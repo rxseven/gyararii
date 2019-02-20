@@ -14,7 +14,8 @@
   "files.associations": {
     ".babelrc": "json",
     ".huskyrc": "json",
-    ".lintstagedrc": "json"
+    ".lintstagedrc": "json",
+    ".stylelintrc": "json"
   },
 
   // Use ESLint for JavaScript and TypeScript linting rather than
