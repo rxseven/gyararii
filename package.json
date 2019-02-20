@@ -36,6 +36,7 @@
     "react-dom": "16.8.2",
     "react-helmet": "5.2.0",
     "react-image": "2.0.0",
+    "react-sizes": "1.0.4",
     "react-transition-group": "2.5.3",
     "recompose": "0.30.0",
     "yup": "0.26.10"
