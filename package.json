@@ -27,7 +27,7 @@
     "format:debug": "prettier --debug-check src/**/*.{js,json,jsx}",
     "lint:script": "eslint src/**/*.{js,jsx}",
     "lint:script:fix": "eslint --fix src/**/*.{js,jsx}",
-    "lint:styles": "stylelint src/**/*.css",
+    "lint:styles": "stylelint src/**/*.scss",
     "start": "node scripts/start.js",
     "start:https": "HTTPS=true yarn start",
     "start:static": "http-server ./build -p 8080 -o",
