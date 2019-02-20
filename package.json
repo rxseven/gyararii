@@ -28,6 +28,7 @@
     "lint:script": "eslint src/**/*.{js,jsx}",
     "lint:script:fix": "eslint --fix src/**/*.{js,jsx}",
     "lint:styles": "stylelint src/**/*.scss",
+    "lint:styled": "stylelint src/**/*.{js,jsx} --config .stylelintrc.styled.json",
     "start": "node scripts/start.js",
     "start:https": "HTTPS=true yarn start",
     "start:static": "http-server ./build -p 8080 -o",
