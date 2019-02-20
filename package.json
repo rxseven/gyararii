@@ -24,6 +24,7 @@
     "test": "node scripts/test.js --config jest.config.json"
   },
   "dependencies": {
+    "axios": "0.18.0",
     "classnames": "2.2.6",
     "lodash": "4.17.11",
     "prop-types": "15.7.2",
