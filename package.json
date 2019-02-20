@@ -50,6 +50,7 @@
     "react-device-detect": "1.6.2",
     "react-dom": "16.8.2",
     "react-helmet": "5.2.0",
+    "react-hot-loader": "4.7.1",
     "react-image": "2.0.0",
     "react-sizes": "1.0.4",
     "react-transition-group": "2.5.3",
