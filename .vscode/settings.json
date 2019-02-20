@@ -23,7 +23,8 @@
     ".huskyrc": "json",
     ".lintstagedrc": "json",
     ".prettierrc": "json",
-    ".stylelintrc": "json"
+    ".stylelintrc": "json",
+    "*.test.js.snap": "javascript"
   },
 
   // Prettier
