@@ -6,6 +6,7 @@ import { withBackgrounds } from '@storybook/addon-backgrounds';
 import { withInfo } from '@storybook/addon-info';
 import { withNotes } from '@storybook/addon-notes';
 import { withOptions } from '@storybook/addon-options';
+import { configureViewport } from '@storybook/addon-viewport';
 import { themes } from '@storybook/components';
 import { addDecorator, configure } from '@storybook/react';
 
@@ -103,6 +104,11 @@ configureActions({
 
 // A11Y addon
 addDecorator(checkA11y);
+
+// Viewport addon
+configureViewport({
+  defaultViewport: 'responsive'
+});
 
 // Wrap each story within a container
 addDecorator(story => <Wrapper>{story()}</Wrapper>);
