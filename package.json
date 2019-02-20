@@ -19,6 +19,7 @@
   "main": "index.jsx",
   "private": true,
   "scripts": {
+    "analyze:bundle:sourcemap": "source-map-explorer build/static/js/main.*",
     "build": "node scripts/build.js",
     "format": "prettier --write src/**/*.{js,json,jsx}",
     "format:check": "prettier --check src/**/*.{js,json,jsx}",
