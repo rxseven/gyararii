@@ -1225,6 +1225,17 @@
     global "^4.3.2"
     prop-types "^15.6.2"
 
+"@storybook/addon-notes@4.1.12":
+  version "4.1.12"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-notes/-/addon-notes-4.1.12.tgz#b13ca46d437e94e21d01fc19213f7178d9ff24b9"
+  integrity sha512-3T4G7mCHZ2xvmXF2t/6IWqRVOr0XDkGLgYwsfTe9aIvoaywPgUvp4w4fEWNzSWv3p/a03WUybHiPRWS7V7UXoQ==
+  dependencies:
+    "@emotion/styled" "^0.10.6"
+    "@storybook/addons" "4.1.12"
+    core-js "^2.5.7"
+    marked "^0.5.2"
+    prop-types "^15.6.2"
+
 "@storybook/addon-options@4.1.12":
   version "4.1.12"
   resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-4.1.12.tgz#28d570ed47faae3c97d24dae7b6bb4984c1f7231"
@@ -8584,6 +8595,11 @@ marked@^0.3.12:
   version "0.3.19"
   resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.19.tgz#5d47f709c4c9fc3c216b6d46127280f40b39d790"
   integrity sha512-ea2eGWOqNxPcXv8dyERdSr/6FmzvWwzjMxpfGB/sbMccXoct+xY+YukPD+QTUZwyvK7BZwcr4m21WBOW41pAkg==
+
+marked@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/marked/-/marked-0.5.2.tgz#3efdb27b1fd0ecec4f5aba362bddcd18120e5ba9"
+  integrity sha512-fdZvBa7/vSQIZCi4uuwo2N3q+7jJURpMVCcbaX0S1Mg65WZ5ilXvC67MviJAsdjqqgD+CEq4RKo5AYGgINkVAA==
 
 marksy@^6.1.0:
   version "6.1.0"
