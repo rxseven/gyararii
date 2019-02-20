@@ -23,6 +23,7 @@ const getClientEnvironment = require('./env');
 const ModuleNotFoundPlugin = require('react-dev-utils/ModuleNotFoundPlugin');
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin-alt');
 const typescriptFormatter = require('react-dev-utils/typescriptFormatter');
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 
 // Source maps are resource heavy and can cause out of memory issue for large source files.
@@ -599,6 +600,13 @@ module.exports = function(webpackEnv) {
           watch: paths.appSrc,
           silent: true,
           formatter: typescriptFormatter,
+        }),
+        // Webpack Bundle Analyzer
+        // Visualize size of webpack output files with an interactive zoomable treemap.
+        new BundleAnalyzerPlugin({
+          analyzerMode: 'static',
+          openAnalyzer: false,
+          reportFilename: path.resolve('tmp/bundle-report/index.html')
         }),
     ].filter(Boolean),
     // Some libraries import Node modules but don't use them in the browser.
