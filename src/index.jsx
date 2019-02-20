@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 // Entry point component
-import App from './components/App';
+import App from 'components/App';
 
 // Utilities
-import * as serviceWorker from './serviceWorker';
+import * as serviceWorker from 'serviceWorker';
 
 // Render React element into the DOM
 ReactDOM.render(<App />, document.getElementById('root'));
