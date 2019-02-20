@@ -49,7 +49,7 @@
     semver "^5.4.1"
     source-map "^0.5.0"
 
-"@babel/core@>=7.1.0":
+"@babel/core@>=7.1.0", "@babel/core@^7.1.2":
   version "7.3.3"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.3.3.tgz#d090d157b7c5060d05a05acaebc048bd2b037947"
   integrity sha512-w445QGI2qd0E0GlSnq6huRZWPMmQGCp5gd5ZWS4hagn0EiwzxD5QMFkpchyusAyVC1n27OKXzQ0/88aVU9n4xQ==
@@ -2668,6 +2668,13 @@ babel-plugin-jest-hoist@^23.2.0:
   version "23.2.0"
   resolved "https://registry.yarnpkg.com/babel-plugin-jest-hoist/-/babel-plugin-jest-hoist-23.2.0.tgz#e61fae05a1ca8801aadee57a6d66b8cefaf44167"
   integrity sha1-5h+uBaHKiAGq3uV6bWa4zvr0QWc=
+
+babel-plugin-jsx-control-statements@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/babel-plugin-jsx-control-statements/-/babel-plugin-jsx-control-statements-4.0.0.tgz#a326ed2423d8f3c520655df06e41594143f3f80a"
+  integrity sha512-sIcKisKlodYEpKlcVLj0nRy/3iy6JFVh3kp3SuBaPVRgcKqaTcQQx1J1Dq4AgHiD2Z4SCBmeYfE3epCX5Rr1KA==
+  dependencies:
+    "@babel/core" "^7.1.2"
 
 babel-plugin-macros@2.4.2:
   version "2.4.2"
