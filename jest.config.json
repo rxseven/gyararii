@@ -1,5 +1,21 @@
 {
   "collectCoverageFrom": ["src/**/*.{js,jsx,ts,tsx}", "!src/**/*.d.ts"],
+  "coveragePathIgnorePatterns": [
+    "<rootDir>/.vscode/",
+    "<rootDir>/build/",
+    "<rootDir>/config/",
+    "<rootDir>/coverage/",
+    "<rootDir>/node_modules/",
+    "<rootDir>/public/",
+    "<rootDir>/scripts/",
+    "<rootDir>/src/__mock__/",
+    "<rootDir>/src/config/",
+    "<rootDir>/src/constants/",
+    "<rootDir>/src/libraries/",
+    "<rootDir>/src/tests/",
+    "<rootDir>/src/serviceWorker.js",
+    "<rootDir>/tmp/"
+  ],
   "moduleFileExtensions": [
     "js",
     "json",
