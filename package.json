@@ -1,6 +1,22 @@
 {
   "name": "gyararii",
+  "description": "A simple React app for collecting photos",
   "version": "0.1.0",
+  "license": "AGPL-3.0-or-later",
+  "author": {
+    "name": "Theerawat Pongsupawat",
+    "email": "rxseven.com@gmail.com",
+    "url": "http://www.rxseven.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rxseven/gyararii.git"
+  },
+  "engines": {
+    "node": "10.15.1",
+    "npm": "6.4.1"
+  },
+  "main": "index.jsx",
   "private": true,
   "scripts": {
     "build": "node scripts/build.js",
