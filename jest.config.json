@@ -41,6 +41,7 @@
     "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,ts,tsx}"
   ],
   "testPathIgnorePatterns": [
+    "<rootDir>/.storybook/",
     "<rootDir>/.vscode/",
     "<rootDir>/build/",
     "<rootDir>/config/",
@@ -54,6 +55,7 @@
     "<rootDir>/src/libraries/",
     "<rootDir>/src/tests/",
     "<rootDir>/src/serviceWorker.js",
+    "<rootDir>/src/stories/",
     "<rootDir>/tmp/"
   ],
   "testURL": "http://localhost",
