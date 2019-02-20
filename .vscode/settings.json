@@ -24,6 +24,7 @@
     ".lintstagedrc": "json",
     ".prettierrc": "json",
     ".stylelintrc": "json",
+    ".stylelintrc.styled.json": "json",
     "*.test.js.snap": "javascript"
   },
 

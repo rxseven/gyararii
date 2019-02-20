@@ -1,5 +1,5 @@
 {
   "src/**/*.{js,json,jsx,scss}": ["yarn format", "git add"],
-  "src/**/*.{js,jsx}": ["yarn lint:script:fix", "git add"],
+  "src/**/*.{js,jsx}": ["yarn lint:script:fix", "yarn lint:styled", "git add"],
   "src/**/*.scss": ["yarn lint:styles", "git add"]
 }
