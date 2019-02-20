@@ -32,6 +32,7 @@
     "test": "node scripts/test.js --config jest.config.json",
     "test:coverage": "npm test -- --coverage --no-cache --silent",
     "test:silent": "npm test -- --silent",
+    "test:staged": "cross-env CI=true npm test",
     "test:verbose": "npm test -- --verbose"
   },
   "dependencies": {
