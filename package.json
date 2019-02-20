@@ -32,6 +32,7 @@
     "start": "node scripts/start.js",
     "start:https": "HTTPS=true yarn start",
     "start:static": "http-server ./build -p 8080 -o",
+    "storybook": "start-storybook -p 6006 -s public",
     "test": "node scripts/test.js --config jest.config.json",
     "test:coverage": "npm test -- --coverage --no-cache --silent",
     "test:debug": "react-scripts --inspect-brk test --runInBand",
