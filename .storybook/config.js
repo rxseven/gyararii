@@ -114,7 +114,7 @@ configureViewport({
 addDecorator(story => <Wrapper>{story()}</Wrapper>);
 
 // Import story files
-const req = requireContext('../src', true, /\.stories\.js$/);
+const req = requireContext('../src', true, /\.stories\.jsx$/);
 
 // Load all stories
 function loadStories() {
