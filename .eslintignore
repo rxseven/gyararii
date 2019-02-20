@@ -1,0 +1,6 @@
+/.vscode
+/build
+/config
+/scripts
+/src/serviceWorker.js
+/tmp
