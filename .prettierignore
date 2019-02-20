@@ -1,0 +1,8 @@
+./vscode
+/build
+/config
+/node_modules
+/scripts
+/src/serviceWorker.js
+/tmp
+package.json

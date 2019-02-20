@@ -1,5 +1,6 @@
 {
-  "extends": ["react-app", "airbnb"],
+  "extends": ["react-app", "airbnb", "prettier"],
+  "plugins": ["prettier"],
   "rules": {
     "comma-dangle": ["error", "never"],
     "no-unused-vars": [
