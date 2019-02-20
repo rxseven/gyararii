@@ -1,5 +1,7 @@
 import data from './data';
+import elements from './elements';
 
 export default {
-  data
+  data,
+  elements
 };
