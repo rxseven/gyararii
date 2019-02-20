@@ -1,6 +1,7 @@
 ./vscode
 /build
 /config
+/coverage
 /node_modules
 /scripts
 /src/serviceWorker.js

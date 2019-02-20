@@ -1,6 +1,9 @@
 {
-  "extends": ["react-app", "airbnb", "prettier"],
-  "plugins": ["prettier"],
+  "env": {
+    "jest/globals": true
+  },
+  "extends": ["react-app", "airbnb", "plugin:jest/recommended", "prettier"],
+  "plugins": ["jest", "prettier"],
   "rules": {
     "comma-dangle": ["error", "never"],
     "no-unused-vars": [
@@ -14,6 +17,11 @@
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
     "import/no-named-as-default": "off",
     "import/no-named-as-default-member": "off",
+    "jest/no-disabled-tests": "warn",
+    "jest/no-focused-tests": "error",
+    "jest/no-identical-title": "error",
+    "jest/prefer-to-have-length": "warn",
+    "jest/valid-expect": "error",
     "jsx-a11y/anchor-is-valid": [
       "error",
       {
