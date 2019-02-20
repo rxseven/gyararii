@@ -1,5 +1,6 @@
 import React from 'react';
 import requireContext from 'require-context.macro';
+import { checkA11y } from '@storybook/addon-a11y';
 import { configureActions } from '@storybook/addon-actions';
 import { withBackgrounds } from '@storybook/addon-backgrounds';
 import { withInfo } from '@storybook/addon-info';
@@ -99,6 +100,9 @@ configureActions({
   depth: 10,
   limit: 50
 });
+
+// A11Y addon
+addDecorator(checkA11y);
 
 // Wrap each story within a container
 addDecorator(story => <Wrapper>{story()}</Wrapper>);
