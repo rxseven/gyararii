@@ -1,5 +1,6 @@
 import React from 'react';
 import requireContext from 'require-context.macro';
+import { configureActions } from '@storybook/addon-actions';
 import { withBackgrounds } from '@storybook/addon-backgrounds';
 import { withInfo } from '@storybook/addon-info';
 import { withNotes } from '@storybook/addon-notes';
@@ -91,6 +92,13 @@ addDecorator(
 
 // Notes addon
 addDecorator(withNotes);
+
+// Actions addon
+configureActions({
+  clearOnStoryChange: true,
+  depth: 10,
+  limit: 50
+});
 
 // Wrap each story within a container
 addDecorator(story => <Wrapper>{story()}</Wrapper>);
