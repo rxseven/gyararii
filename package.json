@@ -22,7 +22,7 @@
     "analyze:bundle:sourcemap": "source-map-explorer build/static/js/main.*",
     "analyze:bundle:webpack": "http-server ./tmp/bundle-report -p 5000 -o",
     "build": "node scripts/build.js",
-    "format": "prettier --write src/**/*.{js,json,jsx}",
+    "format": "prettier --write src/**/*.{js,json,jsx,scss}",
     "format:check": "prettier --check src/**/*.{js,json,jsx}",
     "format:debug": "prettier --debug-check src/**/*.{js,json,jsx}",
     "lint:script": "eslint src/**/*.{js,jsx}",
