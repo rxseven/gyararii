@@ -111,10 +111,5 @@
       "/Users/rxseven/iHost/GitHub/gyararii/node_modules/jest-watch-typeahead/filename.js",
       "/Users/rxseven/iHost/GitHub/gyararii/node_modules/jest-watch-typeahead/testname.js"
     ]
-  },
-  "babel": {
-    "presets": [
-      "react-app"
-    ]
   }
 }
