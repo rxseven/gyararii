@@ -1,6 +1,7 @@
 /.vscode
 /build
 /config
+/coverage
 /scripts
 /src/serviceWorker.js
 /tmp
