@@ -1314,6 +1314,20 @@
     react-syntax-highlighter "^10.0.0"
     regenerator-runtime "^0.12.1"
 
+"@storybook/addon-viewport@4.1.12":
+  version "4.1.12"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-viewport/-/addon-viewport-4.1.12.tgz#29d546eec7f0c1e6fdc158124f826bbf71dbee56"
+  integrity sha512-RLRuFcwjhwbsNQ/I3fV4hYmDgdp4Gv0frq1r2z8ysP3N3TlqFbjkkNBSLgv8GQvY8SxwD9Va7yTzDe6A8AVY6w==
+  dependencies:
+    "@emotion/styled" "^0.10.6"
+    "@storybook/addons" "4.1.12"
+    "@storybook/components" "4.1.12"
+    "@storybook/core-events" "4.1.12"
+    core-js "^2.5.7"
+    global "^4.3.2"
+    prop-types "^15.6.2"
+    util-deprecate "^1.0.2"
+
 "@storybook/addons@4.1.12":
   version "4.1.12"
   resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-4.1.12.tgz#ab38bfd0be97ed02a7d43d97cc631fa4c3a6f3a2"
