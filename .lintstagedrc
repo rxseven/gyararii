@@ -1,3 +1,4 @@
 {
-  "src/**/*.{js,jsx}": ["yarn lint:script:fix", "git add"]
+  "src/**/*.{js,jsx}": ["yarn lint:script:fix", "git add"],
+  "src/**/*.css": ["yarn lint:styles", "git add"]
 }
