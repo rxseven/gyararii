@@ -22,6 +22,7 @@
     ".babelrc": "json",
     ".huskyrc": "json",
     ".lintstagedrc": "json",
+    ".prettierrc": "json",
     ".stylelintrc": "json"
   },
 
