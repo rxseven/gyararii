@@ -32,6 +32,7 @@
     "react": "16.8.2",
     "react-app-polyfill": "0.2.1",
     "react-dom": "16.8.2",
+    "recompose": "0.30.0",
     "yup": "0.26.10"
   },
   "devDependencies": {
