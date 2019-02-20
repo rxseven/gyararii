@@ -2,6 +2,7 @@ import React from 'react';
 import requireContext from 'require-context.macro';
 import { withBackgrounds } from '@storybook/addon-backgrounds';
 import { withInfo } from '@storybook/addon-info';
+import { withNotes } from '@storybook/addon-notes';
 import { withOptions } from '@storybook/addon-options';
 import { themes } from '@storybook/components';
 import { addDecorator, configure } from '@storybook/react';
@@ -87,6 +88,9 @@ addDecorator(
     }
   })
 );
+
+// Notes addon
+addDecorator(withNotes);
 
 // Wrap each story within a container
 addDecorator(story => <Wrapper>{story()}</Wrapper>);
