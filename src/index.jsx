@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 import HTML from 'constants/elements/html';
 
 // Entry point component
-import App from 'components/App';
+import App from 'components/core/skeleton/App';
 
 // Utilities
 import * as serviceWorker from 'serviceWorker';
