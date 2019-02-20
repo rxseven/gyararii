@@ -29,7 +29,8 @@
     "start": "node scripts/start.js",
     "start:https": "HTTPS=true yarn start",
     "start:static": "http-server ./build -p 8080 -o",
-    "test": "node scripts/test.js --config jest.config.json"
+    "test": "node scripts/test.js --config jest.config.json",
+    "test:coverage": "npm test -- --coverage --no-cache --silent"
   },
   "dependencies": {
     "axios": "0.18.0",
