@@ -24,6 +24,7 @@
     "test": "node scripts/test.js --config jest.config.json"
   },
   "dependencies": {
+    "lodash": "4.17.11",
     "prop-types": "15.7.2",
     "prop-types-exact": "1.2.0",
     "react": "16.8.2",
