@@ -7,5 +7,6 @@
     "mgmcdermott.vscode-language-babel",
     "mikestead.dotenv",
     "robertohuertasm.vscode-icons",
+    "shinnn.stylelint"
   ]
 }
