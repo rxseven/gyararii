@@ -25,7 +25,8 @@
     ".prettierrc": "json",
     ".stylelintrc": "json",
     ".stylelintrc.styled.json": "json",
-    "*.test.js.snap": "javascript"
+    "*.test.js.snap": "javascript",
+    "*.test.jsx.snap": "javascript"
   },
 
   // Prettier
