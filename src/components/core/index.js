@@ -1,3 +1,6 @@
+// Document
+export { default as Body } from './document/Body';
+
 // Navigation
 export { default as Routes } from './navigation/Routes';
 
