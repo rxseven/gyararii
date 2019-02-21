@@ -1,14 +1,36 @@
-import React from 'react';
+/* eslint-disable  */
+import * as React from 'react';
 import { hot } from 'react-hot-loader';
 
-import { Routes, Router } from 'components/core';
+import {
+  Body,
+  Footer,
+  Header,
+  Main,
+  Router,
+  Routes,
+  Theme,
+  Wrapper
+} from 'components/core';
 
-function App() {
-  return (
-    <Router>
-      <Routes />
-    </Router>
-  );
+class App extends React.Component {
+  render() {
+    return (
+      <Router>
+        <Theme>
+          <Wrapper>
+            <Header />
+            <Body>
+              <Main>
+                <Routes />
+              </Main>
+            </Body>
+            <Footer />
+          </Wrapper>
+        </Theme>
+      </Router>
+    );
+  }
 }
 
 export default hot(module)(App);
