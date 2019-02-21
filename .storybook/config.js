@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import requireContext from 'require-context.macro';
 import { checkA11y } from '@storybook/addon-a11y';
 import { configureActions } from '@storybook/addon-actions';
@@ -112,6 +113,9 @@ addDecorator(checkA11y);
 configureViewport({
   defaultViewport: 'responsive'
 });
+
+// Wrap each story within Router component
+addDecorator(story => <Router>{story()}</Router>);
 
 // Wrap each story within a container
 addDecorator(story => <Wrapper>{story()}</Wrapper>);
