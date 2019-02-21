@@ -1,5 +1,6 @@
 // Document
 export { default as Body } from './document/Body';
+export { default as Footer } from './document/Footer';
 export { default as Header } from './document/Header';
 
 // Navigation
