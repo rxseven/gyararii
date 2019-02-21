@@ -4,6 +4,9 @@ import ReactDOM from 'react-dom';
 // Constants
 import HTML from 'constants/elements/html';
 
+// Libraries
+import 'libraries/icons';
+
 // Entry point component
 import App from 'components/core/skeleton/App';
 
