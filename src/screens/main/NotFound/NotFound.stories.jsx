@@ -1,9 +1,9 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 
-import App from './index';
+import NotFound from './index';
 
-const title = 'Components/App';
-const component = <App />;
+const title = 'Screens/Main/Not Found (404)';
+const component = <NotFound />;
 
 storiesOf(title, module).add('default', () => component);
