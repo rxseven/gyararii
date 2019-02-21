@@ -10,6 +10,9 @@ import { configureViewport } from '@storybook/addon-viewport';
 import { themes } from '@storybook/components';
 import { addDecorator, configure } from '@storybook/react';
 
+// Application styles
+import '../src/styles/index.scss';
+
 // Decorators
 import Wrapper from './decorators/Wrapper';
 
