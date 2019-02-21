@@ -9,5 +9,3 @@ const title = 'Components/Core/Skeleton/Router';
 const component = <Router>{content}</Router>;
 
 storiesOf(title, module).add('default', () => component);
-
-export default { title };
