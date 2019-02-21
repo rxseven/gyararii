@@ -7,6 +7,9 @@ import HTML from 'constants/elements/html';
 // Entry point component
 import App from 'components/core/skeleton/App';
 
+// Global styles
+import 'styles/index.scss';
+
 // Utilities
 import * as serviceWorker from 'serviceWorker';
 
