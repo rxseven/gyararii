@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Layout /> Snapshot tests should render correctly 1`] = `
+<div
+  className="row justify-content-sm-center"
+>
+  <div
+    className="col"
+  >
+    <div>
+      Content
+    </div>
+  </div>
+</div>
+`;
