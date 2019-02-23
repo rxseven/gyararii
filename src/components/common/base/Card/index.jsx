@@ -8,6 +8,7 @@ import Deck from './Deck';
 import Columns from './Columns';
 import Footer from './Footer';
 import Header from './Header';
+import Text from './Text';
 import Title from './Title';
 
 const propTypes = exact({
@@ -51,6 +52,7 @@ Container.Columns = Columns;
 Container.Deck = Deck;
 Container.Footer = Footer;
 Container.Header = Header;
+Container.Text = Text;
 Container.Title = Title;
 
 export default Container;
