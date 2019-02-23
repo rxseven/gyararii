@@ -78,6 +78,7 @@ function Button({
   // Filter unrelatd props
   if (passive) {
     restProps = omit(props, ['type']);
+    restProps.role = 'button';
   }
 
   return (
