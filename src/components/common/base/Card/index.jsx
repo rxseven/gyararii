@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import exact from 'prop-types-exact';
 import React from 'react';
 
+import Body from './Body';
 import Deck from './Deck';
 import Columns from './Columns';
 
@@ -42,6 +43,7 @@ function Container({ alignment, background, children, color, end, margin }) {
 Container.propTypes = propTypes;
 Container.defaultProps = defaultProps;
 
+Container.Body = Body;
 Container.Columns = Columns;
 Container.Deck = Deck;
 
