@@ -7,28 +7,25 @@ import {
   Footer,
   Header,
   Main,
-  Router,
+  Providers,
   Routes,
-  Theme,
   Wrapper
 } from 'components/core';
 
 class App extends React.Component {
   render() {
     return (
-      <Router>
-        <Theme>
-          <Wrapper>
-            <Header />
-            <Body>
-              <Main>
-                <Routes />
-              </Main>
-            </Body>
-            <Footer />
-          </Wrapper>
-        </Theme>
-      </Router>
+      <Providers>
+        <Wrapper>
+          <Header />
+          <Body>
+            <Main>
+              <Routes />
+            </Main>
+          </Body>
+          <Footer />
+        </Wrapper>
+      </Providers>
     );
   }
 }
