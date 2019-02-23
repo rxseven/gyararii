@@ -3,6 +3,8 @@ import PropTypes from 'prop-types';
 import exact from 'prop-types-exact';
 import React from 'react';
 
+import Columns from './Columns';
+
 const propTypes = exact({
   alignment: PropTypes.string,
   background: PropTypes.string,
@@ -38,5 +40,7 @@ function Container({ alignment, background, children, color, end, margin }) {
 
 Container.propTypes = propTypes;
 Container.defaultProps = defaultProps;
+
+Container.Columns = Columns;
 
 export default Container;
