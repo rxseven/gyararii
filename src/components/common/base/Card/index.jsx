@@ -6,6 +6,7 @@ import React from 'react';
 import Body from './Body';
 import Deck from './Deck';
 import Columns from './Columns';
+import Footer from './Footer';
 import Header from './Header';
 
 const propTypes = exact({
@@ -47,6 +48,7 @@ Container.defaultProps = defaultProps;
 Container.Body = Body;
 Container.Columns = Columns;
 Container.Deck = Deck;
+Container.Footer = Footer;
 Container.Header = Header;
 
 export default Container;
