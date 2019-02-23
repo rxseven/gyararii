@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import exact from 'prop-types-exact';
 import React from 'react';
 
+import Deck from './Deck';
 import Columns from './Columns';
 
 const propTypes = exact({
@@ -42,5 +43,6 @@ Container.propTypes = propTypes;
 Container.defaultProps = defaultProps;
 
 Container.Columns = Columns;
+Container.Deck = Deck;
 
 export default Container;
