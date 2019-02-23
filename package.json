@@ -57,6 +57,7 @@
     "ramda": "0.26.1",
     "react": "16.8.2",
     "react-app-polyfill": "0.2.1",
+    "react-burger-menu": "^2.6.5",
     "react-device-detect": "1.6.2",
     "react-dom": "16.8.2",
     "react-helmet": "5.2.0",
