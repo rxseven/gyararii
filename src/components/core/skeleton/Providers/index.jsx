@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import exact from 'prop-types-exact';
 import React from 'react';
 
+import Global from './Global';
 import Router from './Router';
 import Theme from './Theme';
 
@@ -12,7 +13,9 @@ const propTypes = exact({
 function Providers({ children }) {
   return (
     <Router>
-      <Theme>{children}</Theme>
+      <Theme>
+        <Global>{children}</Global>
+      </Theme>
     </Router>
   );
 }
