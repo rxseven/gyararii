@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Hyperlink /> Snapshot tests should render correctly 1`] = `
+<a
+  href="/"
+  rel="noopener noreferrer"
+  target="_blank"
+>
+  Link Text
+</a>
+`;
