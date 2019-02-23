@@ -1,5 +1,4 @@
-/* eslint-disable  */
-import * as React from 'react';
+import React from 'react';
 import { hot } from 'react-hot-loader';
 
 import {
@@ -7,30 +6,25 @@ import {
   Footer,
   Header,
   Main,
-  Router,
+  Providers,
   Routes,
-  Theme,
   Wrapper
 } from 'components/core';
 
-class App extends React.Component {
-  render() {
-    return (
-      <Router>
-        <Theme>
-          <Wrapper>
-            <Header />
-            <Body>
-              <Main>
-                <Routes />
-              </Main>
-            </Body>
-            <Footer />
-          </Wrapper>
-        </Theme>
-      </Router>
-    );
-  }
+function App() {
+  return (
+    <Providers>
+      <Wrapper>
+        <Header />
+        <Body>
+          <Main>
+            <Routes />
+          </Main>
+        </Body>
+        <Footer />
+      </Wrapper>
+    </Providers>
+  );
 }
 
 export default hot(module)(App);
