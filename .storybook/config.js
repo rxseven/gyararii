@@ -1,7 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
 import requireContext from 'require-context.macro';
-import { ThemeProvider as Theme } from 'styled-components';
 import { checkA11y } from '@storybook/addon-a11y';
 import { configureActions } from '@storybook/addon-actions';
 import { withBackgrounds } from '@storybook/addon-backgrounds';
@@ -12,14 +10,14 @@ import { configureViewport } from '@storybook/addon-viewport';
 import { themes } from '@storybook/components';
 import { addDecorator, configure } from '@storybook/react';
 
+// Context providers
+import Providers from '../src/components/core/skeleton/Providers';
+
 // Libraries
 import '../src/libraries/icons';
 
 // Application styles
 import '../src/styles/index.scss';
-
-// Theme
-import theme from '../src/config/theme';
 
 // Decorators
 import Wrapper from './decorators/Wrapper';
@@ -121,11 +119,8 @@ configureViewport({
   defaultViewport: 'responsive'
 });
 
-// Wrap each story within Router component
-addDecorator(story => <Router>{story()}</Router>);
-
-// Wrap each story within Styled Component theme
-addDecorator(story => <Theme theme={theme}>{story()}</Theme>);
+// Wrap each story within context providers
+addDecorator(story => <Providers>{story()}</Providers>);
 
 // Wrap each story within a container
 addDecorator(story => <Wrapper>{story()}</Wrapper>);
