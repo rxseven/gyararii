@@ -12,7 +12,10 @@ import Set from './Set';
 const propTypes = {
   block: PropTypes.bool,
   children: PropTypes.string,
-  icon: PropTypes.string,
+  icon: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.arrayOf(PropTypes.string)
+  ]),
   loading: PropTypes.bool,
   look: PropTypes.string,
   outline: PropTypes.string,
