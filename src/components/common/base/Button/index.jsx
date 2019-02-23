@@ -7,6 +7,8 @@ import styled from 'styled-components';
 import Icon from 'components/common/base/Icon';
 import Spinner from 'components/common/base/Spinner';
 
+import Set from './Set';
+
 const propTypes = {
   block: PropTypes.bool,
   children: PropTypes.string,
@@ -109,5 +111,7 @@ function Button({
 
 Button.propTypes = propTypes;
 Button.defaultProps = defaultProps;
+
+Button.Set = Set;
 
 export default Button;
