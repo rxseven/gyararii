@@ -6,6 +6,7 @@ import {
   Footer,
   Header,
   Main,
+  Notification,
   Providers,
   Routes,
   Tooltip,
@@ -23,6 +24,7 @@ function App() {
           </Main>
         </Body>
         <Footer />
+        <Notification />
         <Tooltip />
       </Wrapper>
     </Providers>
