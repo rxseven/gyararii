@@ -28,7 +28,7 @@ const defaultProps = {
   margin: '3'
 };
 
-function Container({ alignment, background, children, color, end, margin }) {
+function Card({ alignment, background, children, color, end, margin }) {
   return (
     <div
       className={cx(
@@ -44,15 +44,15 @@ function Container({ alignment, background, children, color, end, margin }) {
   );
 }
 
-Container.propTypes = propTypes;
-Container.defaultProps = defaultProps;
+Card.propTypes = propTypes;
+Card.defaultProps = defaultProps;
 
-Container.Body = Body;
-Container.Columns = Columns;
-Container.Deck = Deck;
-Container.Footer = Footer;
-Container.Header = Header;
-Container.Text = Text;
-Container.Title = Title;
+Card.Body = Body;
+Card.Columns = Columns;
+Card.Deck = Deck;
+Card.Footer = Footer;
+Card.Header = Header;
+Card.Text = Text;
+Card.Title = Title;
 
-export default Container;
+export default Card;
