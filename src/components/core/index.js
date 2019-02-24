@@ -15,3 +15,4 @@ export { default as Wrapper } from './skeleton/Wrapper';
 
 // UI
 export { default as Notification } from './ui/Notification';
+export { default as Tooltip } from './ui/Tooltip';

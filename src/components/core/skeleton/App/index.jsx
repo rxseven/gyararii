@@ -8,6 +8,7 @@ import {
   Main,
   Providers,
   Routes,
+  Tooltip,
   Wrapper
 } from 'components/core';
 
@@ -22,6 +23,7 @@ function App() {
           </Main>
         </Body>
         <Footer />
+        <Tooltip />
       </Wrapper>
     </Providers>
   );
