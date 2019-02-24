@@ -71,6 +71,7 @@
     "react-router-last-location": "2.0.0-beta.0",
     "react-router-scroll-memory": "2.0.1",
     "react-sizes": "1.0.4",
+    "react-toastify": "4.5.2",
     "react-transition-group": "2.5.3",
     "recompose": "0.30.0",
     "styled-components": "4.1.3",
