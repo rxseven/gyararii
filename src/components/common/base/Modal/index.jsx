@@ -5,6 +5,7 @@ import ReactModal from 'react-modal';
 import './Modal.styles.scss';
 
 import Body from './Body';
+import Footer from './Footer';
 import Header from './Header';
 
 // Hide the application from screenreaders and other assistive technologies
@@ -33,6 +34,7 @@ function Modal({ children, onClose, ...props }) {
 Modal.propTypes = propTypes;
 
 Modal.Body = Body;
+Modal.Footer = Footer;
 Modal.Header = Header;
 
 export default Modal;
