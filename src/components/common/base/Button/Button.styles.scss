@@ -1,0 +1,8 @@
+// Bootstrap Buttons
+// https://getbootstrap.com/docs/4.1/components/buttons/
+
+.btn {
+  &:not(:disabled):not(.disabled) {
+    cursor: pointer;
+  }
+}

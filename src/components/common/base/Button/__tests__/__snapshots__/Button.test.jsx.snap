@@ -8,12 +8,12 @@ exports[`<Button /> Snapshot tests should render correctly 1`] = `
   type="button"
 >
   <span
-    className="sc-bdVaJa dgJszb"
+    className="sc-bwzfXH foyPXx"
   >
     Text
   </span>
   <span
-    className="sc-htpNat evzDoH"
+    className="sc-bxivhb cRFcgP"
   >
     <span>
       <style>

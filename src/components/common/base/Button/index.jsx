@@ -8,6 +8,7 @@ import Icon from 'components/common/base/Icon';
 import Spinner from 'components/common/base/Spinner';
 
 import Set from './Set';
+import './Button.styles.scss';
 
 const propTypes = {
   block: PropTypes.bool,
