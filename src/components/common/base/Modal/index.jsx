@@ -5,6 +5,7 @@ import ReactModal from 'react-modal';
 import './Modal.styles.scss';
 
 import Body from './Body';
+import Header from './Header';
 
 // Hide the application from screenreaders and other assistive technologies
 if (process.env.NODE_ENV !== 'test') ReactModal.setAppElement('#root');
@@ -32,5 +33,6 @@ function Modal({ children, onClose, ...props }) {
 Modal.propTypes = propTypes;
 
 Modal.Body = Body;
+Modal.Header = Header;
 
 export default Modal;
