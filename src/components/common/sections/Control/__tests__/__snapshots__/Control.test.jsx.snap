@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Control /> Snapshot tests should render correctly 1`] = `
+<div
+  className="sc-gzVnrw liWgEh"
+>
+  <div
+    className="sc-dnqmqq guwrEu"
+  >
+    Showing 
+    <span
+      className="sc-EHOje lpjwMY"
+    >
+      2
+    </span>
+     images
+  </div>
+</div>
+`;
