@@ -8,6 +8,7 @@ export { default as Routes } from './navigation/Routes';
 
 // Sections
 export { default as Main } from './sections/Main';
+export { default as Sidebar } from './sections/Sidebar';
 
 // Skeleton
 export { default as Providers } from './skeleton/Providers';
