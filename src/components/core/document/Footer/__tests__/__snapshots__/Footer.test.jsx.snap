@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer /> Snapshot tests should render correctly 1`] = `
+<footer
+  className="sc-bwzfXH iyEFui"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col"
+      >
+        <ul
+          className="sc-bxivhb hpIYpU"
+        >
+          <li
+            className="sc-ifAKCX kQYkju"
+          >
+            <a
+              aria-current="page"
+              className="sc-EHOje hlRBmM sc-bdVaJa hYPwXj active"
+              data-light={true}
+              href="/"
+              onClick={[Function]}
+              style={Object {}}
+            >
+              Gallery
+            </a>
+          </li>
+          <li
+            className="sc-ifAKCX kQYkju"
+          >
+            <a
+              className="sc-bZQynM htyeqS"
+              href="https://github.com/rxseven/gyararii"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              GitHub
+            </a>
+          </li>
+        </ul>
+        <div
+          className="sc-htpNat ccJztr"
+        >
+          <p
+            className="sc-gzVnrw cacXWT"
+          >
+            Designed & built with all the love in React.
+          </p>
+          <p
+            className="sc-gzVnrw cacXWT"
+          >
+            Copyright © 2019 Theerawat Pongsupawat.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+`;
