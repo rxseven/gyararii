@@ -28,7 +28,7 @@ storiesOf(title, module)
   .add(
     'disabled',
     () => (
-      <File {...actions} icon="cloud-upload-alt" id="avatar" loading>
+      <File {...actions} icon="cloud-upload-alt" id="avatar" isLoading>
         Upload
       </File>
     ),
@@ -39,7 +39,7 @@ storiesOf(title, module)
   .add(
     'with spinner',
     () => (
-      <File {...actions} id="avatar" loading spinner>
+      <File {...actions} id="avatar" isLoading spinner>
         Upload
       </File>
     ),

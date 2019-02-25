@@ -18,26 +18,26 @@ const Input = styled.input`
 const propTypes = {
   children: PropTypes.string.isRequired,
   id: PropTypes.string.isRequired,
-  loading: PropTypes.bool,
+  isLoading: PropTypes.bool,
   multiple: PropTypes.bool,
   onChange: PropTypes.func.isRequired,
   spinner: PropTypes.bool
 };
 
 const defaultProps = {
-  loading: false,
+  isLoading: false,
   multiple: false,
   spinner: false
 };
 
-function File({ children, id, loading, multiple, onChange, ...props }) {
+function File({ children, id, isLoading, multiple, onChange, ...props }) {
   return (
     <Label htmlFor={id}>
-      <Button {...props} loading={loading} look="primary" passive>
+      <Button {...props} isLoading={isLoading} look="primary" passive>
         {children}
       </Button>
       <Input
-        disabled={loading}
+        disabled={isLoading}
         id={id}
         multiple={multiple}
         onChange={onChange}
