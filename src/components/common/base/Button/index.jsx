@@ -2,6 +2,7 @@ import cx from 'classnames';
 import { omit } from 'lodash';
 import PropTypes from 'prop-types';
 import React from 'react';
+import { isBrowser, isMobile } from 'react-device-detect';
 import styled from 'styled-components';
 
 import Icon from 'components/common/base/Icon';
@@ -17,8 +18,9 @@ const propTypes = {
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string)
   ]),
-  loading: PropTypes.bool,
+  isLoading: PropTypes.bool,
   look: PropTypes.string,
+  minimal: PropTypes.bool,
   outline: PropTypes.string,
   passive: PropTypes.bool,
   size: PropTypes.string,
@@ -30,8 +32,9 @@ const defaultProps = {
   block: false,
   children: '',
   icon: '',
-  loading: false,
+  isLoading: false,
   look: 'secondary',
+  minimal: false,
   outline: '',
   passive: false,
   size: 'sm',
@@ -41,16 +44,16 @@ const defaultProps = {
 
 const Text = styled.span`
   margin-left: ${({ icon }) => (icon ? '7px' : '0')};
-  visibility: ${({ loading }) => (loading ? 'hidden' : 'visible')};
+  visibility: ${({ isLoading }) => (isLoading ? 'hidden' : 'visible')};
 `;
 
 const Symbol = styled.span`
-  visibility: ${({ loading }) => (loading ? 'hidden' : 'visible')};
+  visibility: ${({ isLoading }) => (isLoading ? 'hidden' : 'visible')};
 `;
 
 const Indicator = styled.span`
   align-items: center;
-  display: ${({ loading }) => (loading ? 'flex' : 'none')};
+  display: ${({ isLoading }) => (isLoading ? 'flex' : 'none')};
   height: 100%;
   justify-content: center;
   left: 0;
@@ -65,8 +68,9 @@ function Button({
   block,
   children,
   icon,
-  loading,
+  isLoading,
   look,
+  minimal,
   outline,
   passive,
   size,
@@ -91,21 +95,23 @@ function Button({
         !!look && !outline && `btn-${look}`,
         `btn-${size}`,
         !!outline && `btn-outline-${outline}`,
-        loading && 'disabled'
+        isLoading && 'disabled'
       )}
-      disabled={loading}
+      disabled={isLoading}
     >
       {!!icon && (
-        <Symbol loading={loading && spinner}>
+        <Symbol isLoading={isLoading && spinner}>
           <Icon icon={icon} />
         </Symbol>
       )}
       {!!children && (
         <React.Fragment>
-          <Text icon={icon} loading={loading && spinner}>
-            {children}
-          </Text>
-          <Indicator loading={loading && spinner}>
+          <If condition={isBrowser || (!minimal && isMobile)}>
+            <Text icon={icon} isLoading={isLoading && spinner}>
+              {children}
+            </Text>
+          </If>
+          <Indicator isLoading={isLoading && spinner}>
             <Spinner color="#fff" />
           </Indicator>
         </React.Fragment>

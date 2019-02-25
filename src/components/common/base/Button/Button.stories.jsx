@@ -42,7 +42,7 @@ storiesOf(title, module)
     </Button>
   ))
   .add('disabled', () => (
-    <Button {...actions} loading look="primary">
+    <Button {...actions} isLoading look="primary">
       OK
     </Button>
   ))
@@ -55,7 +55,7 @@ storiesOf(title, module)
     </Button>
   ))
   .add('with spinner', () => (
-    <Button {...actions} loading look="primary" spinner>
+    <Button {...actions} isLoading look="primary" spinner>
       Upload
     </Button>
   ))
