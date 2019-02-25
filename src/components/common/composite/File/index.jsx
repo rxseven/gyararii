@@ -20,7 +20,7 @@ const propTypes = {
   id: PropTypes.string.isRequired,
   isLoading: PropTypes.bool,
   multiple: PropTypes.bool,
-  onChange: PropTypes.func.isRequired,
+  onUpload: PropTypes.func.isRequired,
   spinner: PropTypes.bool
 };
 
@@ -30,7 +30,7 @@ const defaultProps = {
   spinner: false
 };
 
-function File({ children, id, isLoading, multiple, onChange, ...props }) {
+function File({ children, id, isLoading, multiple, onUpload, ...props }) {
   return (
     <Label htmlFor={id}>
       <Button {...props} isLoading={isLoading} look="primary" passive>
@@ -40,7 +40,7 @@ function File({ children, id, isLoading, multiple, onChange, ...props }) {
         disabled={isLoading}
         id={id}
         multiple={multiple}
-        onChange={onChange}
+        onChange={onUpload}
         type="file"
       />
     </Label>

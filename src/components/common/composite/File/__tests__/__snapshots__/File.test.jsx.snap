@@ -8,6 +8,7 @@ exports[`<File /> Snapshot tests should render correctly 1`] = `
   <span
     className="btn btn-primary btn-sm"
     disabled={false}
+    onChange={[MockFunction]}
     role="button"
   >
     <span
@@ -93,7 +94,6 @@ exports[`<File /> Snapshot tests should render correctly 1`] = `
     disabled={false}
     id="file"
     multiple={false}
-    onChange={[MockFunction]}
     type="file"
   />
 </label>
