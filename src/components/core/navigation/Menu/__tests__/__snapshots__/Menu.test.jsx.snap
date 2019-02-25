@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Menu /> Snapshot tests should render correctly 1`] = `
+<div>
+  <div
+    className="bm-overlay"
+    onClick={[Function]}
+    style={
+      Object {
+        "MozTransform": "translate3d(100%, 0, 0)",
+        "MsTransform": "translate3d(100%, 0, 0)",
+        "OTransform": "translate3d(100%, 0, 0)",
+        "WebkitTransform": "translate3d(100%, 0, 0)",
+        "background": "rgba(0, 0, 0, 0.8)",
+        "height": "100%",
+        "opacity": 0,
+        "position": "fixed",
+        "top": 0,
+        "transform": "translate3d(100%, 0, 0)",
+        "transition": "opacity 0.3s, transform 0s 0.3s",
+        "width": "100%",
+        "zIndex": 1000,
+      }
+    }
+  />
+  <div
+    className="bm-menu-wrap"
+    id="sidebar"
+    style={
+      Object {
+        "MozTransform": "translate3d(-100%, 0, 0)",
+        "MsTransform": "translate3d(-100%, 0, 0)",
+        "OTransform": "translate3d(-100%, 0, 0)",
+        "WebkitTransform": "translate3d(-100%, 0, 0)",
+        "height": "100%",
+        "maxWidth": "320px",
+        "position": "fixed",
+        "right": "inherit",
+        "top": 0,
+        "transform": "translate3d(-100%, 0, 0)",
+        "transition": "all 0.5s",
+        "width": "85%",
+        "zIndex": 8001,
+      }
+    }
+  >
+    <div
+      className="bm-menu"
+      style={
+        Object {
+          "background": "#fff",
+          "boxSizing": "border-box",
+          "height": "100%",
+          "overflow": "auto",
+        }
+      }
+    >
+      <nav
+        className="bm-item-list"
+        style={
+          Object {
+            "height": "100%",
+            "padding": 0,
+            "position": "relative",
+          }
+        }
+      >
+        <div
+          className="bm-item"
+          style={
+            Object {
+              "display": "block",
+            }
+          }
+          tabIndex={-1}
+        >
+          <div
+            className="sc-htpNat irRsyb"
+          >
+            <a
+              className="sc-bdVaJa jQwNdM"
+              href="/"
+              onClick={[Function]}
+              title="Gallery"
+            >
+              ギャラリー
+            </a>
+          </div>
+          <ul
+            className="sc-EHOje jkqiYl"
+          >
+            <li
+              className="sc-bZQynM fGYiaS"
+            >
+              <a
+                aria-current="page"
+                className="sc-gzVnrw VdJZi sc-bwzfXH dRlolo active"
+                data-light={false}
+                href="/"
+                onClick={[Function]}
+                style={Object {}}
+              >
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-home fa-w-18 "
+                  data-icon="home"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 576 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+                <span
+                  className="sc-htoDjs rhhap"
+                >
+                  Gallery
+                </span>
+              </a>
+            </li>
+            <li
+              className="sc-bZQynM fGYiaS"
+            >
+              <a
+                className="sc-bxivhb bhtyXQ"
+                href="https://github.com/rxseven/gyararii"
+                rel="noopener noreferrer"
+                target="_blank"
+              >
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-github-alt fa-w-15 "
+                  data-icon="github-alt"
+                  data-prefix="fab"
+                  focusable="false"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 480 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+                <span
+                  className="sc-htoDjs rhhap"
+                >
+                  View on GitHub
+                </span>
+              </a>
+            </li>
+          </ul>
+          <div
+            className="sc-ifAKCX cPObRf"
+          >
+            <a
+              className="sc-dnqmqq dufLND"
+              href="https://github.com/rxseven/gyararii/releases/tag/v0.1.0"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Version 0.1.0
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </div>
+</div>
+`;
