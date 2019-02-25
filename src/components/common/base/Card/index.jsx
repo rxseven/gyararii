@@ -8,6 +8,7 @@ import Deck from './Deck';
 import Columns from './Columns';
 import Footer from './Footer';
 import Header from './Header';
+import Image from './Image';
 import Text from './Text';
 import Title from './Title';
 
@@ -52,6 +53,7 @@ Card.Columns = Columns;
 Card.Deck = Deck;
 Card.Footer = Footer;
 Card.Header = Header;
+Card.Image = Image;
 Card.Text = Text;
 Card.Title = Title;
 
