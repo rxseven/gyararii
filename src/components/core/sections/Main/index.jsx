@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import Grid from 'components/common/base/Grid';
 
 const Frame = styled.main`
-  margin-top: 2.875rem;
+  margin-top: 3.875rem;
 `;
 
 const propTypes = exact({
