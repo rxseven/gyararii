@@ -4,7 +4,7 @@ import ReactImages from 'react-images';
 
 const propTypes = {
   currentImage: PropTypes.number.isRequired,
-  images: PropTypes.arrayOf(PropTypes.any).isRequired,
+  images: PropTypes.arrayOf(PropTypes.object).isRequired,
   isOpen: PropTypes.bool,
   onClickNext: PropTypes.func.isRequired,
   onClickPrev: PropTypes.func.isRequired,
