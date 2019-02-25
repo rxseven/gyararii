@@ -9,6 +9,7 @@ import {
   Notification,
   Providers,
   Routes,
+  Sidebar,
   Tooltip,
   Wrapper
 } from 'components/core';
@@ -18,6 +19,7 @@ function App() {
     <Providers>
       <Wrapper>
         <Header />
+        <Sidebar />
         <Body>
           <Main>
             <Routes />
