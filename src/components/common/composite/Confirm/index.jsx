@@ -9,8 +9,8 @@ const propTypes = exact({
   buttonCancel: PropTypes.string,
   buttonConfirm: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
+  isLoading: PropTypes.bool,
   isOpen: PropTypes.bool.isRequired,
-  loading: PropTypes.bool,
   onClose: PropTypes.func.isRequired,
   onConfirm: PropTypes.func.isRequired,
   title: PropTypes.string.isRequired,
@@ -19,7 +19,7 @@ const propTypes = exact({
 
 const defaultProps = {
   buttonCancel: 'Cancel',
-  loading: false,
+  isLoading: false,
   type: 'danger'
 };
 
@@ -27,8 +27,8 @@ function Confirm({
   buttonCancel,
   buttonConfirm,
   children,
+  isLoading,
   isOpen,
-  loading,
   onClose,
   onConfirm,
   title,
@@ -39,14 +39,14 @@ function Confirm({
       <Modal.Header onClose={onClose}>{title}</Modal.Header>
       <Modal.Body>{children}</Modal.Body>
       <Modal.Footer>
-        <Button loading={loading} onClick={onClose}>
+        <Button isLoading={isLoading} onClick={onClose}>
           {buttonCancel}
         </Button>
         <Button
-          loading={loading}
+          isLoading={isLoading}
           look={type}
           onClick={onConfirm}
-          spinner={loading}
+          spinner={isLoading}
         >
           {buttonConfirm}
         </Button>

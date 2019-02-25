@@ -8,8 +8,8 @@ describe('<Confirm />', () => {
   const props = {
     buttonConfirm: 'delete',
     children: 'content',
+    isLoading: false,
     isOpen: true,
-    loading: false,
     onClose: jest.fn(),
     onConfirm: jest.fn(),
     title: 'Permanently Delete Images',

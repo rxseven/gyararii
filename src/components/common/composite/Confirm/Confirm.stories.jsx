@@ -9,8 +9,8 @@ const { text } = mock;
 const title = 'Components/Common/Composite/Confirm';
 const props = {
   buttonConfirm: 'delete',
+  isLoading: false,
   isOpen: false,
-  loading: false,
   onClose: action('onClose'),
   onConfirm: action('onConfirm'),
   title: 'Permanently Delete Images'
@@ -40,7 +40,7 @@ storiesOf(title, module)
   .add(
     'loading',
     () => (
-      <Confirm {...props} isOpen loading>
+      <Confirm {...props} isOpen isLoading>
         {text}
       </Confirm>
     ),
