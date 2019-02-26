@@ -13,7 +13,7 @@ function NotFound() {
         <title>Page not found · ギャラリー</title>
       </Head>
       <Body>
-        <Layout size="col-md-10 col-lg-8">
+        <Layout adaptive>
           <Card>
             <Card.Body>
               <Card.Title>404</Card.Title>
