@@ -2,13 +2,13 @@
 
 exports[`<Masonry /> Snapshot tests should render correctly 1`] = `
 <div
-  className="sc-EHOje grfhqt"
+  className="sc-bZQynM ghYVpU"
 >
   <div
     className="card-columns"
   >
     <div
-      className="card text-text-left mb-3"
+      className="card sc-EHOje iBnegZ text-text-left mb-3"
     >
       <div
         className="sc-bdVaJa cLhofW"
@@ -19,7 +19,7 @@ exports[`<Masonry /> Snapshot tests should render correctly 1`] = `
         />
         <svg
           aria-hidden="true"
-          className="svg-inline--fa fa-check-circle fa-w-16 sc-bxivhb dOWKyo"
+          className="svg-inline--fa fa-check-circle fa-w-16 sc-bxivhb iUSuZZ"
           data-checked={false}
           data-icon="check-circle"
           data-mobile={false}
@@ -38,7 +38,7 @@ exports[`<Masonry /> Snapshot tests should render correctly 1`] = `
           />
         </svg>
         <a
-          className="sc-bwzfXH MELYj"
+          className="sc-bwzfXH jHGBQq"
           data-mobile={false}
           href="gallery/image-001.jpg"
           onClick={[Function]}

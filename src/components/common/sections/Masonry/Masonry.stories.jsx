@@ -18,6 +18,7 @@ const props = {
       url: 'https://via.placeholder.com/480x320?text=Image-002'
     }
   ],
+  onLoaded: action('onLoaded'),
   onPreview: action('onPreview'),
   onSelect: action('onSelect')
 };

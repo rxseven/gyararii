@@ -15,6 +15,7 @@ describe('<Masonry />', () => {
         url: 'gallery/image-001.jpg'
       }
     ],
+    onLoaded: jest.fn(),
     onPreview: jest.fn(),
     onSelect: jest.fn()
   };
