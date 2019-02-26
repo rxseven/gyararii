@@ -13,11 +13,11 @@ function NotFound() {
         <title>Page not found · ギャラリー</title>
       </Head>
       <Body>
-        <Layout>
+        <Layout size="col-md-10 col-lg-8">
           <Card>
             <Card.Body>
               <Card.Title>404</Card.Title>
-              <p>This is not webpage you are looking for.</p>
+              <Card.Text>This is not webpage you are looking for.</Card.Text>
               <Link to={PATHS.root}>Go back to Home page</Link>
             </Card.Body>
           </Card>
