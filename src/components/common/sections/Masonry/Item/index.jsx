@@ -107,7 +107,8 @@ const Thumbnail = styled(Card)`
     border: ${props =>
       props['data-visibility'] ? '1px solid rgba(0, 0, 0, 0.125)' : 'none'};
     position: ${props => (props['data-visibility'] ? 'static' : 'absolute')};
-    z-index: -1;
+    visibility: ${props => (props['data-visibility'] ? 'visible' : 'hidden')};
+    z-index: -999;
   }
 `;
 
