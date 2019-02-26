@@ -4,6 +4,6 @@ exports[`<Card.Text /> Snapshot tests should render correctly 1`] = `
 <p
   className="card-text"
 >
-  Content
+  content
 </p>
 `;

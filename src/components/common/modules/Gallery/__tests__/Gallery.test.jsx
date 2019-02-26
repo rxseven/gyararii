@@ -1,7 +1,8 @@
 import { shallow } from 'enzyme';
 import React from 'react';
-// import renderer from 'react-test-renderer';
+import renderer from 'react-test-renderer';
 
+import Environment from 'tests/environment';
 import Gallery from '../index';
 
 describe('<Gallery />', () => {
@@ -62,7 +63,11 @@ describe('<Gallery />', () => {
     onLightboxPrev: jest.fn(),
     onLightboxClose: jest.fn()
   };
-  const component = <Gallery {...props} />;
+  const component = (
+    <Environment>
+      <Gallery {...props} />
+    </Environment>
+  );
 
   describe('Unit tests', () => {
     it('should render without crashing', () => {
@@ -74,13 +79,13 @@ describe('<Gallery />', () => {
     });
   });
 
-  // describe('Snapshot tests', () => {
-  //   it('should render correctly', () => {
-  //     // Act
-  //     const tree = renderer.create(component).toJSON();
+  describe('Snapshot tests', () => {
+    it('should render correctly', () => {
+      // Act
+      const tree = renderer.create(component).toJSON();
 
-  //     // Assert
-  //     expect(tree).toMatchSnapshot();
-  //   });
-  // });
+      // Assert
+      expect(tree).toMatchSnapshot();
+    });
+  });
 });

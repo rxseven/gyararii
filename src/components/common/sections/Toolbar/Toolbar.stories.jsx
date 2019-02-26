@@ -5,12 +5,13 @@ import notes from 'stories/shared/notes';
 import Toolbar from './index';
 
 const title = 'Components/Common/Sections/Toolbar';
+const props = { children: 'Content' };
 
 storiesOf(title, module)
-  .add('default', () => <Toolbar>Content</Toolbar>, {
+  .add('default', () => <Toolbar {...props} />, {
     notes: notes.minimal
   })
-  .add('loading', () => <Toolbar isLoading>Content</Toolbar>, {
+  .add('loading', () => <Toolbar {...props} isLoading />, {
     notes:
       'A component is invisible while a network request is being submitted.'
   });

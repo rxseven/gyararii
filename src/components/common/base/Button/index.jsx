@@ -42,15 +42,6 @@ const defaultProps = {
   type: 'button'
 };
 
-const Text = styled.span`
-  margin-left: ${({ icon }) => (icon ? '7px' : '0')};
-  visibility: ${({ isLoading }) => (isLoading ? 'hidden' : 'visible')};
-`;
-
-const Symbol = styled.span`
-  visibility: ${({ isLoading }) => (isLoading ? 'hidden' : 'visible')};
-`;
-
 const Indicator = styled.span`
   align-items: center;
   display: ${({ isLoading }) => (isLoading ? 'flex' : 'none')};
@@ -62,6 +53,15 @@ const Indicator = styled.span`
   text-align: center;
   top: 0;
   width: 100%;
+`;
+
+const Symbol = styled.span`
+  visibility: ${({ isLoading }) => (isLoading ? 'hidden' : 'visible')};
+`;
+
+const Text = styled.span`
+  margin-left: ${({ icon }) => (icon ? '7px' : '0')};
+  visibility: ${({ isLoading }) => (isLoading ? 'hidden' : 'visible')};
 `;
 
 function Button({

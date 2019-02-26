@@ -7,10 +7,10 @@ import Burger from '../index';
 
 describe('<Burger />', () => {
   // Arrange
-  const onToggle = jest.fn();
+  const props = { onToggle: jest.fn() };
   const component = (
     <Environment>
-      <Burger onToggle={onToggle} />
+      <Burger {...props} />
     </Environment>
   );
 

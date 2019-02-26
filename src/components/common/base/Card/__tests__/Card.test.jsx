@@ -4,15 +4,10 @@ import renderer from 'react-test-renderer';
 
 import Card from '../index';
 
-const seed = {
-  props: {
-    children: 'Content'
-  }
-};
-
 describe('<Card />', () => {
   // Arrange
-  const component = <Card>{seed.props.children}</Card>;
+  const props = { children: 'content' };
+  const component = <Card {...props} />;
 
   describe('Unit tests', () => {
     it('should render without crashing', () => {

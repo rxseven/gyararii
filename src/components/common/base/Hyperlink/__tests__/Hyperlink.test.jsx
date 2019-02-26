@@ -6,7 +6,8 @@ import Hyperlink from '../index';
 
 describe('<Hyperlink />', () => {
   // Arrange
-  const component = <Hyperlink href="/">Link Text</Hyperlink>;
+  const props = { children: 'Link Text', href: '/' };
+  const component = <Hyperlink {...props} />;
 
   describe('Unit tests', () => {
     it('should render without crashing', () => {

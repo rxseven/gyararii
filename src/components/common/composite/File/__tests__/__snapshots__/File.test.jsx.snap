@@ -2,7 +2,7 @@
 
 exports[`<File /> Snapshot tests should render correctly 1`] = `
 <label
-  className="sc-ifAKCX bAELOi"
+  className="sc-EHOje grfhqt"
   htmlFor="file"
 >
   <span
@@ -12,12 +12,12 @@ exports[`<File /> Snapshot tests should render correctly 1`] = `
     role="button"
   >
     <span
-      className="sc-bwzfXH foyPXx"
+      className="sc-bxivhb IvOzD"
     >
       Text
     </span>
     <span
-      className="sc-bxivhb cRFcgP"
+      className="sc-bwzfXH iDiJqN"
     >
       <span>
         <style>
@@ -90,7 +90,7 @@ exports[`<File /> Snapshot tests should render correctly 1`] = `
     </span>
   </span>
   <input
-    className="sc-EHOje dQDKDv"
+    className="sc-ifAKCX iCqVOX"
     disabled={false}
     id="file"
     multiple={false}

@@ -4,8 +4,6 @@ exports[`<Wrapper /> Snapshot tests should render correctly 1`] = `
 <div
   className="sc-bdVaJa jaytjN"
 >
-  <div>
-    Content
-  </div>
+  content
 </div>
 `;

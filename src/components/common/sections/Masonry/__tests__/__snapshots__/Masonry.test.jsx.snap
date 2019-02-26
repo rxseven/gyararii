@@ -8,7 +8,7 @@ exports[`<Masonry /> Snapshot tests should render correctly 1`] = `
     className="card-columns"
   >
     <div
-      className="card sc-EHOje iBnegZ text-text-left mb-3"
+      className="card sc-EHOje bJcwWL text-text-left mb-3"
     >
       <div
         className="sc-bdVaJa cLhofW"

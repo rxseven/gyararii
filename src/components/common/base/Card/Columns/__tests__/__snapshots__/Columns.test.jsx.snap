@@ -4,6 +4,6 @@ exports[`<Card.Column /> Snapshot tests should render correctly 1`] = `
 <div
   className="card-columns"
 >
-  Content
+  content
 </div>
 `;

@@ -6,7 +6,8 @@ import Image from '../index';
 
 describe('<Card.Image />', () => {
   // Arrange
-  const component = <Image src="/gallery/image-001.png" />;
+  const props = { src: '/gallery/image-001.png' };
+  const component = <Image {...props} />;
 
   describe('Unit tests', () => {
     it('should render without crashing', () => {

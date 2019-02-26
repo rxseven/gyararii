@@ -10,8 +10,8 @@ function Home() {
       <Head>
         <title>ギャラリー</title>
         <meta
-          name="description"
           content="A simple React app for collecting photos"
+          name="description"
         />
       </Head>
       <Body>

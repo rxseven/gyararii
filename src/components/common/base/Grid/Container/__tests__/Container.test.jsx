@@ -5,15 +5,10 @@ import renderer from 'react-test-renderer';
 import mock from 'tests/mock';
 import Container from '../index';
 
-const seed = {
-  props: {
-    children: mock.elements.children
-  }
-};
-
 describe('<Container />', () => {
   // Arrange
-  const component = <Container>{seed.props.children}</Container>;
+  const props = { children: mock.elements.children };
+  const component = <Container {...props} />;
 
   describe('Unit tests', () => {
     it('should render without crashing', () => {

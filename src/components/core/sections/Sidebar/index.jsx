@@ -6,6 +6,7 @@ import withContext from 'HOCs/withContext';
 function Sidebar(props) {
   const { context } = props;
   const { actions, state } = context;
+
   return (
     <Menu
       isOpen={state.isMenu}

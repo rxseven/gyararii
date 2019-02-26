@@ -66,7 +66,7 @@ exports[`<Sidebar /> Snapshot tests should render correctly 1`] = `
         }
       >
         <div
-          className="bm-item"
+          className="bm-item sc-htpNat bcNAOR"
           style={
             Object {
               "display": "block",
@@ -75,7 +75,7 @@ exports[`<Sidebar /> Snapshot tests should render correctly 1`] = `
           tabIndex={-1}
         >
           <div
-            className="sc-htpNat irRsyb"
+            className="sc-bxivhb qapvx"
           >
             <a
               className="sc-bdVaJa jQwNdM"
@@ -87,14 +87,14 @@ exports[`<Sidebar /> Snapshot tests should render correctly 1`] = `
             </a>
           </div>
           <ul
-            className="sc-EHOje jkqiYl"
+            className="sc-bZQynM hRyDTQ"
           >
             <li
-              className="sc-bZQynM fGYiaS"
+              className="sc-gzVnrw kXANwb"
             >
               <a
                 aria-current="page"
-                className="sc-gzVnrw VdJZi sc-bwzfXH dRlolo active"
+                className="sc-htoDjs ydPJF sc-bwzfXH dRlolo active"
                 data-light={false}
                 href="/"
                 onClick={[Function]}
@@ -118,18 +118,86 @@ exports[`<Sidebar /> Snapshot tests should render correctly 1`] = `
                   />
                 </svg>
                 <span
-                  className="sc-htoDjs rhhap"
+                  className="sc-dnqmqq cpJVKj"
                 >
                   Gallery
                 </span>
               </a>
             </li>
             <li
-              className="sc-bZQynM fGYiaS"
+              className="sc-gzVnrw kXANwb"
             >
               <a
                 aria-current={null}
-                className="sc-gzVnrw VdJZi sc-bwzfXH dRlolo"
+                className="sc-htoDjs ydPJF sc-bwzfXH dRlolo"
+                data-light={false}
+                href="/about"
+                onClick={[Function]}
+              >
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-info-circle fa-w-16 "
+                  data-icon="info-circle"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 512 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M256 8C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm0 110c23.196 0 42 18.804 42 42s-18.804 42-42 42-42-18.804-42-42 18.804-42 42-42zm56 254c0 6.627-5.373 12-12 12h-88c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h12v-64h-12c-6.627 0-12-5.373-12-12v-24c0-6.627 5.373-12 12-12h64c6.627 0 12 5.373 12 12v100h12c6.627 0 12 5.373 12 12v24z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+                <span
+                  className="sc-dnqmqq cpJVKj"
+                >
+                  About Gyararii
+                </span>
+              </a>
+            </li>
+            <li
+              className="sc-gzVnrw kXANwb"
+            >
+              <a
+                aria-current={null}
+                className="sc-htoDjs ydPJF sc-bwzfXH dRlolo"
+                data-light={false}
+                href="/terms"
+                onClick={[Function]}
+              >
+                <svg
+                  aria-hidden="true"
+                  className="svg-inline--fa fa-file-alt fa-w-12 "
+                  data-icon="file-alt"
+                  data-prefix="fas"
+                  focusable="false"
+                  role="img"
+                  style={Object {}}
+                  viewBox="0 0 384 512"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm64 236c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12v8zm0-64c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12v8zm0-72v8c0 6.6-5.4 12-12 12H108c-6.6 0-12-5.4-12-12v-8c0-6.6 5.4-12 12-12h168c6.6 0 12 5.4 12 12zm96-114.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"
+                    fill="currentColor"
+                    style={Object {}}
+                  />
+                </svg>
+                <span
+                  className="sc-dnqmqq cpJVKj"
+                >
+                  Terms of Use
+                </span>
+              </a>
+            </li>
+            <li
+              className="sc-gzVnrw kXANwb"
+            >
+              <a
+                aria-current={null}
+                className="sc-htoDjs ydPJF sc-bwzfXH dRlolo"
                 data-light={false}
                 href="/404"
                 onClick={[Function]}
@@ -152,17 +220,17 @@ exports[`<Sidebar /> Snapshot tests should render correctly 1`] = `
                   />
                 </svg>
                 <span
-                  className="sc-htoDjs rhhap"
+                  className="sc-dnqmqq cpJVKj"
                 >
                   404
                 </span>
               </a>
             </li>
             <li
-              className="sc-bZQynM fGYiaS"
+              className="sc-gzVnrw kXANwb"
             >
               <a
-                className="sc-bxivhb bhtyXQ"
+                className="sc-ifAKCX jSbHxJ"
                 href="https://github.com/rxseven"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -185,17 +253,17 @@ exports[`<Sidebar /> Snapshot tests should render correctly 1`] = `
                   />
                 </svg>
                 <span
-                  className="sc-htoDjs rhhap"
+                  className="sc-dnqmqq cpJVKj"
                 >
                   Storybook
                 </span>
               </a>
             </li>
             <li
-              className="sc-bZQynM fGYiaS"
+              className="sc-gzVnrw kXANwb"
             >
               <a
-                className="sc-bxivhb bhtyXQ"
+                className="sc-ifAKCX jSbHxJ"
                 href="https://github.com/rxseven/gyararii"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -218,7 +286,7 @@ exports[`<Sidebar /> Snapshot tests should render correctly 1`] = `
                   />
                 </svg>
                 <span
-                  className="sc-htoDjs rhhap"
+                  className="sc-dnqmqq cpJVKj"
                 >
                   View on GitHub
                 </span>
@@ -226,10 +294,10 @@ exports[`<Sidebar /> Snapshot tests should render correctly 1`] = `
             </li>
           </ul>
           <div
-            className="sc-ifAKCX cPObRf"
+            className="sc-EHOje kTJQym"
           >
             <a
-              className="sc-dnqmqq dufLND"
+              className="sc-iwsKbI ktpWoE"
               href="https://github.com/rxseven/gyararii/releases/tag/v0.1.0"
               rel="noopener noreferrer"
               target="_blank"

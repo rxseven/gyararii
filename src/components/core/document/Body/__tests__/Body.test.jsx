@@ -2,18 +2,12 @@ import { shallow } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import mock from 'tests/mock';
 import Body from '../index';
-
-const seed = {
-  props: {
-    children: mock.elements.children
-  }
-};
 
 describe('<Body />', () => {
   // Arrange
-  const component = <Body>{seed.props.children}</Body>;
+  const props = { children: 'content' };
+  const component = <Body {...props} />;
 
   describe('Unit tests', () => {
     it('should render without crashing', () => {

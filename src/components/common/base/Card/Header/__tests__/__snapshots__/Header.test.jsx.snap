@@ -4,6 +4,6 @@ exports[`<Card.Header /> Snapshot tests should render correctly 1`] = `
 <div
   className="card-header"
 >
-  Content
+  content
 </div>
 `;

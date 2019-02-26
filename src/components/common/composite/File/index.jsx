@@ -4,15 +4,15 @@ import styled from 'styled-components';
 
 import Button from 'components/common/base/Button';
 
-const Label = styled.label`
-  margin-bottom: 0;
-`;
-
 const Input = styled.input`
   &[type='file'] {
     visibility: hidden;
     position: absolute;
   }
+`;
+
+const Label = styled.label`
+  margin-bottom: 0;
 `;
 
 const propTypes = {

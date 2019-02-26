@@ -7,9 +7,10 @@ import Brand from '../index';
 
 describe('<Brand />', () => {
   // Arrange
+  const props = { children: 'Link Text', href: '/' };
   const component = (
     <Environment>
-      <Brand href="/">Link Text</Brand>
+      <Brand {...props} />
     </Environment>
   );
 

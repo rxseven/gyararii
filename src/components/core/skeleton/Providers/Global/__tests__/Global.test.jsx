@@ -5,15 +5,10 @@ import renderer from 'react-test-renderer';
 import mock from 'tests/mock';
 import Global from '../index';
 
-const seed = {
-  props: {
-    children: mock.elements.children
-  }
-};
-
 describe('<Global />', () => {
   // Arrange
-  const component = <Global>{seed.props.children}</Global>;
+  const props = { children: mock.elements.children };
+  const component = <Global {...props} />;
 
   describe('Unit tests', () => {
     it('should render without crashing', () => {

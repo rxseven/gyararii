@@ -8,6 +8,7 @@ import Footnote from 'stories/utilities/Footnote';
 import View from './View/View.stories';
 
 const title = 'Components/Common/Modules/Gallery';
+const component = <div>A container component, no view later.</div>;
 
 storiesOf(title, module)
   .addDecorator(story => (
@@ -29,7 +30,7 @@ storiesOf(title, module)
       `
     }
   })
-  .add('default', () => <div>A container component, no view later.</div>, {
+  .add('default', () => component, {
     notes: notes.minimal
   });
 

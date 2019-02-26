@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 import Burger from './index';
 
 const title = 'Components/Common/Base/Burger';
-const actions = { onToggle: action('onToggle') };
-const component = <Burger {...actions} />;
+const props = { onToggle: action('onToggle') };
+const component = <Burger {...props} />;
 
 storiesOf(title, module).add('default', () => component);

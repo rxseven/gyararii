@@ -4,6 +4,6 @@ exports[`<Card.Footer /> Snapshot tests should render correctly 1`] = `
 <div
   className="card-footer text-muted"
 >
-  Content
+  content
 </div>
 `;

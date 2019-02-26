@@ -3,20 +3,14 @@ import React from 'react';
 import renderer from 'react-test-renderer';
 
 import Environment from 'tests/environment';
-import mock from 'tests/mock';
 import Sidebar from '../index';
-
-const seed = {
-  props: {
-    children: mock.elements.children
-  }
-};
 
 describe('<Sidebar />', () => {
   // Arrange
+  const props = { children: 'content' };
   const component = (
     <Environment>
-      <Sidebar>{seed.props.children}</Sidebar>
+      <Sidebar {...props} />
     </Environment>
   );
 

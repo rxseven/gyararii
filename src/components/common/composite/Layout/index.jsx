@@ -5,8 +5,8 @@ import React from 'react';
 import Grid from 'components/common/base/Grid';
 
 const propTypes = exact({
-  children: PropTypes.node.isRequired,
   alignment: PropTypes.string,
+  children: PropTypes.node.isRequired,
   size: PropTypes.string
 });
 

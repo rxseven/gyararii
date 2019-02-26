@@ -7,10 +7,10 @@ import Link from '../index';
 
 describe('<Nav.Link />', () => {
   // Arrange
-  const props = { to: '/' };
+  const props = { children: 'Link Text', to: '/' };
   const component = (
     <Environment>
-      <Link {...props}>Link Text</Link>
+      <Link {...props} />
     </Environment>
   );
 

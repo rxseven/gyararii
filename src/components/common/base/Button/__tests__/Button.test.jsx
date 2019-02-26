@@ -6,8 +6,8 @@ import Button from '../index';
 
 describe('<Button />', () => {
   // Arrange
-  const onClick = jest.fn();
-  const component = <Button onClick={onClick}>Text</Button>;
+  const props = { children: 'Text', onClick: jest.fn() };
+  const component = <Button {...props} />;
 
   describe('Unit tests', () => {
     it('should render without crashing', () => {

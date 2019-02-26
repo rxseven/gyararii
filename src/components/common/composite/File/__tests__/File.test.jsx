@@ -6,12 +6,8 @@ import File from '../index';
 
 describe('<File />', () => {
   // Arrange
-  const onChange = jest.fn();
-  const component = (
-    <File id="file" onChange={onChange}>
-      Text
-    </File>
-  );
+  const props = { children: 'Text', id: 'file', onChange: jest.fn() };
+  const component = <File {...props} />;
 
   describe('Unit tests', () => {
     it('should render without crashing', () => {

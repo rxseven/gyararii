@@ -5,8 +5,8 @@ import React from 'react';
 
 const propTypes = exact({
   children: PropTypes.node.isRequired,
-  onDismiss: PropTypes.func.isRequired,
-  look: PropTypes.string
+  look: PropTypes.string,
+  onDismiss: PropTypes.func.isRequired
 });
 
 const defaultProps = {

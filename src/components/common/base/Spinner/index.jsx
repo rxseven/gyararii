@@ -13,13 +13,13 @@ const defaultProps = {
   size: 7
 };
 
-const config = {
+const options = {
   duration: '1.25s',
   gutter: 5
 };
 
 function Spinner(props) {
-  return <ThreeBounce {...config} {...props} />;
+  return <ThreeBounce {...options} {...props} />;
 }
 
 Spinner.propTypes = propTypes;

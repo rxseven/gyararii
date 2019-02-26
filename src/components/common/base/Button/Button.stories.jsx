@@ -5,7 +5,7 @@ import { storiesOf } from '@storybook/react';
 import Button from './index';
 
 const title = 'Components/Common/Base/Button';
-const actions = { onClick: action('onClick') };
+const props = { onClick: action('onClick') };
 
 storiesOf(title, module)
   .addParameters({
@@ -15,47 +15,47 @@ storiesOf(title, module)
   `
     }
   })
-  .add('normal (default)', () => <Button {...actions}>Normal Button</Button>)
+  .add('normal (default)', () => <Button {...props}>Normal Button</Button>)
   .add('look', () => (
-    <Button {...actions} look="primary">
+    <Button {...props} look="primary">
       Primary
     </Button>
   ))
   .add('outline', () => (
-    <Button {...actions} outline="primary">
+    <Button {...props} outline="primary">
       Primary
     </Button>
   ))
   .add('size', () => (
-    <Button {...actions} look="primary" size="lg">
+    <Button {...props} look="primary" size="lg">
       Large
     </Button>
   ))
   .add('type', () => (
-    <Button {...actions} look="primary" type="submit">
+    <Button {...props} look="primary" type="submit">
       Submit
     </Button>
   ))
   .add('block', () => (
-    <Button {...actions} block look="primary">
+    <Button {...props} block look="primary">
       OK
     </Button>
   ))
   .add('disabled', () => (
-    <Button {...actions} isLoading look="primary">
+    <Button {...props} isLoading look="primary">
       OK
     </Button>
   ))
   .add('with icon', () => (
-    <Button {...actions} icon="cloud-upload-alt" look="primary" />
+    <Button {...props} icon="cloud-upload-alt" look="primary" />
   ))
   .add('with icon & text', () => (
-    <Button {...actions} icon="cloud-upload-alt" look="primary">
+    <Button {...props} icon="cloud-upload-alt" look="primary">
       Upload
     </Button>
   ))
   .add('with spinner', () => (
-    <Button {...actions} isLoading look="primary" spinner>
+    <Button {...props} isLoading look="primary" spinner>
       Upload
     </Button>
   ))

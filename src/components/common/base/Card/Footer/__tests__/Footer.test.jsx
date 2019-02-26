@@ -4,15 +4,10 @@ import renderer from 'react-test-renderer';
 
 import Footer from '../index';
 
-const seed = {
-  props: {
-    children: 'Content'
-  }
-};
-
 describe('<Card.Footer />', () => {
   // Arrange
-  const component = <Footer>{seed.props.children}</Footer>;
+  const props = { children: 'content' };
+  const component = <Footer {...props} />;
 
   describe('Unit tests', () => {
     it('should render without crashing', () => {
