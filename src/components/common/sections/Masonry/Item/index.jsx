@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import exact from 'prop-types-exact';
-import React from 'react';
+import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
 import { isMobile } from 'react-device-detect';
 
@@ -99,6 +99,15 @@ const Shadow = styled.div`
   }
 `;
 
+const Thumbnail = styled(Card)`
+  &&& {
+    border: ${props =>
+      props['data-visibility'] ? '1px solid rgba(0, 0, 0, 0.125)' : 'none'};
+    position: ${props => (props['data-visibility'] ? 'static' : 'absolute')};
+    z-index: -1;
+  }
+`;
+
 const propTypes = exact({
   image: PropTypes.shape({
     public_id: PropTypes.string.isRequired,
@@ -120,6 +129,7 @@ const defaultProps = {
 };
 
 function Item(props) {
+  const [visibility, setVisible] = useState(false);
   const {
     image: { public_id: publicId, secure_url: https, url },
     index,
@@ -129,6 +139,10 @@ function Item(props) {
     onSelect,
     toDelete
   } = props;
+
+  function handleLoaded() {
+    setVisible(true);
+  }
 
   function handleSelect(event) {
     event.stopPropagation();
@@ -144,9 +158,9 @@ function Item(props) {
   }
 
   return (
-    <Card>
+    <Thumbnail data-visibility={visibility}>
       <Frame onClick={handleOpenLightbox}>
-        <Card.Image src={https} />
+        <Card.Image src={https} onLoad={handleLoaded} />
         <Shadow mobile={isMobile} />
         <Select
           data-checked={isSelected}
@@ -167,7 +181,7 @@ function Item(props) {
           <Spinner color="#fff" />
         </Overlay>
       </Frame>
-    </Card>
+    </Thumbnail>
   );
 }
 

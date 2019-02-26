@@ -2,7 +2,7 @@
 
 exports[`<Masonry.Item /> Snapshot tests should render correctly 1`] = `
 <div
-  className="card text-text-left mb-3"
+  className="card sc-EHOje iBnegZ text-text-left mb-3"
 >
   <div
     className="sc-bdVaJa cLhofW"
