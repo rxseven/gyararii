@@ -46,17 +46,16 @@ const Shadow = styled.div`
 
 const propTypes = exact({
   children: PropTypes.node.isRequired,
-  isLoading: PropTypes.bool,
-  node: PropTypes.any.isRequired
+  isLoading: PropTypes.bool
 });
 
 const defaultProps = {
   isLoading: false
 };
 
-function Toolbar({ children, isLoading, node }) {
+function Toolbar({ children, isLoading }) {
   return (
-    <Frame isLoading={isLoading} ref={node}>
+    <Frame isLoading={isLoading}>
       <Grid.Container>
         <Grid.Row>
           <Grid.Column>

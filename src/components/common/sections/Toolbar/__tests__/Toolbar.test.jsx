@@ -6,7 +6,7 @@ import Toolbar from '../index';
 
 describe('<Toolbar />', () => {
   // Arrange
-  const props = { children: 'content', node: React.createRef() };
+  const props = { children: 'content' };
   const component = <Toolbar {...props} />;
 
   describe('Unit tests', () => {
