@@ -1,6 +1,5 @@
 import cx from 'classnames';
 import PropTypes from 'prop-types';
-import exact from 'prop-types-exact';
 import React from 'react';
 
 import Body from './Body';
@@ -12,28 +11,39 @@ import Image from './Image';
 import Text from './Text';
 import Title from './Title';
 
-const propTypes = exact({
+const propTypes = {
   alignment: PropTypes.string,
   background: PropTypes.string,
   children: PropTypes.node.isRequired,
+  className: PropTypes.string,
   color: PropTypes.string,
   end: PropTypes.bool,
   margin: PropTypes.string
-});
+};
 
 const defaultProps = {
   alignment: 'text-left',
   background: '',
+  className: '',
   color: '',
   end: false,
   margin: '3'
 };
 
-function Card({ alignment, background, children, color, end, margin }) {
+function Card({
+  alignment,
+  background,
+  children,
+  className,
+  color,
+  end,
+  margin
+}) {
   return (
     <div
       className={cx(
         'card',
+        className,
         !!alignment && `text-${alignment}`,
         !!background && `bg-${background}`,
         !!color && `text-${color}`,
