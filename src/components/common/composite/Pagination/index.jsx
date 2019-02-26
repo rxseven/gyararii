@@ -11,7 +11,7 @@ const Frame = styled.div`
   display: ${({ hidden }) => (hidden ? 'none' : 'flex')};
   justify-content: center;
   margin: 1.5rem 0;
-  min-height: 27px;
+  min-height: 28px;
 `;
 
 const propTypes = exact({
