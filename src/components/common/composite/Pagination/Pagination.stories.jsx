@@ -9,7 +9,6 @@ const props = {
   children: 'More images',
   isLoading: false,
   isMore: false,
-  node: React.createRef(),
   onLoad: action('onLoad')
 };
 

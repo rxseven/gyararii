@@ -10,7 +10,6 @@ describe('<Pagination />', () => {
     children: 'More images',
     isLoading: false,
     isMore: false,
-    node: React.createRef(),
     onLoad: jest.fn()
   };
   const component = <Pagination {...props} />;

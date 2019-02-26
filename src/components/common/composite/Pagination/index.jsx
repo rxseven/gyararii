@@ -8,7 +8,7 @@ import Spinner from 'components/common/base/Spinner';
 
 const Frame = styled.div`
   align-items: center;
-  display: flex;
+  display: ${({ hidden }) => (hidden ? 'none' : 'flex')};
   justify-content: center;
   margin: 1.5rem 0;
   min-height: 27px;
@@ -18,7 +18,6 @@ const propTypes = exact({
   children: PropTypes.string.isRequired,
   isLoading: PropTypes.bool,
   isMore: PropTypes.bool,
-  node: PropTypes.any.isRequired,
   onLoad: PropTypes.func.isRequired
 });
 
@@ -27,22 +26,22 @@ const defaultProps = {
   isMore: false
 };
 
-function Pagination({ children, isLoading, isMore, node, onLoad }) {
+function Pagination({ children, isLoading, isMore, onLoad }) {
   function handleLoad() {
     onLoad({ mode: 'pagination' });
   }
 
   return (
-    <Frame ref={node}>
+    <Frame hidden={!isLoading && !isMore}>
       <Choose>
-        <When condition={isLoading}>
-          <Spinner />
-        </When>
         <When condition={!isLoading && isMore}>
           <Button icon="image" look="outline-primary" onClick={handleLoad}>
             {children}
           </Button>
         </When>
+        <Otherwise>
+          <Spinner />
+        </Otherwise>
       </Choose>
     </Frame>
   );
