@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import PropTypes from 'prop-types';
 import exact from 'prop-types-exact';
 import React, { useState } from 'react';
@@ -12,7 +13,8 @@ const styles = {
   icon: css`
     color: #fff;
     cursor: pointer;
-    font-size: 16px;
+    display: ${props => (props['data-visibility'] ? 'block' : 'none')};
+    font-size: ${props => (props['data-mobile'] ? '1.5rem' : '1rem')};
     position: absolute;
   `
 };
@@ -34,7 +36,7 @@ const Link = styled.a`
   ${styles.icon}
   color: ${props => (props['data-mobile'] ? '#666' : '#fff')};
   display: ${props => (props['data-mobile'] ? 'block' : 'none')};
-  left: 32px;
+  left: ${props => (props['data-mobile'] ? '42px' : '32px')};
   opacity: ${props => (props['data-mobile'] ? 0.5 : 1)};
   top: 2px;
 
@@ -64,7 +66,8 @@ const Overlay = styled.div`
 
 const Select = styled(Icon)`
   ${styles.icon}
-  color: ${props => (props['data-checked'] ? '#ff620c' : '#fff')};
+  color: ${props =>
+    props['data-checked'] ? '#ff620c' : props['data-mobile'] ? '#666' : '#fff'};
   display: ${props =>
     props['data-checked'] || props['data-mobile'] ? 'block' : 'none'};
   left: 7px;
