@@ -1,19 +1,25 @@
+import cx from 'classnames';
 import PropTypes from 'prop-types';
 import exact from 'prop-types-exact';
 import React from 'react';
 
 const propTypes = exact({
-  children: PropTypes.string.isRequired,
-  onDismiss: PropTypes.func.isRequired
+  children: PropTypes.node.isRequired,
+  onDismiss: PropTypes.func.isRequired,
+  look: PropTypes.string
 });
 
-function Alert({ children, onDismiss }) {
+const defaultProps = {
+  look: 'danger'
+};
+
+function Alert({ children, onDismiss, look }) {
   function handleDismiss() {
     onDismiss(children);
   }
 
   return (
-    <div className="alert alert-danger">
+    <div className={cx('alert', `alert-${look}`)}>
       {children}
       <button
         aria-label="Close"
@@ -28,5 +34,6 @@ function Alert({ children, onDismiss }) {
 }
 
 Alert.propTypes = propTypes;
+Alert.defaultProps = defaultProps;
 
 export default Alert;

@@ -6,6 +6,14 @@ import Alert from './index';
 
 const title = 'Components/Common/Base/Alert';
 const props = { children: 'Alert message', onDismiss: action('onDismiss') };
-const component = <Alert {...props} />;
 
-storiesOf(title, module).add('default', () => component);
+storiesOf(title, module)
+  .addParameters({
+    info: {
+      text: `
+  **Usage:** for more information, see [Bootstrap - Alerts](https://getbootstrap.com/docs/4.1/components/alerts/).
+`
+    }
+  })
+  .add('danger (default)', () => <Alert {...props} />)
+  .add('look', () => <Alert {...props} look="success" />);
