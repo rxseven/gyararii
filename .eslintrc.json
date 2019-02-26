@@ -8,7 +8,8 @@
     "airbnb",
     "plugin:jest/recommended",
     "plugin:jsx-control-statements/recommended",
-    "prettier"
+    "prettier",
+    "prettier/react"
   ],
   "plugins": ["jest", "jsx-control-statements", "prettier"],
   "rules": {
