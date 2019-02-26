@@ -14,6 +14,7 @@ describe('<Masonry.Item />', () => {
       url: 'gallery/image-001.jpg'
     },
     index: 1,
+    onLoaded: jest.fn(),
     onPreview: jest.fn(),
     onSelect: jest.fn()
   };

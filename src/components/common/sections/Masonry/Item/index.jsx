@@ -118,6 +118,7 @@ const propTypes = exact({
     url: PropTypes.string.isRequired
   }).isRequired,
   index: PropTypes.number.isRequired,
+  onLoaded: PropTypes.func.isRequired,
   isLoading: PropTypes.bool,
   onPreview: PropTypes.func.isRequired,
   isSelected: PropTypes.bool,
@@ -136,14 +137,16 @@ function Item(props) {
   const {
     image: { public_id: publicId, secure_url: https, url },
     index,
+    onLoaded,
     isLoading,
-    isSelected,
     onPreview,
     onSelect,
+    isSelected,
     toDelete
   } = props;
 
   function handleLoaded() {
+    onLoaded();
     setVisible(true);
   }
 
