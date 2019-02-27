@@ -40,6 +40,7 @@ const Link = styled.a`
   opacity: ${props => (props['data-mobile'] ? 0.5 : 1)};
   top: 2px;
 
+  /* stylelint-disable-next-line */
   ${Frame}:hover & {
     display: block;
     opacity: 0.5;
@@ -74,6 +75,7 @@ const Select = styled(Icon)`
   opacity: ${props => (props['data-mobile'] ? 0.5 : 1)};
   top: 7px;
 
+  /* stylelint-disable-next-line */
   ${Frame}:hover & {
     display: block;
     opacity: ${props => (props['data-checked'] ? '1' : '0.5')};
@@ -97,6 +99,7 @@ const Shadow = styled.div`
   width: 100%;
   z-index: 0;
 
+  /* stylelint-disable-next-line */
   ${Frame}:hover & {
     display: ${({ mobile }) => (mobile ? 'none' : 'block')};
   }
