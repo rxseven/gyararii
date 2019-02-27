@@ -11,6 +11,10 @@ A simple React app for collecting photos.
 - [Live Demo](#live-demo)
 - [Configuring the Development Environment](#configuring-the-development-environment)
 
+### Specifications
+
+- [Features](#features)
+
 ## Live Demo
 
 **Gyararii** is running on **Heroku** at [https://gyararii.herokuapp.com](https://gyararii.herokuapp.com)
@@ -191,6 +195,14 @@ yarn storybook:static
 **2.** Open [http://localhost:8081](http://localhost:8081) in the browser to launch the static Storybook app in the browser.
 
 > Tip: press `control + c` to stop the server.
+
+[Back to top](#table-of-contents)
+
+## Features
+
+- View images (masonry and lightbox)
+- Upload images
+- Delete images
 
 [Back to top](#table-of-contents)
 
