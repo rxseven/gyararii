@@ -25,6 +25,7 @@ A simple React app for collecting photos.
 - [Development Milestones](#development-milestones)
 - [Changelog](#changelog)
 - [Acknowledgements](#acknowledgements)
+- [Credits](#credits)
 
 ## Live Demo
 
@@ -311,6 +312,10 @@ See [releases](https://github.com/rxseven/gyararii/releases).
 ## Acknowledgements
 
 This project is maintained by [Theerawat Pongsupawat](http://www.rxseven.com), frontend developer from Chiang Mai, Thailand.
+
+## Credits
+
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 ---
 
