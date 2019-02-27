@@ -20,6 +20,10 @@ A simple React app for collecting photos.
 - [Browser Support](#browser-support)
 - [Related Projects](#related-projects)
 
+### Appendix
+
+- [Development Milestones](#development-milestones)
+
 ## Live Demo
 
 **Gyararii** is running on **Heroku** at [https://gyararii.herokuapp.com](https://gyararii.herokuapp.com)
@@ -286,6 +290,15 @@ REST API for Gyararii built with Node.js, Express, and Cloudinary.
 **[Setup React App](https://github.com/rxseven/setup-react-app)**
 
 React & Redux starter kit with best practices bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+
+[Back to top](#table-of-contents)
+
+## Development Milestones
+
+- Implement animations
+- Optimize the app’s performance
+- Add more unit tests to cover the entire app
+- More...
 
 [Back to top](#table-of-contents)
 
