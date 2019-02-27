@@ -66,7 +66,7 @@ exports[`<Menu /> Snapshot tests should render correctly 1`] = `
         }
       >
         <div
-          className="bm-item"
+          className="bm-item sc-htpNat bcNAOR"
           style={
             Object {
               "display": "block",
@@ -75,7 +75,7 @@ exports[`<Menu /> Snapshot tests should render correctly 1`] = `
           tabIndex={-1}
         >
           <div
-            className="sc-htpNat irRsyb"
+            className="sc-bxivhb qapvx"
           >
             <a
               className="sc-bdVaJa jQwNdM"
@@ -87,14 +87,14 @@ exports[`<Menu /> Snapshot tests should render correctly 1`] = `
             </a>
           </div>
           <ul
-            className="sc-EHOje jkqiYl"
+            className="sc-bZQynM hRyDTQ"
           >
             <li
-              className="sc-bZQynM fGYiaS"
+              className="sc-gzVnrw kXANwb"
             >
               <a
                 aria-current="page"
-                className="sc-gzVnrw VdJZi sc-bwzfXH dRlolo active"
+                className="sc-htoDjs ydPJF sc-bwzfXH dRlolo active"
                 data-light={false}
                 href="/"
                 onClick={[Function]}
@@ -118,17 +118,17 @@ exports[`<Menu /> Snapshot tests should render correctly 1`] = `
                   />
                 </svg>
                 <span
-                  className="sc-htoDjs rhhap"
+                  className="sc-dnqmqq cpJVKj"
                 >
                   Gallery
                 </span>
               </a>
             </li>
             <li
-              className="sc-bZQynM fGYiaS"
+              className="sc-gzVnrw kXANwb"
             >
               <a
-                className="sc-bxivhb bhtyXQ"
+                className="sc-ifAKCX jSbHxJ"
                 href="https://github.com/rxseven/gyararii"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -151,7 +151,7 @@ exports[`<Menu /> Snapshot tests should render correctly 1`] = `
                   />
                 </svg>
                 <span
-                  className="sc-htoDjs rhhap"
+                  className="sc-dnqmqq cpJVKj"
                 >
                   View on GitHub
                 </span>
@@ -159,10 +159,10 @@ exports[`<Menu /> Snapshot tests should render correctly 1`] = `
             </li>
           </ul>
           <div
-            className="sc-ifAKCX cPObRf"
+            className="sc-EHOje kTJQym"
           >
             <a
-              className="sc-dnqmqq dufLND"
+              className="sc-iwsKbI ktpWoE"
               href="https://github.com/rxseven/gyararii/releases/tag/v0.1.0"
               rel="noopener noreferrer"
               target="_blank"

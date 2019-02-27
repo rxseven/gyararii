@@ -27,6 +27,11 @@ const linkStyles = css`
   }
 `;
 
+const Frame = styled.div`
+  box-shadow: none;
+  outline: none;
+`;
+
 const Header = styled.div`
   align-items: center;
   border-bottom: #ccc solid 1px;
@@ -122,7 +127,7 @@ class Menu extends React.Component {
     return (
       <React.Fragment>
         <Offcanvas {...menuOptions} isOpen={isOpen} onStateChange={onChange}>
-          <div>
+          <Frame>
             <Header>
               <Brand />
             </Header>
@@ -145,7 +150,7 @@ class Menu extends React.Component {
                 Version 0.1.0
               </Version>
             </Meta>
-          </div>
+          </Frame>
         </Offcanvas>
         <Overflow />
       </React.Fragment>
