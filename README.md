@@ -15,6 +15,7 @@ A simple React app for collecting photos.
 
 - [Features](#features)
 - [Technology Stack](#technology-stack)
+- [Development Workflow](#development-workflow)
 
 ## Live Demo
 
@@ -222,6 +223,29 @@ Gyararii was built with React and Node.js, one of the most popular stack of tech
 
 - Node.js, Express, and Cloudinary
 - Body parser, Path parser, Lodash
+
+[Back to top](#table-of-contents)
+
+## Development Workflow
+
+- Project bootstraping with Create React App
+- JavaScript and assets bundling with Webpack
+- Development server and live reloading with Webpack DevServer
+- JavaScript transpiling with Babel
+- CSS-in-JS with Styled Components
+- CSS pre-processing and transforming with Sass, PostCSS, and CSS modules
+- JavaScript linting with ESLint
+- Stylesheet linting with Stylelint
+- Code formatting with Prettier
+- Automate testing with Jest and Enzyme
+- Assets analyzing and debuging with Source Map Explorer
+- Type checking with PropTypes
+- Code debugging with Visual Studio Code and Chrome Debugger
+- Pre-commit hooking with Husky and Lint-staged
+- CI/CD with GitHub, Travis CI, and Heroku
+- Developing UI components in isolation with Storybook
+
+> Note: the complete guidelines are available in [this project](https://github.com/rxseven/setup-react-app).
 
 [Back to top](#table-of-contents)
 
