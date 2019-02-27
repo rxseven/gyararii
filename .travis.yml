@@ -16,6 +16,8 @@ script:
   - yarn lint:styles
   # Run styled components linting
   - yarn lint:styled
+  # Create an optimized production build
+  - yarn build
 
 notifications:
   # Default email notification settings
