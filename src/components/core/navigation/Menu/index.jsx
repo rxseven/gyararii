@@ -139,6 +139,18 @@ class Menu extends React.Component {
                 </NavLink>
               </NavItem>
               <NavItem>
+                <NavLink exact to={PATHS.about}>
+                  <Icon icon="info-circle" />
+                  <Text>About Gyararii</Text>
+                </NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink exact to={PATHS.terms}>
+                  <Icon icon="file-alt" />
+                  <Text>Terms & Conditions</Text>
+                </NavLink>
+              </NavItem>
+              <NavItem>
                 <Link href="https://github.com/rxseven/gyararii">
                   <Icon icon={['fab', 'github-alt']} />
                   <Text>View on GitHub</Text>
