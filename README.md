@@ -14,6 +14,7 @@ A simple React app for collecting photos.
 ### Specifications
 
 - [Features](#features)
+- [Technology Stack](#technology-stack)
 
 ## Live Demo
 
@@ -203,6 +204,24 @@ yarn storybook:static
 - View images (masonry and lightbox)
 - Upload images
 - Delete images
+
+[Back to top](#table-of-contents)
+
+## Technology Stack
+
+Gyararii was built with React and Node.js, one of the most popular stack of technologies for building a modern single-page app.
+
+### Web application
+
+- React, React Router, React Transition Group, React Helmet
+- Recompose, Lodash, Ramda, Axios, Yup
+- Styled Components, Sass, PostCSS, CSS modules, Bootstrap
+- [More...](https://github.com/rxseven/gyararii/blob/master/package.json)
+
+### REST API
+
+- Node.js, Express, and Cloudinary
+- Body parser, Path parser, Lodash
 
 [Back to top](#table-of-contents)
 
