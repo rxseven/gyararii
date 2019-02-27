@@ -1,4 +1,5 @@
 import React from 'react';
+import { isMobile } from 'react-device-detect';
 import styled from 'styled-components';
 
 import Confirm from 'components/common/composite/Confirm';
@@ -60,6 +61,7 @@ function View(props) {
         <File
           data-place="right"
           data-tip="Please DO NOT upload inappropriate images."
+          data-tip-disable={isMobile}
           icon="cloud-upload-alt"
           id="gallery"
           isLoading={isLoading}

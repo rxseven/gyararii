@@ -95,6 +95,9 @@ function Footer() {
                 <NavLink to={PATHS.terms}>Terms</NavLink>
               </NavItem>
               <NavItem>
+                <Link href="https://gyararii.netlify.com">Storybook</Link>
+              </NavItem>
+              <NavItem>
                 <Link href="https://github.com/rxseven/gyararii">GitHub</Link>
               </NavItem>
             </Navigation>

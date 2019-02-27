@@ -18,11 +18,23 @@ function About() {
             <Card.Header>What is Gyararii</Card.Header>
             <Card.Body>
               <Card.Text>
-                Gyararii is a simple React app for collecting photos.
+                <strong>Gyararaii</strong> is a very simple single page
+                application (SPA) for collecting photos. It was built with pure
+                React and PropTypes, no state menagement like Redux and static
+                type checking like TypeScript or Flow needed.
               </Card.Text>
               <Card.Text>
-                It is an open-source project maintained by Theerawat
-                Pongsupawat, frontend developer from Chiang Mai, Thailand.
+                <strong>Gyararaii</strong> is an open-source project maintained
+                by{' '}
+                <Hyperlink href="https://www.linkedin.com/in/pongsupawat">
+                  Theerawat Pongsupawat
+                </Hyperlink>
+                , React &amp; Redux frontend developer from Chiang Mai,
+                Thailand.
+              </Card.Text>
+              <Card.Text>
+                <strong>Gyararaii</strong> or ギャラリー literally means
+                “Gallery” in Japanese.
               </Card.Text>
             </Card.Body>
           </Card>
