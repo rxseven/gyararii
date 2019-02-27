@@ -44,6 +44,7 @@ describe('<Gallery.View />', () => {
       }
     ],
     onLightboxOpen: jest.fn(),
+    onLoaded: jest.fn(),
     onSelect: jest.fn(),
 
     // Pagination
