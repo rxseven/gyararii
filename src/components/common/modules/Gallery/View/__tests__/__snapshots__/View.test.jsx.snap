@@ -175,11 +175,11 @@ exports[`<Gallery.View /> Snapshot tests should render correctly 1`] = `
           onClick={[Function]}
         >
           <div
-            className="sc-kAzzGY jMPRIu"
+            className="sc-kAzzGY cCGlGI"
           />
           <svg
             aria-hidden="true"
-            className="svg-inline--fa fa-check-circle fa-w-16 sc-cSHVUG bCacWZ"
+            className="svg-inline--fa fa-check-circle fa-w-16 sc-cSHVUG EsCbH"
             data-checked={false}
             data-icon="check-circle"
             data-mobile={false}
@@ -198,7 +198,7 @@ exports[`<Gallery.View /> Snapshot tests should render correctly 1`] = `
             />
           </svg>
           <a
-            className="sc-fjdhpX hYGmOQ"
+            className="sc-fjdhpX kEjQDE"
             data-mobile={false}
             href="https://via.placeholder.com/480x320?text=Image-001"
             onClick={[Function]}
@@ -305,11 +305,11 @@ exports[`<Gallery.View /> Snapshot tests should render correctly 1`] = `
           onClick={[Function]}
         >
           <div
-            className="sc-kAzzGY jMPRIu"
+            className="sc-kAzzGY cCGlGI"
           />
           <svg
             aria-hidden="true"
-            className="svg-inline--fa fa-check-circle fa-w-16 sc-cSHVUG bCacWZ"
+            className="svg-inline--fa fa-check-circle fa-w-16 sc-cSHVUG EsCbH"
             data-checked={false}
             data-icon="check-circle"
             data-mobile={false}
@@ -328,7 +328,7 @@ exports[`<Gallery.View /> Snapshot tests should render correctly 1`] = `
             />
           </svg>
           <a
-            className="sc-fjdhpX hYGmOQ"
+            className="sc-fjdhpX kEjQDE"
             data-mobile={false}
             href="https://via.placeholder.com/480x320?text=Image-002"
             onClick={[Function]}
@@ -435,11 +435,11 @@ exports[`<Gallery.View /> Snapshot tests should render correctly 1`] = `
           onClick={[Function]}
         >
           <div
-            className="sc-kAzzGY jMPRIu"
+            className="sc-kAzzGY cCGlGI"
           />
           <svg
             aria-hidden="true"
-            className="svg-inline--fa fa-check-circle fa-w-16 sc-cSHVUG bCacWZ"
+            className="svg-inline--fa fa-check-circle fa-w-16 sc-cSHVUG EsCbH"
             data-checked={false}
             data-icon="check-circle"
             data-mobile={false}
@@ -458,7 +458,7 @@ exports[`<Gallery.View /> Snapshot tests should render correctly 1`] = `
             />
           </svg>
           <a
-            className="sc-fjdhpX hYGmOQ"
+            className="sc-fjdhpX kEjQDE"
             data-mobile={false}
             href="https://via.placeholder.com/480x320?text=Image-003"
             onClick={[Function]}
