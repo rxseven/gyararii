@@ -2,12 +2,12 @@ import { has } from 'lodash';
 import React from 'react';
 import { animateScroll as scroll } from 'react-scroll';
 
+import withContext from 'HOCs/withContext';
+
 import { isTruthy } from 'helpers/boolean';
 import { pluralWord } from 'helpers/string';
 import toast from 'helpers/toast';
 import * as galelryService from 'services/gallery';
-
-import withContext from 'HOCs/withContext';
 
 import View from './View';
 
