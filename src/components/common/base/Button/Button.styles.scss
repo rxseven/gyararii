@@ -1,0 +1,10 @@
+// Bootstrap Buttons
+// https://getbootstrap.com/docs/4.1/components/buttons/
+
+.btn {
+  position: relative;
+
+  &:not(:disabled):not(.disabled) {
+    cursor: pointer;
+  }
+}

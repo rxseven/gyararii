@@ -4,15 +4,10 @@ import renderer from 'react-test-renderer';
 
 import Head from '../index';
 
-const seed = {
-  props: {
-    children: <title>Page Title</title>
-  }
-};
-
 describe('<Head />', () => {
   // Arrange
-  const component = <Head>{seed.props.children}</Head>;
+  const props = { children: 'content' };
+  const component = <Head {...props} />;
 
   describe('Unit tests', () => {
     it('should render without crashing', () => {

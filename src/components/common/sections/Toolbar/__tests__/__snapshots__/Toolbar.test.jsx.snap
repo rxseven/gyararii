@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Toolbar /> Snapshot tests should render correctly 1`] = `
+<div
+  className="sc-bwzfXH hknwyC"
+>
+  <div
+    className="container"
+  >
+    <div
+      className="row"
+    >
+      <div
+        className="col"
+      >
+        <div
+          className="sc-bdVaJa hBESVI"
+        >
+          content
+        </div>
+      </div>
+    </div>
+    <div
+      className="sc-htpNat chXZuS"
+    />
+  </div>
+</div>
+`;

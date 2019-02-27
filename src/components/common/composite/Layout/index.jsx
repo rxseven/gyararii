@@ -5,20 +5,24 @@ import React from 'react';
 import Grid from 'components/common/base/Grid';
 
 const propTypes = exact({
-  children: PropTypes.node.isRequired,
+  adaptive: PropTypes.bool,
   alignment: PropTypes.string,
+  children: PropTypes.node.isRequired,
   size: PropTypes.string
 });
 
 const defaultProps = {
+  adaptive: false,
   alignment: 'justify-content-sm-center',
   size: 'col'
 };
 
-function Layout({ alignment, children, size }) {
+function Layout({ adaptive, alignment, children, size }) {
   return (
     <Grid.Row alignment={alignment}>
-      <Grid.Column size={size}>{children}</Grid.Column>
+      <Grid.Column size={adaptive ? 'col-md-10 col-lg-8' : size}>
+        {children}
+      </Grid.Column>
     </Grid.Row>
   );
 }

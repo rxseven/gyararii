@@ -2,7 +2,7 @@
 
 exports[`<Main /> Snapshot tests should render correctly 1`] = `
 <main
-  className="sc-bdVaJa cIUQSX"
+  className="sc-bdVaJa gFhbTF"
 >
   <div
     className="container"
@@ -13,9 +13,7 @@ exports[`<Main /> Snapshot tests should render correctly 1`] = `
       <div
         className="col"
       >
-        <div>
-          Content
-        </div>
+        content
       </div>
     </div>
   </div>

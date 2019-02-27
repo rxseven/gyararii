@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Nav.Link /> Snapshot tests should render correctly 1`] = `
+<a
+  aria-current="page"
+  className="sc-bdVaJa cVXdtY active"
+  data-light={false}
+  href="/"
+  onClick={[Function]}
+  style={Object {}}
+>
+  Link Text
+</a>
+`;

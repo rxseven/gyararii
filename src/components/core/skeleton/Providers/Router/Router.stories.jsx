@@ -6,9 +6,9 @@ import notes from 'stories/shared/notes';
 import Router from './index';
 
 const { content } = mock.elements;
-const title = 'Components/Core/Skeleton/Router';
+const title = 'Components/Core/Skeleton/Providers/Router';
 const component = <Router>{content}</Router>;
 
 storiesOf(title, module).add('default', () => component, {
-  notes: notes.hoc
+  notes: notes.provider
 });

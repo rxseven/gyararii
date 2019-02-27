@@ -6,9 +6,9 @@ import notes from 'stories/shared/notes';
 import Theme from './index';
 
 const { content } = mock.elements;
-const title = 'Components/Core/Skeleton/Theme';
+const title = 'Components/Core/Skeleton/Providers/Theme';
 const component = <Theme>{content}</Theme>;
 
 storiesOf(title, module).add('default', () => component, {
-  notes: notes.hoc
+  notes: notes.provider
 });

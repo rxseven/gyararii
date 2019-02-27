@@ -7,7 +7,7 @@ const title = 'Components/Common/Base/Page/Head';
 const component = (
   <Head>
     <title>Document Title</title>
-    <meta name="description" content="Define a description of a web page" />
+    <meta content="Define a description of a web page" name="description" />
   </Head>
 );
 

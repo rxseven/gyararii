@@ -2,18 +2,12 @@ import { shallow } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import mock from 'tests/mock';
 import Document from '../index';
-
-const seed = {
-  props: {
-    children: mock.elements.children
-  }
-};
 
 describe('<Document />', () => {
   // Arrange
-  const component = <Document>{seed.props.children}</Document>;
+  const props = { children: 'content' };
+  const component = <Document {...props} />;
 
   describe('Unit tests', () => {
     it('should render without crashing', () => {

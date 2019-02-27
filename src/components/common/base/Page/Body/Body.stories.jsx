@@ -5,9 +5,9 @@ import mock from 'stories/mock';
 import notes from 'stories/shared/notes';
 import Body from './index';
 
-const { content } = mock.elements;
+const { text } = mock;
 const title = 'Components/Common/Base/Page/Body';
-const component = <Body>{content}</Body>;
+const component = <Body>{text}</Body>;
 
 storiesOf(title, module).add('default', () => component, {
   notes: notes.minimal
