@@ -1,8 +1,11 @@
 import * as React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
+import withLoadable from 'HOCs/withLoadable';
 import PATHS from 'constants/routes/paths';
-import { Home, NotFound } from 'screens';
+import { Home } from 'screens';
+
+const NotFound = withLoadable(() => import('screens/main/NotFound'));
 
 function Routes() {
   return (
