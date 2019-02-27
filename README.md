@@ -1,6 +1,6 @@
 # Gyararii
 
-[![Latest Release](https://img.shields.io/badge/latest-0.1.0-lightgrey.svg?style=flat 'Latest Release')](https://github.com/rxseven/gyararii/releases/tag/v0.1.0) [![Build Status](https://travis-ci.org/rxseven/gyararii.svg?branch=master 'Build Status')](https://travis-ci.org/rxseven/gyararii)
+[![Latest Release](https://img.shields.io/badge/latest-0.1.0-lightgrey.svg?style=flat 'Latest Release')](https://github.com/rxseven/gyararii/releases/tag/v0.1.0) [![Build Status](https://travis-ci.org/rxseven/gyararii.svg?branch=master 'Build Status')](https://travis-ci.org/rxseven/gyararii) [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/ 'CC BY-NC-ND 4.0')
 
 A simple React app for collecting photos.
 
