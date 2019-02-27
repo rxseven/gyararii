@@ -2,10 +2,10 @@
 
 exports[`<Gallery.View /> Snapshot tests should render correctly 1`] = `
 <div
-  className="sc-hMqMXs dMjOIG"
+  className="sc-kEYyzF hhZbae"
 >
   <div
-    className="sc-jKJlTe cDrlMA"
+    className="sc-eNQAEJ iJLkrf"
   >
     <div
       className="container"
@@ -17,7 +17,7 @@ exports[`<Gallery.View /> Snapshot tests should render correctly 1`] = `
           className="col"
         >
           <div
-            className="sc-ckVGcZ cuDuMa"
+            className="sc-jKJlTe iXSmQl"
           >
             <label
               className="sc-gqjmRU egfDhJ"
@@ -157,29 +157,29 @@ exports[`<Gallery.View /> Snapshot tests should render correctly 1`] = `
         </div>
       </div>
       <div
-        className="sc-eNQAEJ bnYtcV"
+        className="sc-hMqMXs dRzBD"
       />
     </div>
   </div>
   <div
-    className="sc-kgoBCf eIUqfm"
+    className="sc-kGXeez jhzAZZ"
   >
     <div
       className="card-columns"
     >
       <div
-        className="card sc-chPdSV evfJHz text-text-left mb-3"
+        className="card sc-kgoBCf dEuInR text-text-left mb-3"
       >
         <div
-          className="sc-jTzLTM hIHSra"
+          className="sc-fjdhpX idBwjd"
           onClick={[Function]}
         >
           <div
-            className="sc-kAzzGY cCGlGI"
+            className="sc-chPdSV gOGbZh"
           />
           <svg
             aria-hidden="true"
-            className="svg-inline--fa fa-check-circle fa-w-16 sc-cSHVUG EsCbH"
+            className="svg-inline--fa fa-check-circle fa-w-16 sc-kAzzGY jQRtnk"
             data-checked={false}
             data-icon="check-circle"
             data-mobile={false}
@@ -198,7 +198,7 @@ exports[`<Gallery.View /> Snapshot tests should render correctly 1`] = `
             />
           </svg>
           <a
-            className="sc-fjdhpX kEjQDE"
+            className="sc-jzJRlG fSxHWO"
             data-mobile={false}
             href="https://via.placeholder.com/480x320?text=Image-001"
             onClick={[Function]}
@@ -224,7 +224,7 @@ exports[`<Gallery.View /> Snapshot tests should render correctly 1`] = `
             </svg>
           </a>
           <div
-            className="sc-jzJRlG cxewMt"
+            className="sc-cSHVUG bHUcXy"
           >
             <span>
               <style>
@@ -298,18 +298,18 @@ exports[`<Gallery.View /> Snapshot tests should render correctly 1`] = `
         </div>
       </div>
       <div
-        className="card sc-chPdSV evfJHz text-text-left mb-3"
+        className="card sc-kgoBCf dEuInR text-text-left mb-3"
       >
         <div
-          className="sc-jTzLTM hIHSra"
+          className="sc-fjdhpX idBwjd"
           onClick={[Function]}
         >
           <div
-            className="sc-kAzzGY cCGlGI"
+            className="sc-chPdSV gOGbZh"
           />
           <svg
             aria-hidden="true"
-            className="svg-inline--fa fa-check-circle fa-w-16 sc-cSHVUG EsCbH"
+            className="svg-inline--fa fa-check-circle fa-w-16 sc-kAzzGY jQRtnk"
             data-checked={false}
             data-icon="check-circle"
             data-mobile={false}
@@ -328,7 +328,7 @@ exports[`<Gallery.View /> Snapshot tests should render correctly 1`] = `
             />
           </svg>
           <a
-            className="sc-fjdhpX kEjQDE"
+            className="sc-jzJRlG fSxHWO"
             data-mobile={false}
             href="https://via.placeholder.com/480x320?text=Image-002"
             onClick={[Function]}
@@ -354,7 +354,7 @@ exports[`<Gallery.View /> Snapshot tests should render correctly 1`] = `
             </svg>
           </a>
           <div
-            className="sc-jzJRlG cxewMt"
+            className="sc-cSHVUG bHUcXy"
           >
             <span>
               <style>
@@ -428,18 +428,18 @@ exports[`<Gallery.View /> Snapshot tests should render correctly 1`] = `
         </div>
       </div>
       <div
-        className="card sc-chPdSV evfJHz text-text-left mb-3"
+        className="card sc-kgoBCf dEuInR text-text-left mb-3"
       >
         <div
-          className="sc-jTzLTM hIHSra"
+          className="sc-fjdhpX idBwjd"
           onClick={[Function]}
         >
           <div
-            className="sc-kAzzGY cCGlGI"
+            className="sc-chPdSV gOGbZh"
           />
           <svg
             aria-hidden="true"
-            className="svg-inline--fa fa-check-circle fa-w-16 sc-cSHVUG EsCbH"
+            className="svg-inline--fa fa-check-circle fa-w-16 sc-kAzzGY jQRtnk"
             data-checked={false}
             data-icon="check-circle"
             data-mobile={false}
@@ -458,7 +458,7 @@ exports[`<Gallery.View /> Snapshot tests should render correctly 1`] = `
             />
           </svg>
           <a
-            className="sc-fjdhpX kEjQDE"
+            className="sc-jzJRlG fSxHWO"
             data-mobile={false}
             href="https://via.placeholder.com/480x320?text=Image-003"
             onClick={[Function]}
@@ -484,7 +484,7 @@ exports[`<Gallery.View /> Snapshot tests should render correctly 1`] = `
             </svg>
           </a>
           <div
-            className="sc-jzJRlG cxewMt"
+            className="sc-cSHVUG bHUcXy"
           >
             <span>
               <style>
@@ -560,7 +560,7 @@ exports[`<Gallery.View /> Snapshot tests should render correctly 1`] = `
     </div>
   </div>
   <div
-    className="sc-dxgOiQ ibApdb"
+    className="sc-ckVGcZ cAgsBG"
     hidden={true}
   >
     <span>
@@ -650,23 +650,27 @@ exports[`<Gallery.View /> Snapshot tests should render correctly 1`] = `
       }
     }
   >
-    <svg
-      aria-hidden="true"
-      className="svg-inline--fa fa-arrow-alt-circle-up fa-w-16 sc-VigVT hvKqCR"
-      data-icon="arrow-alt-circle-up"
-      data-prefix="fas"
-      focusable="false"
-      role="img"
-      style={Object {}}
-      viewBox="0 0 512 512"
-      xmlns="http://www.w3.org/2000/svg"
+    <div
+      className="sc-jTzLTM iMLVic"
     >
-      <path
-        d="M8 256C8 119 119 8 256 8s248 111 248 248-111 248-248 248S8 393 8 256zm292 116V256h70.9c10.7 0 16.1-13 8.5-20.5L264.5 121.2c-4.7-4.7-12.2-4.7-16.9 0l-115 114.3c-7.6 7.6-2.2 20.5 8.5 20.5H212v116c0 6.6 5.4 12 12 12h64c6.6 0 12-5.4 12-12z"
-        fill="currentColor"
+      <svg
+        aria-hidden="true"
+        className="svg-inline--fa fa-arrow-up fa-w-14 sc-VigVT iSMghy"
+        data-icon="arrow-up"
+        data-prefix="fas"
+        focusable="false"
+        role="img"
         style={Object {}}
-      />
-    </svg>
+        viewBox="0 0 448 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M34.9 289.5l-22.2-22.2c-9.4-9.4-9.4-24.6 0-33.9L207 39c9.4-9.4 24.6-9.4 33.9 0l194.3 194.3c9.4 9.4 9.4 24.6 0 33.9L413 289.4c-9.5 9.5-25 9.3-34.3-.4L264 168.6V456c0 13.3-10.7 24-24 24h-32c-13.3 0-24-10.7-24-24V168.6L69.2 289.1c-9.3 9.8-24.8 10-34.3.4z"
+          fill="currentColor"
+          style={Object {}}
+        />
+      </svg>
+    </div>
   </div>
 </div>
 `;
