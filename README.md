@@ -1,5 +1,7 @@
 # Gyararii
 
+[![Latest Release](https://img.shields.io/badge/latest-0.1.0-lightgrey.svg?style=flat 'Latest Release')](https://github.com/rxseven/gyararii/releases/tag/v0.1.0)
+
 A simple React app for collecting photos.
 
 > Gyararii or ギャラリー literally means “Gallery” in Japanese.
