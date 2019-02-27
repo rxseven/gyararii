@@ -6,3 +6,9 @@ node_js:
 cache:
   directories:
     - node_modules
+
+notifications:
+  # Default email notification settings
+  email:
+    on_failure: always
+    on_success: change
