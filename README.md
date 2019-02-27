@@ -16,6 +16,7 @@ A simple React app for collecting photos.
 - [Features](#features)
 - [Technology Stack](#technology-stack)
 - [Development Workflow](#development-workflow)
+- [Third-party Services](#third-party-services)
 
 ## Live Demo
 
@@ -246,6 +247,23 @@ Gyararii was built with React and Node.js, one of the most popular stack of tech
 - Developing UI components in isolation with Storybook
 
 > Note: the complete guidelines are available in [this project](https://github.com/rxseven/setup-react-app).
+
+[Back to top](#table-of-contents)
+
+## Third-party Services
+
+### Infrastructure
+
+- [Heroku](https://www.heroku.com/) - cloud platform as a service
+
+### Cloud computing and Platforms
+
+- [Cloudinary](https://cloudinary.com/) - end-to-end image management solution
+
+### Software as a Service
+
+- [GitHub](https://github.com/) - web-based hosting service for version control using Git
+- [Travis CI](https://travis-ci.org/) - continuous integration
 
 [Back to top](#table-of-contents)
 
