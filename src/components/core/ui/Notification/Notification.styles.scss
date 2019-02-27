@@ -1,0 +1,28 @@
+// Plugin styles
+// https://fkhadra.github.io/react-toastify
+
+@import "~react-toastify/dist/ReactToastify.css";
+
+.notification-toast {
+  background-color: #f8d7da;
+  border: #f5c6cb solid 1px;
+  border-radius: 0.25rem;
+  color: #721c24;
+  min-height: 0;
+  padding: 0.75rem 1.25rem;
+}
+
+.notification-close {
+  color: #000;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  opacity: 0.5;
+  text-shadow: 0 1px 0 #fff;
+}
+
+.notification-progressbar {
+  background-color: #7e6b6d;
+  bottom: 0;
+  height: 3px;
+}

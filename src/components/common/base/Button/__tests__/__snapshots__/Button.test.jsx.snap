@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> Snapshot tests should render correctly 1`] = `
+<button
+  className="btn btn-secondary btn-sm"
+  disabled={false}
+  onClick={[MockFunction]}
+  type="button"
+>
+  <span
+    className="sc-bxivhb IvOzD"
+  >
+    Text
+  </span>
+  <span
+    className="sc-bwzfXH iDiJqN"
+  >
+    <span>
+      <style>
+         @-webkit-keyframes brsk-three-bounce { 0%, 80%, 100% { -webkit-transform: scale(0); } 40% { -webkit-transform: scale(1); } } @keyframes brsk-three-bounce { 0%, 80%, 100% { transform: scale(0); -webkit-transform: scale(0); } 40% { transform: scale(1); -webkit-transform: scale(1); } } 
+      </style>
+      <div
+        style={
+          Object {
+            "WebkitAnimationDelay": "-0.32s",
+            "WebkitAnimationDuration": "1.25s",
+            "WebkitAnimationIterationCount": "infinite",
+            "WebkitAnimationName": "brsk-three-bounce",
+            "WebkitAnimationTimingFunction": "ease-in-out",
+            "animationDelay": "-0.32s",
+            "animationDuration": "1.25s",
+            "animationIterationCount": "infinite",
+            "animationName": "brsk-three-bounce",
+            "animationTimingFunction": "ease-in-out",
+            "backgroundColor": "#fff",
+            "borderRadius": "100%",
+            "display": "inline-block",
+            "height": 7,
+            "marginRight": 5,
+            "width": 7,
+          }
+        }
+      />
+      <div
+        style={
+          Object {
+            "WebkitAnimationDelay": "-0.16s",
+            "WebkitAnimationDuration": "1.25s",
+            "WebkitAnimationIterationCount": "infinite",
+            "WebkitAnimationName": "brsk-three-bounce",
+            "WebkitAnimationTimingFunction": "ease-in-out",
+            "animationDelay": "-0.16s",
+            "animationDuration": "1.25s",
+            "animationIterationCount": "infinite",
+            "animationName": "brsk-three-bounce",
+            "animationTimingFunction": "ease-in-out",
+            "backgroundColor": "#fff",
+            "borderRadius": "100%",
+            "display": "inline-block",
+            "height": 7,
+            "marginRight": 5,
+            "width": 7,
+          }
+        }
+      />
+      <div
+        style={
+          Object {
+            "WebkitAnimationDuration": "1.25s",
+            "WebkitAnimationIterationCount": "infinite",
+            "WebkitAnimationName": "brsk-three-bounce",
+            "WebkitAnimationTimingFunction": "ease-in-out",
+            "animationDuration": "1.25s",
+            "animationIterationCount": "infinite",
+            "animationName": "brsk-three-bounce",
+            "animationTimingFunction": "ease-in-out",
+            "backgroundColor": "#fff",
+            "borderRadius": "100%",
+            "display": "inline-block",
+            "height": 7,
+            "width": 7,
+          }
+        }
+      />
+    </span>
+  </span>
+</button>
+`;

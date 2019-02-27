@@ -1,0 +1,44 @@
+{
+  // ESLint extension
+  "eslint.autoFixOnSave": true,
+  "eslint.enable": true,
+  "eslint.run": "onType",
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    { "autoFix": true, "language": "javascript" },
+    { "autoFix": true, "language": "javascriptreact" }
+  ],
+
+  // Stylelint
+  // Prevent both the editor’s stylesheet built-in linters and Stylelint
+  // from reporting essentially the same errors.
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+
+  // File associations to languages
+  "files.associations": {
+    ".babelrc": "json",
+    ".huskyrc": "json",
+    ".lintstagedrc": "json",
+    ".prettierrc": "json",
+    ".stylelintrc": "json",
+    ".stylelintrc.styled.json": "json",
+    "*.test.js.snap": "javascript",
+    "*.test.jsx.snap": "javascript"
+  },
+
+  // Prettier
+  // Disable the default JavaScript formatter (editor’s built-in) and allows
+  // Prettier to handle code formatting.
+  "javascript.format.enable": false,
+
+  // Format a file on save.
+  "editor.formatOnSave": true,
+
+  // Use ESLint for JavaScript and TypeScript linting rather than
+  // the built-in validators.
+  "javascript.validate.enable": false,
+  "typescript.validate.enable": false
+}

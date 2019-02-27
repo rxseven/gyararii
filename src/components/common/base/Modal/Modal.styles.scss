@@ -1,0 +1,15 @@
+// Bootstrap Modal
+// https://getbootstrap.com/docs/4.1/components/modal/
+
+.modal-open {
+  .modal {
+    &,
+    &.fade {
+      display: block;
+    }
+  }
+}
+
+.modal {
+  background-color: rgba(0, 0, 0, 0.8);
+}

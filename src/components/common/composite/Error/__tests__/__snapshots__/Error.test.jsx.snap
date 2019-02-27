@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Error /> Snapshot tests should render correctly 1`] = `
+Array [
+  <div
+    className="alert alert-danger"
+  >
+    Error 1
+    <button
+      aria-label="Close"
+      className="close"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+      >
+        ×
+      </span>
+    </button>
+  </div>,
+  <div
+    className="alert alert-danger"
+  >
+    Error 2
+    <button
+      aria-label="Close"
+      className="close"
+      onClick={[Function]}
+      type="button"
+    >
+      <span
+        aria-hidden="true"
+      >
+        ×
+      </span>
+    </button>
+  </div>,
+]
+`;

@@ -1,0 +1,34 @@
+{
+  "env": {
+    "development": {
+      "plugins": [
+        [
+          "styled-components",
+          {
+            "displayName": true,
+            "fileName": false,
+            "ssr": false
+          }
+        ]
+      ]
+    },
+    "production": {
+      "plugins": [
+        [
+          "react-remove-properties",
+          {
+            "properties": ["data-testid"]
+          }
+        ],
+        [
+          "styled-components",
+          {
+            "ssr": false
+          }
+        ]
+      ]
+    }
+  },
+  "plugins": ["jsx-control-statements"],
+  "presets": ["react-app"]
+}

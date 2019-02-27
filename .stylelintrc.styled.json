@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "stylelint-config-recommended",
+    "stylelint-config-styled-components",
+    "stylelint-config-prettier"
+  ],
+  "processors": ["stylelint-processor-styled-components"],
+  "rules": {
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "each",
+          "extend",
+          "function",
+          "if",
+          "include",
+          "mixin"
+        ]
+      }
+    ],
+    "no-descending-specificity": null,
+    "no-empty-source": null
+  }
+}
