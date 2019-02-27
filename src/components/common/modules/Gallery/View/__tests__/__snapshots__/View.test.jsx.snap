@@ -27,6 +27,7 @@ exports[`<Gallery.View /> Snapshot tests should render correctly 1`] = `
                 className="btn btn-primary btn-sm"
                 data-place="right"
                 data-tip="Please DO NOT upload inappropriate images."
+                data-tip-disable={false}
                 disabled={false}
                 role="button"
               >

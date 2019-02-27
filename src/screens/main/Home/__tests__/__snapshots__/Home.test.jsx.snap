@@ -33,6 +33,7 @@ exports[`<Home /> Snapshot tests should render correctly 1`] = `
                     className="btn btn-primary btn-sm disabled"
                     data-place="right"
                     data-tip="Please DO NOT upload inappropriate images."
+                    data-tip-disable={false}
                     disabled={true}
                     role="button"
                   >
