@@ -10,6 +10,8 @@ cache:
 script:
   # Run tests and generate code coverage reports
   - yarn test:coverage
+  # Run JavaScript linting
+  - yarn lint:script
 
 notifications:
   # Default email notification settings
