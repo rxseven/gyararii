@@ -24,6 +24,7 @@ A simple React app for collecting photos.
 
 - [Development Milestones](#development-milestones)
 - [Changelog](#changelog)
+- [Acknowledgements](#acknowledgements)
 
 ## Live Demo
 
@@ -306,6 +307,10 @@ React & Redux starter kit with best practices bootstrapped with [Create React Ap
 ## Changelog
 
 See [releases](https://github.com/rxseven/gyararii/releases).
+
+## Acknowledgements
+
+This project is maintained by [Theerawat Pongsupawat](http://www.rxseven.com), frontend developer from Chiang Mai, Thailand.
 
 ---
 
