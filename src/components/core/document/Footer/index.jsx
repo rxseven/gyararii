@@ -89,6 +89,12 @@ function Footer() {
                 </NavLink>
               </NavItem>
               <NavItem>
+                <NavLink to={PATHS.about}>About</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink to={PATHS.terms}>Terms</NavLink>
+              </NavItem>
+              <NavItem>
                 <Link href="https://github.com/rxseven/gyararii">GitHub</Link>
               </NavItem>
             </Navigation>

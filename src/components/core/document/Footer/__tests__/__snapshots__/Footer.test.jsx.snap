@@ -34,6 +34,32 @@ exports[`<Footer /> Snapshot tests should render correctly 1`] = `
             className="sc-ifAKCX kQYkju"
           >
             <a
+              aria-current={null}
+              className="sc-EHOje hlRBmM sc-bdVaJa hYPwXj"
+              data-light={true}
+              href="/about"
+              onClick={[Function]}
+            >
+              About
+            </a>
+          </li>
+          <li
+            className="sc-ifAKCX kQYkju"
+          >
+            <a
+              aria-current={null}
+              className="sc-EHOje hlRBmM sc-bdVaJa hYPwXj"
+              data-light={true}
+              href="/terms"
+              onClick={[Function]}
+            >
+              Terms
+            </a>
+          </li>
+          <li
+            className="sc-ifAKCX kQYkju"
+          >
+            <a
               className="sc-bZQynM htyeqS"
               href="https://github.com/rxseven/gyararii"
               rel="noopener noreferrer"

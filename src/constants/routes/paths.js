@@ -1,3 +1,5 @@
 export default {
-  root: '/'
+  about: '/about',
+  root: '/',
+  terms: '/terms'
 };
