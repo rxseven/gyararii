@@ -17,6 +17,7 @@ A simple React app for collecting photos.
 - [Technology Stack](#technology-stack)
 - [Development Workflow](#development-workflow)
 - [Third-party Services](#third-party-services)
+- [Browser Support](#browser-support)
 
 ## Live Demo
 
@@ -264,6 +265,14 @@ Gyararii was built with React and Node.js, one of the most popular stack of tech
 
 - [GitHub](https://github.com/) - web-based hosting service for version control using Git
 - [Travis CI](https://travis-ci.org/) - continuous integration
+
+[Back to top](#table-of-contents)
+
+## Browser Support
+
+Because this project uses CSS3 features, it’s only meant for modern browsers. Some browsers currently fail to apply some of the styles correctly.
+
+Chrome and Firefox have full support, but Safari and IE have strange behaviors.
 
 [Back to top](#table-of-contents)
 
