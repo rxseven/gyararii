@@ -14,6 +14,8 @@ script:
   - yarn lint:script
   # Run stylesheet linting
   - yarn lint:styles
+  # Run styled components linting
+  - yarn lint:styled
 
 notifications:
   # Default email notification settings
