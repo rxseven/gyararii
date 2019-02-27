@@ -61,6 +61,18 @@ exports[`<Footer /> Snapshot tests should render correctly 1`] = `
           >
             <a
               className="sc-bZQynM htyeqS"
+              href="https://gyararii.netlify.com"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              Storybook
+            </a>
+          </li>
+          <li
+            className="sc-ifAKCX kQYkju"
+          >
+            <a
+              className="sc-bZQynM htyeqS"
               href="https://github.com/rxseven/gyararii"
               rel="noopener noreferrer"
               target="_blank"
