@@ -15,11 +15,11 @@ exports[`<Masonry /> Snapshot tests should render correctly 1`] = `
         onClick={[Function]}
       >
         <div
-          className="sc-ifAKCX jjZKUx"
+          className="sc-ifAKCX dNDTYw"
         />
         <svg
           aria-hidden="true"
-          className="svg-inline--fa fa-check-circle fa-w-16 sc-bxivhb iUSuZZ"
+          className="svg-inline--fa fa-check-circle fa-w-16 sc-bxivhb gbCqig"
           data-checked={false}
           data-icon="check-circle"
           data-mobile={false}
@@ -38,7 +38,7 @@ exports[`<Masonry /> Snapshot tests should render correctly 1`] = `
           />
         </svg>
         <a
-          className="sc-bwzfXH jHGBQq"
+          className="sc-bwzfXH fbJkSt"
           data-mobile={false}
           href="gallery/image-001.jpg"
           onClick={[Function]}
