@@ -6,6 +6,7 @@ import Control from 'components/common/sections/Control';
 import Error from 'components/common/composite/Error';
 import File from 'components/common/composite/File';
 import Lightbox from 'components/common/base/Lightbox';
+import Jumper from 'components/common/base/Jumper';
 import Masonry from 'components/common/sections/Masonry';
 import Pagination from 'components/common/composite/Pagination';
 import Toolbar from 'components/common/sections/Toolbar';
@@ -121,6 +122,7 @@ function View(props) {
         onClickPrev={onLightboxPrev}
         onClose={onLightboxClose}
       />
+      <Jumper />
     </Frame>
   );
 }

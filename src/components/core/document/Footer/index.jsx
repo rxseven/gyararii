@@ -20,6 +20,11 @@ const Frame = styled.footer`
   color: #999;
   flex-shrink: 0;
   padding: 1.5rem 0;
+  z-index: 2;
+
+  @media (min-width: ${({ theme }) => theme.breakpoint.sm}) {
+    z-index: 0;
+  }
 `;
 
 const Info = styled.div`

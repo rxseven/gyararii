@@ -2,7 +2,7 @@
 
 exports[`<Footer /> Snapshot tests should render correctly 1`] = `
 <footer
-  className="sc-bwzfXH iyEFui"
+  className="sc-bwzfXH cNWnVm"
 >
   <div
     className="container"
