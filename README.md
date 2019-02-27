@@ -18,6 +18,7 @@ A simple React app for collecting photos.
 - [Development Workflow](#development-workflow)
 - [Third-party Services](#third-party-services)
 - [Browser Support](#browser-support)
+- [Related Projects](#related-projects)
 
 ## Live Demo
 
@@ -273,6 +274,18 @@ Gyararii was built with React and Node.js, one of the most popular stack of tech
 Because this project uses CSS3 features, it’s only meant for modern browsers. Some browsers currently fail to apply some of the styles correctly.
 
 Chrome and Firefox have full support, but Safari and IE have strange behaviors.
+
+[Back to top](#table-of-contents)
+
+## Related Projects
+
+**[Gyararii API](https://github.com/rxseven/gyararii-api)**
+
+REST API for Gyararii built with Node.js, Express, and Cloudinary.
+
+**[Setup React App](https://github.com/rxseven/setup-react-app)**
+
+React & Redux starter kit with best practices bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 [Back to top](#table-of-contents)
 
