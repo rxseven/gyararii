@@ -1,8 +1,8 @@
 # Gyararii
 
-[![Latest Release](https://img.shields.io/badge/latest-0.1.0-lightgrey.svg?style=flat 'Latest Release')](https://github.com/rxseven/gyararii/releases/tag/v0.1.0) [![Build Status](https://travis-ci.org/rxseven/gyararii.svg?branch=master 'Build Status')](https://travis-ci.org/rxseven/gyararii) [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/ 'CC BY-NC-ND 4.0') [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0 'AGPL v3')
+[![Latest Release](https://img.shields.io/badge/latest-0.2.0-lightgrey.svg?style=flat 'Latest Release')](https://github.com/rxseven/gyararii/releases/tag/v0.2.0) [![Build Status](https://travis-ci.org/rxseven/gyararii.svg?branch=master 'Build Status')](https://travis-ci.org/rxseven/gyararii) [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/ 'CC BY-NC-ND 4.0') [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0 'AGPL v3')
 
-A simple React app for collecting photos.
+Gyararaii is a very simple SPA for collecting photos. It was built with pure React and PropTypes, no state menagement like Redux and static type checking like TypeScript or Flow needed.
 
 > Gyararii or ギャラリー literally means “Gallery” in Japanese.
 
@@ -32,11 +32,11 @@ A simple React app for collecting photos.
 
 ## Live Demo
 
-**Gyararii** is running on **Heroku** at [https://gyararii.herokuapp.com](https://gyararii.herokuapp.com)
+**Gyararii** is running on **Heroku** at [https://gyararii.herokuapp.com](https://gyararii.herokuapp.com) and **Storybook** (component library for Gyararii) is hosted on **Netlify** at [https://gyararii.netlify.com](https://gyararii.netlify.com).
 
 > **App sleeping...** as Gyararii and its API run on [Heroku’s free plan](https://www.heroku.com/free), when an app on Heroku has only one web dyno and that dyno doesn’t receive any traffic in 1 hour, the dyno goes to sleep. When someone accesses the app, the dyno manager will automatically wake up the web dyno to run the web process type. **This causes a short delay for this first request**, but subsequent requests will perform normally. For more information, see [App Sleeping on Heroku](https://blog.heroku.com/app_sleeping_on_heroku).
 
-> **Monthly limit** as **Gyararii API** runs on [Cloudinary’s free plan](https://cloudinary.com/pricing), at which point **Gyararii is restricted to transferring data at 25 credits per month**. For more information, see [Cloudinary Plans](https://cloudinary.com/pricing).
+> **Monthly limit** as [Gyararii API](https://github.com/rxseven/gyararii-api) runs on [Cloudinary’s free plan](https://cloudinary.com/pricing), at which point **Gyararii is restricted to transferring data at 25 credits per month**. For more information, see [Cloudinary Plans](https://cloudinary.com/pricing).
 
 [Back to top](#table-of-contents)
 
@@ -192,7 +192,7 @@ yarn build
 yarn start:static
 ```
 
-**2.** Open [http://localhost:8080](http://localhost:8080) in the browser to launch the production app in the browser.
+**2.** Open [http://localhost:8080](http://localhost:8080) to launch the production app in the browser.
 
 > Tip: press `control + c` to stop the server.
 
@@ -207,7 +207,7 @@ yarn build:storybook
 yarn storybook:static
 ```
 
-**2.** Open [http://localhost:8081](http://localhost:8081) in the browser to launch the static Storybook app in the browser.
+**2.** Open [http://localhost:8081](http://localhost:8081) to launch the static Storybook app in the browser.
 
 > Tip: press `control + c` to stop the server.
 
@@ -228,14 +228,16 @@ Gyararii was built with React and Node.js, one of the most popular stack of tech
 ### Web application
 
 - React, React Router, React Transition Group, React Helmet
-- Recompose, Lodash, Ramda, Axios, Yup
+- Recompose, Lodash, Ramda, Axios, Yup, PropTypes
 - Styled Components, Sass, PostCSS, CSS modules, Bootstrap
 - [More...](https://github.com/rxseven/gyararii/blob/master/package.json)
 
 ### REST API
 
-- Node.js, Express, and Cloudinary
-- Body parser, Path parser, Lodash
+- Node, Express, Cloudinary
+- Lodash, CORS, .ENV
+
+> Note: REST API for Gyararii can be found in [this repository](https://github.com/rxseven/gyararii-api).
 
 [Back to top](#table-of-contents)
 
@@ -250,12 +252,12 @@ Gyararii was built with React and Node.js, one of the most popular stack of tech
 - JavaScript linting with ESLint
 - Stylesheet linting with Stylelint
 - Code formatting with Prettier
-- Automate testing with Jest and Enzyme
-- Assets analyzing and debuging with Source Map Explorer
+- Automate testing with Jest, Enzyme, and React Testing Library
+- Assets analyzing & debuging with Source Map Explorer & Webpack Bundle Analyzer
 - Type checking with PropTypes
 - Code debugging with Visual Studio Code and Chrome Debugger
 - Pre-commit hooking with Husky and Lint-staged
-- CI/CD with GitHub, Travis CI, and Heroku
+- CI/CD with GitHub, Travis CI, Heroku, and Netlify
 - Developing UI components in isolation with Storybook
 
 > Note: the complete guidelines are available in [this project](https://github.com/rxseven/setup-react-app).
@@ -267,6 +269,7 @@ Gyararii was built with React and Node.js, one of the most popular stack of tech
 ### Infrastructure
 
 - [Heroku](https://www.heroku.com/) - cloud platform as a service
+- [Netlify](https://www.netlify.com/) - hosting & serverless backend services for static websites
 
 ### Cloud computing and Platforms
 
@@ -291,7 +294,7 @@ Chrome and Firefox have full support, but Safari and IE have strange behaviors.
 
 **[Gyararii API](https://github.com/rxseven/gyararii-api)**
 
-REST API for Gyararii built with Node.js, Express, and Cloudinary.
+REST API for Gyararii built with Node, Express, and Cloudinary.
 
 **[Setup React App](https://github.com/rxseven/setup-react-app)**
 
@@ -314,7 +317,7 @@ See [releases](https://github.com/rxseven/gyararii/releases).
 
 ## Acknowledgements
 
-This project is maintained by [Theerawat Pongsupawat](http://www.rxseven.com), frontend developer from Chiang Mai, Thailand.
+This project is maintained by [Theerawat Pongsupawat](https://www.linkedin.com/in/pongsupawat/), frontend developer from Chiang Mai, Thailand.
 
 ## Credits
 
