@@ -12,6 +12,8 @@ script:
   - yarn test:coverage
   # Run JavaScript linting
   - yarn lint:script
+  # Run stylesheet linting
+  - yarn lint:styles
 
 notifications:
   # Default email notification settings
