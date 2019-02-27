@@ -7,8 +7,10 @@ import Row from './index';
 
 const { content } = mock.elements;
 const title = 'Components/Common/Base/Grid/Row';
-const component = <Row>{content}</Row>;
+const props = { children: content };
 
-storiesOf(title, module).add('default', () => component, {
-  notes: notes.minimal
-});
+storiesOf(title, module)
+  .add('default', () => <Row {...props} />, {
+    notes: notes.minimal
+  })
+  .add('alignment', () => <Row {...props} alignment="justify-content-end" />);

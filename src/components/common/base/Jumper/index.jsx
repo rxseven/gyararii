@@ -5,25 +5,55 @@ import styled from 'styled-components';
 import Icon from 'components/common/base/Icon';
 
 const Arrow = styled(Icon)`
-  bottom: 1rem;
-  color: rgba(0, 0, 0, 0.5);
-  font-size: 2.25rem;
-  margin-right: ${() => parseFloat(-2.25 / 2)}rem;
-  position: fixed;
-  right: 50%;
+  color: rgba(0, 0, 0, 0.35);
+  font-size: 1.35rem;
   transition: color 0.2s ease-in-out;
-  z-index: 1;
 
   :hover {
-    color: ${({ theme }) => theme.color.dark};
+    color: rgba(0, 0, 0, 0.65);
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoint.sm}) {
-    bottom: 1.5rem;
-    color: ${({ theme }) => theme.color.secondary};
-    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 1.15rem;
+
+    :hover {
+      color: rgba(0, 0, 0, 0.75);
+    }
+  }
+`;
+
+const Frame = styled.div`
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: rgba(0, 0, 0, 0.25) solid 1px;
+  border-radius: 50%;
+  bottom: 1rem;
+  display: flex;
+  height: 35px;
+  justify-content: center;
+  margin-right: ${() => parseFloat(-35 / 2)}px;
+  position: fixed;
+  right: 50%;
+  transition: border-color 0.2s ease-in-out;
+  width: 35px;
+  z-index: 1;
+
+  :hover {
+    border-color: rgba(0, 0, 0, 0.4);
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoint.sm}) {
+    background-color: rgba(255, 255, 255, 1);
+    border-color: rgba(0, 0, 0, 0.35);
+    height: 30px;
     margin-right: 0;
     right: 1.5rem;
+    width: 30px;
+
+    :hover {
+      border-color: rgba(0, 0, 0, 0.5);
+    }
   }
 `;
 
@@ -40,7 +70,9 @@ const options = {
 function Jumper() {
   return (
     <ScrollToTop {...options}>
-      <Arrow icon="arrow-alt-circle-up" />
+      <Frame>
+        <Arrow icon="arrow-up" />
+      </Frame>
     </ScrollToTop>
   );
 }

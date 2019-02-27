@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { slide as Offcanvas } from 'react-burger-menu';
 import { withRouter } from 'react-router-dom';
 import styled, { css, createGlobalStyle } from 'styled-components';
@@ -111,63 +111,61 @@ const menuOptions = {
   width: '85%'
 };
 
-class Menu extends React.Component {
-  componentDidUpdate(prevProps) {
-    const { onClose, location } = this.props;
+function Menu({ isOpen, location, onChange, onClose }) {
+  // Close menu if the URL changes
+  useEffect(() => {
+    onClose();
+  }, [location.pathname]);
 
-    // Close menu if the URL changes
-    if (location.pathname !== prevProps.location.pathname) {
-      onClose();
-    }
-  }
-
-  render() {
-    const { isOpen, onChange } = this.props;
-
-    return (
-      <React.Fragment>
-        <Offcanvas {...menuOptions} isOpen={isOpen} onStateChange={onChange}>
-          <Frame>
-            <Header>
-              <Brand />
-            </Header>
-            <Navigation>
-              <NavItem>
-                <NavLink exact to={PATHS.root}>
-                  <Icon icon="home" />
-                  <Text>Gallery</Text>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink exact to={PATHS.about}>
-                  <Icon icon="info-circle" />
-                  <Text>About Gyararii</Text>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink exact to={PATHS.terms}>
-                  <Icon icon="file-alt" />
-                  <Text>Terms & Conditions</Text>
-                </NavLink>
-              </NavItem>
-              <NavItem>
-                <Link href="https://github.com/rxseven/gyararii">
-                  <Icon icon={['fab', 'github-alt']} />
-                  <Text>View on GitHub</Text>
-                </Link>
-              </NavItem>
-            </Navigation>
-            <Meta>
-              <Version href="https://github.com/rxseven/gyararii/releases/tag/v0.1.0">
-                Version 0.1.0
-              </Version>
-            </Meta>
-          </Frame>
-        </Offcanvas>
-        <Overflow />
-      </React.Fragment>
-    );
-  }
+  return (
+    <React.Fragment>
+      <Offcanvas {...menuOptions} isOpen={isOpen} onStateChange={onChange}>
+        <Frame>
+          <Header>
+            <Brand />
+          </Header>
+          <Navigation>
+            <NavItem>
+              <NavLink exact to={PATHS.root}>
+                <Icon icon="home" />
+                <Text>Gallery</Text>
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink exact to={PATHS.about}>
+                <Icon icon="info-circle" />
+                <Text>About Gyararii</Text>
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink exact to={PATHS.terms}>
+                <Icon icon="file-alt" />
+                <Text>Terms & Conditions</Text>
+              </NavLink>
+            </NavItem>
+            <NavItem>
+              <Link href="https://gyararii.netlify.com">
+                <Icon icon="star-of-life" />
+                <Text>Storybook</Text>
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link href="https://github.com/rxseven/gyararii">
+                <Icon icon={['fab', 'github-alt']} />
+                <Text>View on GitHub</Text>
+              </Link>
+            </NavItem>
+          </Navigation>
+          <Meta>
+            <Version href="https://github.com/rxseven/gyararii/releases/tag/v0.1.0">
+              Version 0.1.0
+            </Version>
+          </Meta>
+        </Frame>
+      </Offcanvas>
+      <Overflow />
+    </React.Fragment>
+  );
 }
 
 export default withRouter(Menu);
