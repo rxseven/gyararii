@@ -23,6 +23,7 @@ A simple React app for collecting photos.
 ### Appendix
 
 - [Development Milestones](#development-milestones)
+- [Changelog](#changelog)
 
 ## Live Demo
 
@@ -301,6 +302,10 @@ React & Redux starter kit with best practices bootstrapped with [Create React Ap
 - More...
 
 [Back to top](#table-of-contents)
+
+## Changelog
+
+See [releases](https://github.com/rxseven/gyararii/releases).
 
 ---
 
