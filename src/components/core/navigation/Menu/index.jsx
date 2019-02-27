@@ -151,6 +151,12 @@ class Menu extends React.Component {
                 </NavLink>
               </NavItem>
               <NavItem>
+                <Link href="https://gyararii.netlify.com">
+                  <Icon icon="star-of-life" />
+                  <Text>Storybook</Text>
+                </Link>
+              </NavItem>
+              <NavItem>
                 <Link href="https://github.com/rxseven/gyararii">
                   <Icon icon={['fab', 'github-alt']} />
                   <Text>View on GitHub</Text>
