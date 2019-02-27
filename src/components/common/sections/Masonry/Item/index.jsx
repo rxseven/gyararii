@@ -122,8 +122,8 @@ const propTypes = exact({
     url: PropTypes.string.isRequired
   }).isRequired,
   index: PropTypes.number.isRequired,
-  onLoaded: PropTypes.func.isRequired,
   isLoading: PropTypes.bool,
+  onLoaded: PropTypes.func.isRequired,
   onPreview: PropTypes.func.isRequired,
   isSelected: PropTypes.bool,
   onSelect: PropTypes.func.isRequired,
