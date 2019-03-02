@@ -134,7 +134,7 @@ function Menu({ isOpen, location, onChange, onClose }) {
             <NavItem>
               <NavLink exact to={PATHS.about}>
                 <Icon icon="info-circle" />
-                <Text>About Gyararii</Text>
+                <Text>About Gyararī</Text>
               </NavLink>
             </NavItem>
             <NavItem>

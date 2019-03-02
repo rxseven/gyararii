@@ -10,22 +10,21 @@ function About() {
     <Document>
       <Head>
         <title>About · ギャラリー</title>
-        <meta content="About Gyararii" name="description" />
+        <meta content="About Gyararī" name="description" />
       </Head>
       <Body>
         <Layout adaptive>
           <Card>
-            <Card.Header>What is Gyararii</Card.Header>
+            <Card.Header>What is Gyararī</Card.Header>
             <Card.Body>
               <Card.Text>
-                <strong>Gyararaii</strong> is a very simple single page
+                <strong>Gyararī</strong> is a very simple single page
                 application (SPA) for collecting photos. It was built with pure
                 React and PropTypes, no complex state menagement like Redux and
                 static type checking like TypeScript or Flow needed.
               </Card.Text>
               <Card.Text>
-                <strong>Gyararaii</strong> is an open-source project maintained
-                by{' '}
+                <strong>Gyararī</strong> is an open-source project maintained by{' '}
                 <Hyperlink href="https://www.linkedin.com/in/pongsupawat">
                   Theerawat Pongsupawat
                 </Hyperlink>
@@ -33,8 +32,8 @@ function About() {
                 Thailand.
               </Card.Text>
               <Card.Text>
-                <strong>Gyararaii</strong> or ギャラリー literally means
-                “Gallery” in Japanese.
+                <strong>Gyararī</strong> or ギャラリー literally means “Gallery”
+                in Japanese.
               </Card.Text>
             </Card.Body>
           </Card>
