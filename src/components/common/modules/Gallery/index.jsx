@@ -31,8 +31,8 @@ const STATE = {
   gallery: {
     autoscroll: false,
     next: 0,
-    pagination: null,
     loaded: false,
+    pagination: null,
     selected: []
   },
   lightbox: {
@@ -500,6 +500,7 @@ class Gallery extends React.Component {
     const galleryProps = {
       ...state,
       images: context.state.images,
+      isModal: context.state.isModal,
       onAutoscroll: this.handleAutoscroll,
       onDeleteCancel: this.handleDeleteCancel,
       onDeleteConfirm: this.handleDeleteConfirm,
@@ -516,7 +517,6 @@ class Gallery extends React.Component {
       onSelect: this.handleSelect,
       onSelectAll: this.handleSelectAll,
       onUpload: this.handleUpload,
-      isModal: context.state.isModal,
       pagination: state.pagination
     };
 
