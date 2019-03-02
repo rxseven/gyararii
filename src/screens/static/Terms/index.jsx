@@ -10,7 +10,7 @@ function Terms() {
       <Head>
         <title>Terms and Conditions of Use · ギャラリー</title>
         <meta
-          content="Gyararii Terms and Conditions of Use"
+          content="Gyararī Terms and Conditions of Use"
           name="description"
         />
       </Head>

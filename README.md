@@ -1,10 +1,10 @@
-# Gyararii
+# Gyararī 🌻
 
-[![Latest Release](https://img.shields.io/badge/latest-0.2.0-lightgrey.svg?style=flat 'Latest Release')](https://github.com/rxseven/gyararii/releases/tag/v0.2.0) [![Build Status](https://travis-ci.org/rxseven/gyararii.svg?branch=master 'Build Status')](https://travis-ci.org/rxseven/gyararii) [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/ 'CC BY-NC-ND 4.0') [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0 'AGPL v3')
+[![Latest Release](https://img.shields.io/badge/latest-0.3.0-lightgrey.svg?style=flat 'Latest Release')](https://github.com/rxseven/gyararii/releases/tag/v0.3.0) [![Build Status](https://travis-ci.org/rxseven/gyararii.svg?branch=master 'Build Status')](https://travis-ci.org/rxseven/gyararii) [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/ 'CC BY-NC-ND 4.0') [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0 'AGPL v3')
 
-Gyararaii is a very simple SPA for collecting photos. It was built with pure React and PropTypes, no state menagement like Redux and static type checking like TypeScript or Flow needed.
+**Gyararī is a simple SPA for collecting photos.** It was built from scratch using only [React](https://reactjs.org) (core UI library) and [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html) (runtime type checking for React props and similar objects). No complex state menagement (e.g. Redux, MobX, Apollo), static type checking (e.g. TypeScript or Flow), and UI library (e.g. Material-UI or React Bootstrap) needed!
 
-> Gyararii or ギャラリー literally means “Gallery” in Japanese.
+> Gyararī or ギャラリー literally means “Gallery” in Japanese.
 
 ## Table of Contents
 
@@ -32,11 +32,11 @@ Gyararaii is a very simple SPA for collecting photos. It was built with pure Rea
 
 ## Live Demo
 
-**Gyararii** is running on **Heroku** at [https://gyararii.herokuapp.com](https://gyararii.herokuapp.com) and **Storybook** (component library for Gyararii) is hosted on **Netlify** at [https://gyararii.netlify.com](https://gyararii.netlify.com).
+**Gyararī** is running on **Heroku** at [https://gyararii.herokuapp.com](https://gyararii.herokuapp.com) and **Storybook** (component library for Gyararī) is hosted on **Netlify** at [https://gyararii.netlify.com](https://gyararii.netlify.com).
 
-> **App sleeping...** as Gyararii and its API run on [Heroku’s free plan](https://www.heroku.com/free), when an app on Heroku has only one web dyno and that dyno doesn’t receive any traffic in 1 hour, the dyno goes to sleep. When someone accesses the app, the dyno manager will automatically wake up the web dyno to run the web process type. **This causes a short delay for this first request**, but subsequent requests will perform normally. For more information, see [App Sleeping on Heroku](https://blog.heroku.com/app_sleeping_on_heroku).
+> **App sleeping...** as Gyararī and its API run on [Heroku’s free plan](https://www.heroku.com/free), when an app on Heroku has only one web dyno and that dyno doesn’t receive any traffic in 1 hour, the dyno goes to sleep. When someone accesses the app, the dyno manager will automatically wake up the web dyno to run the web process type. **This causes a short delay for this first request**, but subsequent requests will perform normally. For more information, see [App Sleeping on Heroku](https://blog.heroku.com/app_sleeping_on_heroku).
 
-> **Monthly limit** as [Gyararii API](https://github.com/rxseven/gyararii-api) runs on [Cloudinary’s free plan](https://cloudinary.com/pricing), at which point **Gyararii is restricted to transferring data at 25 credits per month**. For more information, see [Cloudinary Plans](https://cloudinary.com/pricing).
+> **Monthly limit** as [Gyararī API](https://github.com/rxseven/gyararii-api) runs on [Cloudinary’s free plan](https://cloudinary.com/pricing), at which point **Gyararī is restricted to transferring data at 25 credits per month**. For more information, see [Cloudinary Plans](https://cloudinary.com/pricing).
 
 [Back to top](#table-of-contents)
 
@@ -62,7 +62,7 @@ Optional, but nice to have:
 
 ### Setup
 
-**1.** Clone Gyararii from GitHub repository and change the current working directory:
+**1.** Clone Gyararī from GitHub repository and change the current working directory:
 
 ```sh
 git clone https://github.com/rxseven/gyararii.git
@@ -223,13 +223,13 @@ yarn storybook:static
 
 ## Technology Stack
 
-Gyararii was built with React and Node.js, one of the most popular stack of technologies for building a modern single-page app.
+Gyararī was built with React and Node.js, one of the most popular stack of technologies for building a modern single-page app.
 
 ### Web application
 
 - React, React Router, React Transition Group, React Helmet
 - Recompose, Lodash, Ramda, Axios, Yup, PropTypes
-- Styled Components, Sass, PostCSS, CSS modules, Bootstrap
+- Styled Components, Sass, PostCSS, CSS modules, Bootstrap (Sass)
 - [More...](https://github.com/rxseven/gyararii/blob/master/package.json)
 
 ### REST API
@@ -237,7 +237,7 @@ Gyararii was built with React and Node.js, one of the most popular stack of tech
 - Node, Express, Cloudinary
 - Lodash, CORS, .ENV
 
-> Note: REST API for Gyararii can be found in [this repository](https://github.com/rxseven/gyararii-api).
+> Note: REST API for Gyararī can be found in [this repository](https://github.com/rxseven/gyararii-api).
 
 [Back to top](#table-of-contents)
 
@@ -250,7 +250,7 @@ Gyararii was built with React and Node.js, one of the most popular stack of tech
 - CSS-in-JS with Styled Components
 - CSS pre-processing and transforming with Sass, PostCSS, and CSS modules
 - JavaScript linting with ESLint
-- Stylesheet linting with Stylelint
+- Stylesheet and Styled Components linting with Stylelint
 - Code formatting with Prettier
 - Automate testing with Jest, Enzyme, and React Testing Library
 - Assets analyzing & debuging with Source Map Explorer & Webpack Bundle Analyzer
@@ -292,9 +292,9 @@ Chrome and Firefox have full support, but Safari and IE have strange behaviors.
 
 ## Related Projects
 
-**[Gyararii API](https://github.com/rxseven/gyararii-api)**
+**[Gyararī API](https://github.com/rxseven/gyararii-api)**
 
-REST API for Gyararii built with Node, Express, and Cloudinary.
+REST API for Gyararī built with Node, Express, and Cloudinary.
 
 **[Setup React App](https://github.com/rxseven/setup-react-app)**
 

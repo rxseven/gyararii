@@ -8,12 +8,19 @@ import View from '../index';
 describe('<Gallery.View />', () => {
   // Arrange
   const props = {
+    // Common
+    selected: [],
+
     // Toolbar
     nodeTop: React.createRef(),
 
     // File
     id: 'gallery',
     onUpload: jest.fn(),
+
+    // Autoscroll
+    isAutoscroll: false,
+    onAutoscroll: jest.fn(),
 
     // Control
     onDeleteRequest: jest.fn(),

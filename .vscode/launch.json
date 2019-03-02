@@ -15,7 +15,7 @@
       "console": "integratedTerminal",
       "cwd": "${workspaceRoot}",
       "internalConsoleOptions": "neverOpen",
-      "name": "Debug Gyararii Tests",
+      "name": "Debug Gyararī Tests",
       "request": "launch",
       "runtimeArgs": ["--inspect-brk", "test"],
       "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/react-scripts",

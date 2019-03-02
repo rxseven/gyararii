@@ -47,6 +47,8 @@ const props = {
       url: 'https://via.placeholder.com/480x320?text=Image-003'
     }
   ],
+  selected: [],
+  onAutoscroll: action('onAutoscroll'),
   onLightboxOpen: action('onLightboxOpen'),
   onLoaded: action('onLoaded'),
   onSelect: action('onSelect'),

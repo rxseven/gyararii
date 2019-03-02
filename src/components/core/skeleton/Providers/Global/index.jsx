@@ -3,7 +3,12 @@ import PropTypes from 'prop-types';
 import exact from 'prop-types-exact';
 import React from 'react';
 
-const initialState = { isMenu: false, isModal: false };
+const initialState = {
+  cursor: null,
+  images: [],
+  isMenu: false,
+  isModal: false
+};
 const Context = React.createContext({});
 
 const propTypes = exact({
@@ -12,6 +17,10 @@ const propTypes = exact({
 
 class Global extends React.Component {
   state = { ...initialState };
+
+  handleGalleryChange = state => {
+    this.setState(state);
+  };
 
   handleMenuChange = state => {
     this.setState({ isMenu: state.isOpen });
@@ -36,6 +45,9 @@ class Global extends React.Component {
   render() {
     const { children } = this.props;
     const actions = {
+      gallery: {
+        onChange: this.handleGalleryChange
+      },
       menu: {
         onChange: this.handleMenuChange,
         onClose: this.handleMenuClose,
