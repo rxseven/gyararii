@@ -20,8 +20,8 @@ function About() {
               <Card.Text>
                 <strong>Gyararaii</strong> is a very simple single page
                 application (SPA) for collecting photos. It was built with pure
-                React and PropTypes, no state menagement like Redux and static
-                type checking like TypeScript or Flow needed.
+                React and PropTypes, no complex state menagement like Redux and
+                static type checking like TypeScript or Flow needed.
               </Card.Text>
               <Card.Text>
                 <strong>Gyararaii</strong> is an open-source project maintained
