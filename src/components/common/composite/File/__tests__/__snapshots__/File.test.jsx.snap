@@ -94,6 +94,7 @@ exports[`<File /> Snapshot tests should render correctly 1`] = `
     disabled={false}
     id="file"
     multiple={false}
+    onChange={[MockFunction]}
     type="file"
   />
 </label>

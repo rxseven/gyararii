@@ -6,7 +6,12 @@ import File from '../index';
 
 describe('<File />', () => {
   // Arrange
-  const props = { children: 'Text', id: 'file', onChange: jest.fn() };
+  const props = {
+    children: 'Text',
+    id: 'file',
+    onChange: jest.fn(),
+    onUpload: jest.fn()
+  };
   const component = <File {...props} />;
 
   describe('Unit tests', () => {
