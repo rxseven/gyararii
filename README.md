@@ -2,7 +2,7 @@
 
 [![Latest Release](https://img.shields.io/badge/latest-0.2.0-lightgrey.svg?style=flat 'Latest Release')](https://github.com/rxseven/gyararii/releases/tag/v0.2.0) [![Build Status](https://travis-ci.org/rxseven/gyararii.svg?branch=master 'Build Status')](https://travis-ci.org/rxseven/gyararii) [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/ 'CC BY-NC-ND 4.0') [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0 'AGPL v3')
 
-Gyararī is a very simple SPA for collecting photos. It was built with pure React and PropTypes, no state menagement like Redux and static type checking like TypeScript or Flow needed.
+**Gyararī is a simple SPA for collecting photos.** It was built from scratch using only [React](https://reactjs.org) (core UI library) and [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html) (runtime type checking for React props and similar objects). No complex state menagement (e.g. Redux, MobX, Apollo), static type checking (e.g. TypeScript or Flow), and UI library (e.g. Material-UI or React Bootstrap) needed!
 
 > Gyararī or ギャラリー literally means “Gallery” in Japanese.
 
@@ -229,7 +229,7 @@ Gyararī was built with React and Node.js, one of the most popular stack of tech
 
 - React, React Router, React Transition Group, React Helmet
 - Recompose, Lodash, Ramda, Axios, Yup, PropTypes
-- Styled Components, Sass, PostCSS, CSS modules, Bootstrap
+- Styled Components, Sass, PostCSS, CSS modules, Bootstrap (Sass)
 - [More...](https://github.com/rxseven/gyararii/blob/master/package.json)
 
 ### REST API
@@ -250,7 +250,7 @@ Gyararī was built with React and Node.js, one of the most popular stack of tech
 - CSS-in-JS with Styled Components
 - CSS pre-processing and transforming with Sass, PostCSS, and CSS modules
 - JavaScript linting with ESLint
-- Stylesheet linting with Stylelint
+- Stylesheet and Styled Components linting with Stylelint
 - Code formatting with Prettier
 - Automate testing with Jest, Enzyme, and React Testing Library
 - Assets analyzing & debuging with Source Map Explorer & Webpack Bundle Analyzer
