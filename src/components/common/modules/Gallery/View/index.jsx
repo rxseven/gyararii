@@ -1,8 +1,10 @@
 import React from 'react';
-import { isMobile } from 'react-device-detect';
+import { isMobile, isMobileOnly } from 'react-device-detect';
 import styled from 'styled-components';
 
+import Button from 'components/common/base/Button';
 import Confirm from 'components/common/composite/Confirm';
+import Toggle from 'components/common/composite/Toggle';
 import Control from 'components/common/sections/Control';
 import Error from 'components/common/composite/Error';
 import File from 'components/common/composite/File';
@@ -12,6 +14,21 @@ import Masonry from 'components/common/sections/Masonry';
 import Pagination from 'components/common/composite/Pagination';
 import Toolbar from 'components/common/sections/Toolbar';
 
+const Actions = styled.div`
+  align-items: center;
+  display: ${props => (props['data-visibility'] ? 'flex' : 'none')};
+`;
+
+const Autoscroll = styled.div`
+  display: ${props => (props['data-visibility'] ? 'block' : 'none')};
+`;
+
+const Content = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: ${({ narrow }) => (narrow ? 'flex-end' : 'space-between')};
+`;
+
 const Frame = styled.div`
   margin-top: ${({ isLoading }) => (isLoading ? '-1.5rem' : '36px')};
 `;
@@ -19,6 +36,7 @@ const Frame = styled.div`
 function View(props) {
   const {
     action,
+    autoscroll,
     currentImage,
     error,
     images,
@@ -29,6 +47,7 @@ function View(props) {
     isPreloading,
     isRestoring,
     isUploading,
+    onAutoscroll,
     onDeleteCancel,
     onDeleteConfirm,
     onDeleteRequest,
@@ -50,6 +69,7 @@ function View(props) {
   } = props;
   const errorLength = error.length;
   const imageLength = images.length;
+  const selectedLength = selected.length;
   const isLoading = isDeleting || isFetching || isUploading;
   const isMore = !!pagination;
   const isPrefetching =
@@ -58,19 +78,34 @@ function View(props) {
   return (
     <Frame isLoading={isPrefetching}>
       <Toolbar isLoading={isPrefetching}>
-        <File
-          data-place="right"
-          data-tip="Please DO NOT upload inappropriate images."
-          data-tip-disable={isMobile}
-          icon="cloud-upload-alt"
-          id="gallery"
-          isLoading={isLoading}
-          multiple
-          onUpload={onUpload}
-          spinner={isUploading}
-        >
-          Upload
-        </File>
+        <Content narrow={!!selectedLength}>
+          <Actions data-visibility={!selectedLength}>
+            <Button.Set>
+              <File
+                data-place="right"
+                data-tip="Please DO NOT upload inappropriate images."
+                data-tip-disable={isMobile}
+                icon="cloud-upload-alt"
+                id="gallery"
+                isLoading={isLoading}
+                multiple
+                onUpload={onUpload}
+                spinner={isUploading}
+              >
+                Upload
+              </File>
+              <Autoscroll data-visibility={!isMobileOnly}>
+                <Toggle
+                  checked={autoscroll}
+                  isLoading={isLoading}
+                  onToggle={onAutoscroll}
+                >
+                  Auto scroll
+                </Toggle>
+              </Autoscroll>
+            </Button.Set>
+          </Actions>
+        </Content>
         <Control
           error={error}
           images={images}

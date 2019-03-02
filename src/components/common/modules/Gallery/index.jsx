@@ -1,6 +1,7 @@
 import { has } from 'lodash';
 import React from 'react';
 import { animateScroll as scroll } from 'react-scroll';
+import { isBrowser } from 'react-device-detect';
 
 import withContext from 'HOCs/withContext';
 
@@ -28,6 +29,7 @@ const STATE = {
     isUploading: false
   },
   gallery: {
+    autoscroll: false,
     images: [],
     next: 0,
     pagination: null,
@@ -320,7 +322,7 @@ class Gallery extends React.Component {
 
   // Check loaded images
   handleLoaded = () => {
-    const { next } = this.state;
+    const { autoscroll, next } = this.state;
 
     // Only pagination mode (load more)
     if (next > 0) {
@@ -334,7 +336,9 @@ class Gallery extends React.Component {
         this.updateState({ next: 0, loaded: true });
 
         // Scroll to the bottom of the page
-        scroll.scrollToBottom();
+        if (autoscroll && isBrowser) {
+          scroll.scrollToBottom();
+        }
       }
     }
   };
@@ -386,6 +390,11 @@ class Gallery extends React.Component {
 
     // Upload images
     return this.uploadImages(formData);
+  };
+
+  // Auto-scroll mode
+  handleAutoscroll = checked => {
+    this.setState(state => ({ autoscroll: !state.autoscroll }));
   };
 
   // Select image
@@ -463,6 +472,7 @@ class Gallery extends React.Component {
     const { state } = this;
     const galleryProps = {
       ...state,
+      onAutoscroll: this.handleAutoscroll,
       onDeleteCancel: this.handleDeleteCancel,
       onDeleteConfirm: this.handleDeleteConfirm,
       onDeleteRequest: this.handleDeleteRequest,
