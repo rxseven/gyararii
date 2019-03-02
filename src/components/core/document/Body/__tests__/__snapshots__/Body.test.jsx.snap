@@ -4,6 +4,8 @@ exports[`<Body /> Snapshot tests should render correctly 1`] = `
 <div
   className="sc-bdVaJa odROB"
 >
-  content
+  <div>
+    Content
+  </div>
 </div>
 `;

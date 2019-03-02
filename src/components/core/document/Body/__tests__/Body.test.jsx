@@ -2,11 +2,12 @@ import { shallow } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
 
+import mock from 'tests/mock';
 import Body from '../index';
 
 describe('<Body />', () => {
   // Arrange
-  const props = { children: 'content' };
+  const props = { children: mock.elements.children };
   const component = <Body {...props} />;
 
   describe('Unit tests', () => {
