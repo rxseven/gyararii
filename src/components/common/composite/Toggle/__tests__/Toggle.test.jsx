@@ -2,13 +2,12 @@ import { shallow } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import mock from 'tests/mock';
-import Body from '../index';
+import Toggle from '../index';
 
-describe('<Body />', () => {
+describe('<Toggle />', () => {
   // Arrange
-  const props = { children: mock.elements.children };
-  const component = <Body {...props} />;
+  const props = { children: 'Text', onToggle: jest.fn() };
+  const component = <Toggle {...props} />;
 
   describe('Unit tests', () => {
     it('should render without crashing', () => {

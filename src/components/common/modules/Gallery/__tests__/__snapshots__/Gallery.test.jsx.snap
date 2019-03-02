@@ -2,7 +2,7 @@
 
 exports[`<Gallery /> Snapshot tests should render correctly 1`] = `
 <div
-  className="sc-kEYyzF kOVZJO"
+  className="sc-hSdWYo jVMIsO"
 >
   <div
     className="sc-eNQAEJ jEDVOo"
@@ -19,126 +19,228 @@ exports[`<Gallery /> Snapshot tests should render correctly 1`] = `
           <div
             className="sc-jKJlTe iXSmQl"
           >
-            <label
-              className="sc-gqjmRU egfDhJ"
-              htmlFor="gallery"
+            <div
+              className="sc-iAyFgw dvEgkN"
             >
-              <span
-                className="btn btn-primary btn-sm disabled"
-                data-place="right"
-                data-tip="Please DO NOT upload inappropriate images."
-                data-tip-disable={false}
-                disabled={true}
-                role="button"
+              <div
+                className="sc-kEYyzF cZgNJN"
+                data-visibility={true}
               >
-                <span
-                  className="sc-htpNat iYntvg"
+                <div
+                  className="sc-bdVaJa fYgCuF"
                 >
-                  <svg
-                    aria-hidden="true"
-                    className="svg-inline--fa fa-cloud-upload-alt fa-w-20 "
-                    data-icon="cloud-upload-alt"
-                    data-prefix="fas"
-                    focusable="false"
-                    role="img"
-                    style={Object {}}
-                    viewBox="0 0 640 512"
-                    xmlns="http://www.w3.org/2000/svg"
+                  <label
+                    className="sc-gqjmRU egfDhJ"
+                    htmlFor="gallery"
                   >
-                    <path
-                      d="M537.6 226.6c4.1-10.7 6.4-22.4 6.4-34.6 0-53-43-96-96-96-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32c-88.4 0-160 71.6-160 160 0 2.7.1 5.4.2 8.1C40.2 219.8 0 273.2 0 336c0 79.5 64.5 144 144 144h368c70.7 0 128-57.3 128-128 0-61.9-44-113.6-102.4-125.4zM393.4 288H328v112c0 8.8-7.2 16-16 16h-48c-8.8 0-16-7.2-16-16V288h-65.4c-14.3 0-21.4-17.2-11.3-27.3l105.4-105.4c6.2-6.2 16.4-6.2 22.6 0l105.4 105.4c10.1 10.1 2.9 27.3-11.3 27.3z"
-                      fill="currentColor"
-                      style={Object {}}
+                    <span
+                      className="btn btn-primary btn-sm disabled"
+                      data-place="right"
+                      data-tip="Please DO NOT upload inappropriate images."
+                      data-tip-disable={false}
+                      disabled={true}
+                      role="button"
+                    >
+                      <span
+                        className="sc-htpNat iYntvg"
+                      >
+                        <svg
+                          aria-hidden="true"
+                          className="svg-inline--fa fa-cloud-upload-alt fa-w-20 "
+                          data-icon="cloud-upload-alt"
+                          data-prefix="fas"
+                          focusable="false"
+                          role="img"
+                          style={Object {}}
+                          viewBox="0 0 640 512"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M537.6 226.6c4.1-10.7 6.4-22.4 6.4-34.6 0-53-43-96-96-96-19.7 0-38.1 6-53.3 16.2C367 64.2 315.3 32 256 32c-88.4 0-160 71.6-160 160 0 2.7.1 5.4.2 8.1C40.2 219.8 0 273.2 0 336c0 79.5 64.5 144 144 144h368c70.7 0 128-57.3 128-128 0-61.9-44-113.6-102.4-125.4zM393.4 288H328v112c0 8.8-7.2 16-16 16h-48c-8.8 0-16-7.2-16-16V288h-65.4c-14.3 0-21.4-17.2-11.3-27.3l105.4-105.4c6.2-6.2 16.4-6.2 22.6 0l105.4 105.4c10.1 10.1 2.9 27.3-11.3 27.3z"
+                            fill="currentColor"
+                            style={Object {}}
+                          />
+                        </svg>
+                      </span>
+                      <span
+                        className="sc-bxivhb iGoLHq"
+                      >
+                        Upload
+                      </span>
+                      <span
+                        className="sc-bwzfXH iDiJqN"
+                      >
+                        <span>
+                          <style>
+                             @-webkit-keyframes brsk-three-bounce { 0%, 80%, 100% { -webkit-transform: scale(0); } 40% { -webkit-transform: scale(1); } } @keyframes brsk-three-bounce { 0%, 80%, 100% { transform: scale(0); -webkit-transform: scale(0); } 40% { transform: scale(1); -webkit-transform: scale(1); } } 
+                          </style>
+                          <div
+                            style={
+                              Object {
+                                "WebkitAnimationDelay": "-0.32s",
+                                "WebkitAnimationDuration": "1.25s",
+                                "WebkitAnimationIterationCount": "infinite",
+                                "WebkitAnimationName": "brsk-three-bounce",
+                                "WebkitAnimationTimingFunction": "ease-in-out",
+                                "animationDelay": "-0.32s",
+                                "animationDuration": "1.25s",
+                                "animationIterationCount": "infinite",
+                                "animationName": "brsk-three-bounce",
+                                "animationTimingFunction": "ease-in-out",
+                                "backgroundColor": "#fff",
+                                "borderRadius": "100%",
+                                "display": "inline-block",
+                                "height": 7,
+                                "marginRight": 5,
+                                "width": 7,
+                              }
+                            }
+                          />
+                          <div
+                            style={
+                              Object {
+                                "WebkitAnimationDelay": "-0.16s",
+                                "WebkitAnimationDuration": "1.25s",
+                                "WebkitAnimationIterationCount": "infinite",
+                                "WebkitAnimationName": "brsk-three-bounce",
+                                "WebkitAnimationTimingFunction": "ease-in-out",
+                                "animationDelay": "-0.16s",
+                                "animationDuration": "1.25s",
+                                "animationIterationCount": "infinite",
+                                "animationName": "brsk-three-bounce",
+                                "animationTimingFunction": "ease-in-out",
+                                "backgroundColor": "#fff",
+                                "borderRadius": "100%",
+                                "display": "inline-block",
+                                "height": 7,
+                                "marginRight": 5,
+                                "width": 7,
+                              }
+                            }
+                          />
+                          <div
+                            style={
+                              Object {
+                                "WebkitAnimationDuration": "1.25s",
+                                "WebkitAnimationIterationCount": "infinite",
+                                "WebkitAnimationName": "brsk-three-bounce",
+                                "WebkitAnimationTimingFunction": "ease-in-out",
+                                "animationDuration": "1.25s",
+                                "animationIterationCount": "infinite",
+                                "animationName": "brsk-three-bounce",
+                                "animationTimingFunction": "ease-in-out",
+                                "backgroundColor": "#fff",
+                                "borderRadius": "100%",
+                                "display": "inline-block",
+                                "height": 7,
+                                "width": 7,
+                              }
+                            }
+                          />
+                        </span>
+                      </span>
+                    </span>
+                    <input
+                      className="sc-gZMcBi jOngK"
+                      disabled={true}
+                      id="gallery"
+                      multiple={true}
+                      onChange={[Function]}
+                      type="file"
                     />
-                  </svg>
-                </span>
-                <span
-                  className="sc-bxivhb iGoLHq"
-                >
-                  Upload
-                </span>
-                <span
-                  className="sc-bwzfXH iDiJqN"
-                >
-                  <span>
-                    <style>
-                       @-webkit-keyframes brsk-three-bounce { 0%, 80%, 100% { -webkit-transform: scale(0); } 40% { -webkit-transform: scale(1); } } @keyframes brsk-three-bounce { 0%, 80%, 100% { transform: scale(0); -webkit-transform: scale(0); } 40% { transform: scale(1); -webkit-transform: scale(1); } } 
-                    </style>
-                    <div
-                      style={
-                        Object {
-                          "WebkitAnimationDelay": "-0.32s",
-                          "WebkitAnimationDuration": "1.25s",
-                          "WebkitAnimationIterationCount": "infinite",
-                          "WebkitAnimationName": "brsk-three-bounce",
-                          "WebkitAnimationTimingFunction": "ease-in-out",
-                          "animationDelay": "-0.32s",
-                          "animationDuration": "1.25s",
-                          "animationIterationCount": "infinite",
-                          "animationName": "brsk-three-bounce",
-                          "animationTimingFunction": "ease-in-out",
-                          "backgroundColor": "#fff",
-                          "borderRadius": "100%",
-                          "display": "inline-block",
-                          "height": 7,
-                          "marginRight": 5,
-                          "width": 7,
-                        }
-                      }
-                    />
-                    <div
-                      style={
-                        Object {
-                          "WebkitAnimationDelay": "-0.16s",
-                          "WebkitAnimationDuration": "1.25s",
-                          "WebkitAnimationIterationCount": "infinite",
-                          "WebkitAnimationName": "brsk-three-bounce",
-                          "WebkitAnimationTimingFunction": "ease-in-out",
-                          "animationDelay": "-0.16s",
-                          "animationDuration": "1.25s",
-                          "animationIterationCount": "infinite",
-                          "animationName": "brsk-three-bounce",
-                          "animationTimingFunction": "ease-in-out",
-                          "backgroundColor": "#fff",
-                          "borderRadius": "100%",
-                          "display": "inline-block",
-                          "height": 7,
-                          "marginRight": 5,
-                          "width": 7,
-                        }
-                      }
-                    />
-                    <div
-                      style={
-                        Object {
-                          "WebkitAnimationDuration": "1.25s",
-                          "WebkitAnimationIterationCount": "infinite",
-                          "WebkitAnimationName": "brsk-three-bounce",
-                          "WebkitAnimationTimingFunction": "ease-in-out",
-                          "animationDuration": "1.25s",
-                          "animationIterationCount": "infinite",
-                          "animationName": "brsk-three-bounce",
-                          "animationTimingFunction": "ease-in-out",
-                          "backgroundColor": "#fff",
-                          "borderRadius": "100%",
-                          "display": "inline-block",
-                          "height": 7,
-                          "width": 7,
-                        }
-                      }
-                    />
-                  </span>
-                </span>
-              </span>
-              <input
-                className="sc-gZMcBi jOngK"
-                disabled={true}
-                id="gallery"
-                multiple={true}
-                onChange={[Function]}
-                type="file"
-              />
-            </label>
+                  </label>
+                  <div
+                    className="sc-kkGfuU eAWQpT"
+                    data-visibility={true}
+                  >
+                    <button
+                      className="btn btn-secondary btn-sm disabled"
+                      disabled={true}
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      <span
+                        className="sc-bxivhb IvOzD"
+                      >
+                        Auto scroll
+                      </span>
+                      <span
+                        className="sc-bwzfXH iDiJqN"
+                      >
+                        <span>
+                          <style>
+                             @-webkit-keyframes brsk-three-bounce { 0%, 80%, 100% { -webkit-transform: scale(0); } 40% { -webkit-transform: scale(1); } } @keyframes brsk-three-bounce { 0%, 80%, 100% { transform: scale(0); -webkit-transform: scale(0); } 40% { transform: scale(1); -webkit-transform: scale(1); } } 
+                          </style>
+                          <div
+                            style={
+                              Object {
+                                "WebkitAnimationDelay": "-0.32s",
+                                "WebkitAnimationDuration": "1.25s",
+                                "WebkitAnimationIterationCount": "infinite",
+                                "WebkitAnimationName": "brsk-three-bounce",
+                                "WebkitAnimationTimingFunction": "ease-in-out",
+                                "animationDelay": "-0.32s",
+                                "animationDuration": "1.25s",
+                                "animationIterationCount": "infinite",
+                                "animationName": "brsk-three-bounce",
+                                "animationTimingFunction": "ease-in-out",
+                                "backgroundColor": "#fff",
+                                "borderRadius": "100%",
+                                "display": "inline-block",
+                                "height": 7,
+                                "marginRight": 5,
+                                "width": 7,
+                              }
+                            }
+                          />
+                          <div
+                            style={
+                              Object {
+                                "WebkitAnimationDelay": "-0.16s",
+                                "WebkitAnimationDuration": "1.25s",
+                                "WebkitAnimationIterationCount": "infinite",
+                                "WebkitAnimationName": "brsk-three-bounce",
+                                "WebkitAnimationTimingFunction": "ease-in-out",
+                                "animationDelay": "-0.16s",
+                                "animationDuration": "1.25s",
+                                "animationIterationCount": "infinite",
+                                "animationName": "brsk-three-bounce",
+                                "animationTimingFunction": "ease-in-out",
+                                "backgroundColor": "#fff",
+                                "borderRadius": "100%",
+                                "display": "inline-block",
+                                "height": 7,
+                                "marginRight": 5,
+                                "width": 7,
+                              }
+                            }
+                          />
+                          <div
+                            style={
+                              Object {
+                                "WebkitAnimationDuration": "1.25s",
+                                "WebkitAnimationIterationCount": "infinite",
+                                "WebkitAnimationName": "brsk-three-bounce",
+                                "WebkitAnimationTimingFunction": "ease-in-out",
+                                "animationDuration": "1.25s",
+                                "animationIterationCount": "infinite",
+                                "animationName": "brsk-three-bounce",
+                                "animationTimingFunction": "ease-in-out",
+                                "backgroundColor": "#fff",
+                                "borderRadius": "100%",
+                                "display": "inline-block",
+                                "height": 7,
+                                "width": 7,
+                              }
+                            }
+                          />
+                        </span>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div
               className="sc-gzVnrw liWgEh"
             />

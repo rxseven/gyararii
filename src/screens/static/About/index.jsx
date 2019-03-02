@@ -10,22 +10,28 @@ function About() {
     <Document>
       <Head>
         <title>About · ギャラリー</title>
-        <meta content="About Gyararii" name="description" />
+        <meta content="About Gyararī" name="description" />
       </Head>
       <Body>
         <Layout adaptive>
           <Card>
-            <Card.Header>What is Gyararii</Card.Header>
+            <Card.Header>What is Gyararī</Card.Header>
             <Card.Body>
               <Card.Text>
-                <strong>Gyararaii</strong> is a very simple single page
-                application (SPA) for collecting photos. It was built with pure
-                React and PropTypes, no state menagement like Redux and static
-                type checking like TypeScript or Flow needed.
+                <strong>Gyararī</strong> is a simple SPA for collecting photos.
+                It was built from scratch using only{' '}
+                <Hyperlink href="https://reactjs.org">React</Hyperlink> (core UI
+                library) and{' '}
+                <Hyperlink href="https://reactjs.org/docs/typechecking-with-proptypes.html">
+                  PropTypes
+                </Hyperlink>{' '}
+                (runtime type checking for React props and similar objects). No
+                complex state menagement (e.g. Redux, MobX, Apollo), static type
+                checking (e.g. TypeScript or Flow), and UI library (e.g.
+                Material-UI or React Bootstrap) needed!
               </Card.Text>
               <Card.Text>
-                <strong>Gyararaii</strong> is an open-source project maintained
-                by{' '}
+                <strong>Gyararī</strong> is an open-source project maintained by{' '}
                 <Hyperlink href="https://www.linkedin.com/in/pongsupawat">
                   Theerawat Pongsupawat
                 </Hyperlink>
@@ -33,8 +39,8 @@ function About() {
                 Thailand.
               </Card.Text>
               <Card.Text>
-                <strong>Gyararaii</strong> or ギャラリー literally means
-                “Gallery” in Japanese.
+                <strong>Gyararī</strong> or ギャラリー literally means “Gallery”
+                in Japanese.
               </Card.Text>
             </Card.Body>
           </Card>

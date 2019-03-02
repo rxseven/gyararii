@@ -1,6 +1,7 @@
 import { has } from 'lodash';
 import React from 'react';
 import { animateScroll as scroll } from 'react-scroll';
+import { isBrowser } from 'react-device-detect';
 
 import withContext from 'HOCs/withContext';
 
@@ -28,10 +29,10 @@ const STATE = {
     isUploading: false
   },
   gallery: {
-    images: [],
+    autoscroll: false,
     next: 0,
-    pagination: null,
     loaded: false,
+    pagination: null,
     selected: []
   },
   lightbox: {
@@ -60,11 +61,19 @@ class Gallery extends React.Component {
   loadedImages = 0;
 
   componentDidMount() {
+    const { context } = this.props;
+    const { images } = context.state;
+    const imagesLength = images.length;
+
     // Update mounting state
     this.isMounting = true;
 
-    // Fetch images (pleload mode)
-    this.fetchImages({ mode: MODE.preload });
+    // Fetch images (pleload mode) if the gallery is empty
+    if (imagesLength < 1) {
+      this.fetchImages({ mode: MODE.preload });
+    } else {
+      this.setState({ next: imagesLength });
+    }
   }
 
   componentWillUnmount() {
@@ -82,18 +91,20 @@ class Gallery extends React.Component {
   // Delete images
   deleteImages = () => {
     const { context } = this.props;
-    const { images, pagination, selected } = this.state;
+    const { selected } = this.state;
+    const { actions, state } = context;
+    const { cursor, images } = state;
 
     const successHandler = () => {
       // Close a confirmation modal
-      context.actions.modal.onClose();
+      actions.modal.onClose();
 
       // Remove deleted images from the state and reset selected list
       const remaining = images.filter(
         image => !selected.includes(image.public_id)
       );
-      const isRefill = pagination && remaining.length < 10;
-      const isRestoring = pagination && isTruthy(remaining.length, 0);
+      const isRefill = cursor && remaining.length < 10;
+      const isRestoring = cursor && isTruthy(remaining.length, 0);
 
       // Update state and status message once the HTTP request finished
       this.handleAjaxSuccess({
@@ -108,7 +119,8 @@ class Gallery extends React.Component {
             }, STATUS_TIMEOUT - (isRestoring ? 0 : 1500));
           }
         },
-        state: { isRestoring, images: remaining },
+        gallery: { images: remaining, cursor },
+        state: { isRestoring },
         status: `Deleted ${selected.length} ${pluralWord(
           selected.length,
           'image'
@@ -122,7 +134,7 @@ class Gallery extends React.Component {
       this.handleAjaxError({
         callback: () => {
           // Close modal
-          context.actions.modal.onClose();
+          actions.modal.onClose();
         },
         error
       });
@@ -137,14 +149,17 @@ class Gallery extends React.Component {
 
   // Fetch images
   fetchImages = (options = { max: null, mode: null }) => {
+    const { context } = this.props;
+    const { isRestoring } = this.state;
+    const { state } = context;
+    const { cursor } = state;
     const isMore = isTruthy(options.mode, MODE.pagination);
     const isPreloading = isTruthy(options.mode, MODE.preload);
     const isRefill = isTruthy(options.mode, MODE.refill);
-    const { isRestoring, pagination } = this.state;
     const request = {
       params: {
         max_results: options.max,
-        next_cursor: pagination || null
+        next_cursor: cursor || null
       }
     };
     let status;
@@ -162,7 +177,7 @@ class Gallery extends React.Component {
     }
 
     const successHandler = response => {
-      const { images: current } = this.state;
+      const { images: current } = state;
 
       // Retrieve data in a response and transform to an appropriate format
       const { data } = response;
@@ -170,10 +185,12 @@ class Gallery extends React.Component {
 
       // Update state and status message once the HTTP request finished
       this.handleAjaxSuccess({
+        gallery: {
+          cursor: has(data, 'next_cursor') ? data.next_cursor : null,
+          images: [...current, ...images]
+        },
         state: {
-          images: [...current, ...images],
-          next: isMore ? images.length : 0,
-          pagination: has(data, 'next_cursor') ? data.next_cursor : null
+          next: images.length || 0
         },
         status: isMore
           ? `Retrived ${images.length} ${pluralWord(images.length, 'image')}`
@@ -205,7 +222,8 @@ class Gallery extends React.Component {
 
   // Upload images
   uploadImages = request => {
-    const { images: current } = this.state;
+    const { context } = this.props;
+    const { cursor, images: current } = context.state;
 
     const successHandler = response => {
       // Retrieve data in a response and transform to an appropriate format
@@ -216,7 +234,7 @@ class Gallery extends React.Component {
 
       // Update state and status message once the HTTP request finished
       this.handleAjaxSuccess({
-        state: { images },
+        gallery: { cursor, images },
         status: `Uploaded ${data.length} ${pluralWord(
           data.length,
           'image'
@@ -270,14 +288,23 @@ class Gallery extends React.Component {
   // Handle successful Ajax request
   handleAjaxSuccess = ({
     callback = null,
+    gallery,
     state = null,
     status = null,
     timeout = true
   }) => {
+    const { context } = this.props;
+
+    // Update context state
+    if (this.isMounting) {
+      context.actions.gallery.onChange(gallery);
+    }
+
     this.updateState(
       {
         ...STATE.ajax,
         ...state,
+        pagination: gallery.cursor,
         selected: [],
         status
       },
@@ -320,20 +347,23 @@ class Gallery extends React.Component {
 
   // Check loaded images
   handleLoaded = () => {
-    const { next } = this.state;
+    const { context } = this.props;
+    const { autoscroll, next } = this.state;
 
-    // Only pagination mode (load more)
-    if (next > 0) {
-      // Increase a number of loaded images by one
-      this.loadedImages = this.loadedImages + 1;
+    // Increase a number of loaded images by one
+    this.loadedImages = this.loadedImages + 1;
 
-      // When all images loaded successfully
-      if (next === this.loadedImages) {
-        // Reset counter and tracking state
-        this.loadedImages = 0;
-        this.updateState({ next: 0, loaded: true });
+    // When all images loaded successfully
+    if (next === this.loadedImages) {
+      // Reset counter and tracking state
+      this.loadedImages = 0;
+      this.updateState({ next: 0, loaded: true });
 
-        // Scroll to the bottom of the page
+      // Set pagination
+      this.setState({ pagination: context.state.cursor });
+
+      // Scroll to the bottom of the page
+      if (autoscroll && isBrowser) {
         scroll.scrollToBottom();
       }
     }
@@ -388,6 +418,11 @@ class Gallery extends React.Component {
     return this.uploadImages(formData);
   };
 
+  // Auto-scroll mode
+  handleAutoscroll = checked => {
+    this.setState(state => ({ autoscroll: !state.autoscroll }));
+  };
+
   // Select image
   handleSelect = id => {
     const { selected } = this.state;
@@ -406,7 +441,8 @@ class Gallery extends React.Component {
 
   // Select all images
   handleSelectAll = () => {
-    const { images } = this.state;
+    const { context } = this.props;
+    const { images } = context.state;
 
     this.setState({
       selected: images.map(image => image.public_id)
@@ -463,6 +499,9 @@ class Gallery extends React.Component {
     const { state } = this;
     const galleryProps = {
       ...state,
+      images: context.state.images,
+      isModal: context.state.isModal,
+      onAutoscroll: this.handleAutoscroll,
       onDeleteCancel: this.handleDeleteCancel,
       onDeleteConfirm: this.handleDeleteConfirm,
       onDeleteRequest: this.handleDeleteRequest,
@@ -478,7 +517,7 @@ class Gallery extends React.Component {
       onSelect: this.handleSelect,
       onSelectAll: this.handleSelectAll,
       onUpload: this.handleUpload,
-      isModal: context.state.isModal
+      pagination: state.pagination
     };
 
     return <View {...galleryProps} />;
