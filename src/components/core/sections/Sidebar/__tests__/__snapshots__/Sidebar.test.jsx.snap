@@ -264,11 +264,11 @@ exports[`<Sidebar /> Snapshot tests should render correctly 1`] = `
           >
             <a
               className="sc-iwsKbI ktpWoE"
-              href="https://github.com/rxseven/gyararii/releases/tag/v0.2.0"
+              href="https://github.com/rxseven/gyararii/releases/tag/v0.3.0"
               rel="noopener noreferrer"
               target="_blank"
             >
-              Version 0.2.0
+              Version 0.3.0
             </a>
           </div>
         </div>
