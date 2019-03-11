@@ -1,8 +1,8 @@
-# Gyararī 🌻
+# Gyararī
 
-[![Latest Release](https://img.shields.io/badge/latest-0.3.0-lightgrey.svg?style=flat 'Latest Release')](https://github.com/rxseven/gyararii/releases/tag/v0.3.0) [![Build Status](https://travis-ci.org/rxseven/gyararii.svg?branch=master 'Build Status')](https://travis-ci.org/rxseven/gyararii) [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/ 'CC BY-NC-ND 4.0') [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0 'AGPL v3')
+[![Latest Release](https://img.shields.io/badge/latest-0.4.0-lightgrey.svg?style=flat 'Latest Release')](https://github.com/rxseven/gyararii/releases/tag/v0.4.0) [![Build Status](https://travis-ci.org/rxseven/gyararii.svg?branch=master 'Build Status')](https://travis-ci.org/rxseven/gyararii) [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/ 'CC BY-NC-ND 4.0') [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0 'AGPL v3')
 
-**Gyararī is a simple SPA for collecting photos.** It was built from scratch using only [React](https://reactjs.org) (core UI library) and [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html) (runtime type checking for React props and similar objects). No complex state menagement (e.g. Redux, MobX, Apollo), static type checking (e.g. TypeScript or Flow), and UI library (e.g. Material-UI or React Bootstrap) needed!
+**Gyararī is a simple React app for collecting photos.** It was built from scratch using only [React](https://reactjs.org) and [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html). No complex state menagement, static type checking, and UI library needed!
 
 > Gyararī or ギャラリー literally means “Gallery” in Japanese.
 
@@ -32,7 +32,7 @@
 
 ## Live Demo
 
-**Gyararī** is running on **Heroku** at [https://gyararii.herokuapp.com](https://gyararii.herokuapp.com) and **Storybook** (component library for Gyararī) is hosted on **Netlify** at [https://gyararii.netlify.com](https://gyararii.netlify.com).
+**Gyararī** is running on **Heroku** at [https://gyararii.herokuapp.com](https://gyararii.herokuapp.com) and its **Storybook** (component library for Gyararī) is hosted on **Netlify** at [https://gyararii.netlify.com](https://gyararii.netlify.com).
 
 > **App sleeping...** as Gyararī and its API run on [Heroku’s free plan](https://www.heroku.com/free), when an app on Heroku has only one web dyno and that dyno doesn’t receive any traffic in 1 hour, the dyno goes to sleep. When someone accesses the app, the dyno manager will automatically wake up the web dyno to run the web process type. **This causes a short delay for this first request**, but subsequent requests will perform normally. For more information, see [App Sleeping on Heroku](https://blog.heroku.com/app_sleeping_on_heroku).
 
@@ -174,7 +174,7 @@ yarn build:storybook
 
 ### Analyzing the bundle size
 
-To analyze and debug JavaScript and Sass code bloat through source maps, run the following command to create an optimized production build and start analyzing and debugging the bundle size with [Source Map Explorer](https://github.com/danvk/source-map-explorer):
+To analyze and debug JavaScript and Sass code bloat through source maps, run the following commands respectively to create an optimized production build and start analyzing and debugging the bundle size with [Source Map Explorer](https://github.com/danvk/source-map-explorer):
 
 ```sh
 yarn build
@@ -185,7 +185,7 @@ Once the analyzing process has finished and the report was generated, you will a
 
 ### Running the production build locally
 
-**1.** Run the following commands to create an optimized production build and start an HTTP server serving the static app locally:
+**1.** Run the following commands respectively to create an optimized production build and start an HTTP server serving the static app locally:
 
 ```sh
 yarn build
@@ -200,7 +200,7 @@ yarn start:static
 
 ### Running static Storybook app locally
 
-**1.** Run the following commands to create a static Storybook app and start an HTTP server serving the static app locally:
+**1.** Run the following commands respectively to create a static Storybook app and start an HTTP server serving the static app locally:
 
 ```sh
 yarn build:storybook
@@ -229,13 +229,13 @@ Gyararī was built with React and Node.js, one of the most popular stack of tech
 
 - React, React Router, React Transition Group, React Helmet
 - Recompose, Lodash, Ramda, Axios, Yup, PropTypes
-- Styled Components, Sass, PostCSS, CSS modules, Bootstrap (Sass)
+- Styled Components, Sass, PostCSS, CSS modules, Bootstrap
 - [More...](https://github.com/rxseven/gyararii/blob/master/package.json)
 
 ### REST API
 
-- Node, Express, Cloudinary
-- Lodash, CORS, .ENV
+- Node, Express, TypeScript
+- CORS, Body-parser, .ENV, Lodash
 
 > Note: REST API for Gyararī can be found in [this repository](https://github.com/rxseven/gyararii-api).
 
@@ -294,7 +294,7 @@ Chrome and Firefox have full support, but Safari and IE have strange behaviors.
 
 **[Gyararī API](https://github.com/rxseven/gyararii-api)**
 
-REST API for Gyararī built with Node, Express, and Cloudinary.
+REST API for Gyararī built with Node, Express, and TypeScript.
 
 **[Setup React App](https://github.com/rxseven/setup-react-app)**
 
@@ -317,7 +317,7 @@ See [releases](https://github.com/rxseven/gyararii/releases).
 
 ## Acknowledgements
 
-This project is maintained by [Theerawat Pongsupawat](https://www.linkedin.com/in/pongsupawat/), frontend developer from Chiang Mai, Thailand.
+Gyararī is an open-source project built and maintained by [Theerawat Pongsupawat](https://www.linkedin.com/in/pongsupawat/), frontend developer from Chiang Mai, Thailand.
 
 ## Credits
 
