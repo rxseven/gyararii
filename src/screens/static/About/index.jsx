@@ -18,26 +18,24 @@ function About() {
             <Card.Header>What is Gyararī</Card.Header>
             <Card.Body>
               <Card.Text>
-                <strong>Gyararī</strong> is a simple SPA for collecting photos.
-                It was built from scratch using only{' '}
-                <Hyperlink href="https://reactjs.org">React</Hyperlink> (core UI
-                library) and{' '}
+                <strong>Gyararī</strong> is a simple React app for collecting
+                photos. It was built from scratch using only{' '}
+                <Hyperlink href="https://reactjs.org">React</Hyperlink> and{' '}
                 <Hyperlink href="https://reactjs.org/docs/typechecking-with-proptypes.html">
                   PropTypes
-                </Hyperlink>{' '}
-                (runtime type checking for React props and similar objects). No
-                complex state menagement (e.g. Redux, MobX, Apollo), static type
-                checking (e.g. TypeScript or Flow), and UI library (e.g.
-                Material-UI or React Bootstrap) needed!
+                </Hyperlink>
+                . No complex state menagement, static type checking, and UI
+                library needed!
               </Card.Text>
               <Card.Text>
-                <strong>Gyararī</strong> is an open-source project maintained by{' '}
+                <strong>Gyararī</strong> is an open-source project built and
+                maintained by{' '}
                 <Hyperlink href="https://www.linkedin.com/in/pongsupawat">
                   Theerawat Pongsupawat
                 </Hyperlink>
-                , React &amp; Redux frontend developer from Chiang Mai,
-                Thailand.
+                , frontend developer from Chiang Mai, Thailand.
               </Card.Text>
+              <hr />
               <Card.Text>
                 <strong>Gyararī</strong> or ギャラリー literally means “Gallery”
                 in Japanese.
