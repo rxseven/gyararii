@@ -2,7 +2,9 @@
 
 [![Latest Release](https://img.shields.io/badge/latest-0.4.0-lightgrey.svg?style=flat 'Latest Release')](https://github.com/rxseven/gyararii/releases/tag/v0.4.0) [![Build Status](https://travis-ci.org/rxseven/gyararii.svg?branch=master 'Build Status')](https://travis-ci.org/rxseven/gyararii) [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/ 'CC BY-NC-ND 4.0') [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0 'AGPL v3')
 
-**Gyararī is a simple React app for collecting photos.** It was built from scratch using only [React](https://reactjs.org) and [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html). No complex state menagement, static type checking, and UI library needed!
+**Gyararī is a simple React app for collecting photos.** It was built from scratch using only [React](https://reactjs.org) and [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html). No complex state management, static type checking, and UI library needed!
+
+With **Gyararī**, you can collect and view photos right in your pocket or on your desktop. You can simply upload, view, and organize your favorite photos in just a few clicks!
 
 > Gyararī or ギャラリー literally means “Gallery” in Japanese.
 
