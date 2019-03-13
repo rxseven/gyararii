@@ -8,10 +8,18 @@ import Spinner from 'components/common/base/Spinner';
 
 const Frame = styled.div`
   align-items: center;
+  background-color: #fff;
   display: ${({ hidden }) => (hidden ? 'none' : 'flex')};
   justify-content: center;
-  margin: 1.5rem 0;
+  margin-top: -1rem;
+  padding: 1.5rem 0;
+  position: relative;
   min-height: 28px;
+  z-index: 2;
+
+  @media (min-width: ${({ theme }) => theme.breakpoint.sm}) {
+    background-color: transparent;
+  }
 `;
 
 const propTypes = exact({
