@@ -187,14 +187,23 @@ Once the analyzing process has finished and the report was generated, you will a
 
 ### Running the production build locally
 
-**1.** Run the following commands respectively to create an optimized production build and start an HTTP server serving the static app locally:
+**1.** Change base API URL in `.env.production` as fllows:
+
+```
+# API URLs
+REACT_APP_API_URL=http://localhost:5000/api/v1/gallery
+```
+
+> Why do we need to change the base URL? Because all `build` commands will load environment variables from `.env.production` despite the fact that we run this command locally. However, the production [Grararī API](https://github.com/rxseven/gyararii-api) only allows incoming requests from two domains (see the configuration [here](https://github.com/rxseven/gyararii-api/blob/master/src/config/server.ts#L19)), which are [https://gyararii.herokuapp.com](https://gyararii.herokuapp.com) and [https://gyararii.netlify.com](https://gyararii.netlify.com), other origins will be blocked by [CORS](https://github.com/rxseven/gyararii-api/blob/master/src/app.ts#L35).
+
+**2.** Run the following commands respectively to create an optimized production build and start an HTTP server serving the static app locally:
 
 ```sh
 yarn build
 yarn start:static
 ```
 
-**2.** Open [http://localhost:8080](http://localhost:8080) to launch the production app in the browser.
+**3.** Open [http://localhost:8080](http://localhost:8080) to launch the production app in the browser.
 
 > Tip: press `control + c` to stop the server.
 
@@ -202,14 +211,21 @@ yarn start:static
 
 ### Running static Storybook app locally
 
-**1.** Run the following commands respectively to create a static Storybook app and start an HTTP server serving the static app locally:
+**1.** Change base API URL in `.env.production` as fllows:
+
+```
+# API URLs
+REACT_APP_API_URL=http://localhost:5000/api/v1/gallery
+```
+
+**2.** Run the following commands respectively to create a static Storybook app and start an HTTP server serving the static app locally:
 
 ```sh
 yarn build:storybook
 yarn storybook:static
 ```
 
-**2.** Open [http://localhost:8081](http://localhost:8081) to launch the static Storybook app in the browser.
+**3.** Open [http://localhost:8081](http://localhost:8081) to launch the static Storybook app in the browser.
 
 > Tip: press `control + c` to stop the server.
 
