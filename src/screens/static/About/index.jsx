@@ -28,6 +28,11 @@ function About() {
                 library needed!
               </Card.Text>
               <Card.Text>
+                With <strong>Gyararī</strong>, you can collect and view photos
+                right in your pocket or on your desktop. You can simply upload,
+                view, and organize your favorite photos in just a few clicks!
+              </Card.Text>
+              <Card.Text>
                 <strong>Gyararī</strong> is an open-source project built and
                 maintained by{' '}
                 <Hyperlink href="https://www.linkedin.com/in/pongsupawat">
