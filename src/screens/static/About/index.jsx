@@ -24,7 +24,7 @@ function About() {
                 <Hyperlink href="https://reactjs.org/docs/typechecking-with-proptypes.html">
                   PropTypes
                 </Hyperlink>
-                . No complex state menagement, static type checking, and UI
+                . No complex state management, static type checking, and UI
                 library needed!
               </Card.Text>
               <Card.Text>
