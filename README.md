@@ -1,8 +1,10 @@
 # Gyararī
 
-[![Latest Release](https://img.shields.io/badge/latest-0.4.0-lightgrey.svg?style=flat 'Latest Release')](https://github.com/rxseven/gyararii/releases/tag/v0.4.0) [![Build Status](https://travis-ci.org/rxseven/gyararii.svg?branch=master 'Build Status')](https://travis-ci.org/rxseven/gyararii) [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/ 'CC BY-NC-ND 4.0') [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0 'AGPL v3')
+[![Latest Release](https://img.shields.io/badge/latest-0.5.0-lightgrey.svg?style=flat 'Latest Release')](https://github.com/rxseven/gyararii/releases/tag/v0.5.0) [![Build Status](https://travis-ci.org/rxseven/gyararii.svg?branch=master 'Build Status')](https://travis-ci.org/rxseven/gyararii) [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/ 'CC BY-NC-ND 4.0') [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0 'AGPL v3')
 
-**Gyararī is a simple React app for collecting photos.** It was built from scratch using only [React](https://reactjs.org) and [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html). No complex state menagement, static type checking, and UI library needed!
+**Gyararī is a simple React app for collecting photos.** It was built from scratch using only [React](https://reactjs.org) and [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html). No complex state management, static type checking, and UI library needed!
+
+With **Gyararī**, you can collect and view photos right in your pocket or on your desktop. You can simply upload, view, and organize your favorite photos in just a few clicks!
 
 > Gyararī or ギャラリー literally means “Gallery” in Japanese.
 
@@ -185,14 +187,23 @@ Once the analyzing process has finished and the report was generated, you will a
 
 ### Running the production build locally
 
-**1.** Run the following commands respectively to create an optimized production build and start an HTTP server serving the static app locally:
+**1.** Change base API URL in `.env.production` as fllows:
+
+```
+# API URLs
+REACT_APP_API_URL=http://localhost:5000/api/v1/gallery
+```
+
+> Why do we need to change the base URL? Because all `build` commands will load environment variables from `.env.production` despite the fact that we run this command locally. However, the production [Grararī API](https://github.com/rxseven/gyararii-api) only allows incoming requests from two domains (see the configuration [here](https://github.com/rxseven/gyararii-api/blob/master/src/config/server.ts#L19)), which are [https://gyararii.herokuapp.com](https://gyararii.herokuapp.com) and [https://gyararii.netlify.com](https://gyararii.netlify.com), other origins will be blocked by [CORS](https://github.com/rxseven/gyararii-api/blob/master/src/app.ts#L35).
+
+**2.** Run the following commands respectively to create an optimized production build and start an HTTP server serving the static app locally:
 
 ```sh
 yarn build
 yarn start:static
 ```
 
-**2.** Open [http://localhost:8080](http://localhost:8080) to launch the production app in the browser.
+**3.** Open [http://localhost:8080](http://localhost:8080) to launch the production app in the browser.
 
 > Tip: press `control + c` to stop the server.
 
@@ -200,14 +211,21 @@ yarn start:static
 
 ### Running static Storybook app locally
 
-**1.** Run the following commands respectively to create a static Storybook app and start an HTTP server serving the static app locally:
+**1.** Change base API URL in `.env.production` as fllows:
+
+```
+# API URLs
+REACT_APP_API_URL=http://localhost:5000/api/v1/gallery
+```
+
+**2.** Run the following commands respectively to create a static Storybook app and start an HTTP server serving the static app locally:
 
 ```sh
 yarn build:storybook
 yarn storybook:static
 ```
 
-**2.** Open [http://localhost:8081](http://localhost:8081) to launch the static Storybook app in the browser.
+**3.** Open [http://localhost:8081](http://localhost:8081) to launch the static Storybook app in the browser.
 
 > Tip: press `control + c` to stop the server.
 

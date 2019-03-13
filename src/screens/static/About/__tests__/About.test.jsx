@@ -1,6 +1,5 @@
 import { shallow } from 'enzyme';
 import React from 'react';
-// import renderer from 'react-test-renderer';
 
 import About from '../index';
 
@@ -17,14 +16,4 @@ describe('<About />', () => {
       expect(wrapper).toBeDefined();
     });
   });
-
-  // describe('Snapshot tests', () => {
-  //   it('should render correctly', () => {
-  //     // Act
-  //     const tree = renderer.create(component).toJSON();
-
-  //     // Assert
-  //     expect(tree).toMatchSnapshot();
-  //   });
-  // });
 });

@@ -12,16 +12,13 @@ import HTML from 'constants/elements/html';
 import PATHS from 'constants/routes/paths';
 
 const linkStyles = css`
+  color: ${({ theme }) => theme.color.base};
   display: block;
   padding: 1rem 0 1rem 1rem;
   transition: background-color 0.15s ease-in-out;
 
-  &,
   :hover {
-    color: ${({ theme }) => theme.color.base};
-  }
-
-  :hover {
+    color: ${({ theme }) => theme.color.primary};
     background-color: rgba(0, 0, 0, 0.1);
     text-decoration: none;
   }
@@ -37,7 +34,7 @@ const Header = styled.div`
   border-bottom: #ccc solid 1px;
   display: flex;
   height: 46px;
-  margin: 0 1rem;
+  padding: 0 1rem;
 `;
 
 const Link = styled(Hyperlink)`
@@ -65,6 +62,14 @@ const NavLink = styled(Nav.Link)`
   ${linkStyles}
 `;
 
+const Logo = styled(Brand)`
+  color: #7952b3;
+
+  :hover {
+    color: ${({ theme }) => theme.color.secondary};
+  }
+`;
+
 const Overflow = createGlobalStyle`
   body.menu-open {
     overflow: hidden;
@@ -76,7 +81,7 @@ const Text = styled.span`
 `;
 
 const Version = styled(Hyperlink)`
-  color: ${({ theme }) => theme.color.gray};
+  color: ${({ theme }) => theme.color.secondary};
   font-size: 0.75rem;
 `;
 
@@ -122,7 +127,7 @@ function Menu({ isOpen, location, onChange, onClose }) {
       <Offcanvas {...menuOptions} isOpen={isOpen} onStateChange={onChange}>
         <Frame>
           <Header>
-            <Brand />
+            <Logo />
           </Header>
           <Navigation>
             <NavItem>
@@ -157,8 +162,8 @@ function Menu({ isOpen, location, onChange, onClose }) {
             </NavItem>
           </Navigation>
           <Meta>
-            <Version href="https://github.com/rxseven/gyararii/releases/tag/v0.4.0">
-              Version 0.4.0
+            <Version href="https://github.com/rxseven/gyararii/releases/tag/v0.5.0">
+              Version 0.5.0
             </Version>
           </Meta>
         </Frame>

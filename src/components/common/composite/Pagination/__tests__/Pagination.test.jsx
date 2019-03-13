@@ -2,6 +2,7 @@ import { shallow } from 'enzyme';
 import React from 'react';
 import renderer from 'react-test-renderer';
 
+import Environment from 'tests/environment';
 import Pagination from '../index';
 
 describe('<Pagination />', () => {
@@ -12,7 +13,11 @@ describe('<Pagination />', () => {
     isMore: false,
     onLoad: jest.fn()
   };
-  const component = <Pagination {...props} />;
+  const component = (
+    <Environment>
+      <Pagination {...props} />
+    </Environment>
+  );
 
   describe('Unit tests', () => {
     it('should render without crashing', () => {

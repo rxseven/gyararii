@@ -75,7 +75,7 @@ exports[`<Menu /> Snapshot tests should render correctly 1`] = `
           tabIndex={-1}
         >
           <div
-            className="sc-bxivhb qapvx"
+            className="sc-bxivhb joJJRO"
           >
             <a
               className="sc-bdVaJa jQwNdM"
@@ -94,7 +94,7 @@ exports[`<Menu /> Snapshot tests should render correctly 1`] = `
             >
               <a
                 aria-current="page"
-                className="sc-htoDjs ydPJF sc-bwzfXH dRlolo active"
+                className="sc-htoDjs NwkFE sc-bwzfXH dRlolo active"
                 data-light={false}
                 href="/"
                 onClick={[Function]}
@@ -118,7 +118,7 @@ exports[`<Menu /> Snapshot tests should render correctly 1`] = `
                   />
                 </svg>
                 <span
-                  className="sc-dnqmqq cpJVKj"
+                  className="sc-iwsKbI gVMPMw"
                 >
                   Gallery
                 </span>
@@ -129,7 +129,7 @@ exports[`<Menu /> Snapshot tests should render correctly 1`] = `
             >
               <a
                 aria-current={null}
-                className="sc-htoDjs ydPJF sc-bwzfXH dRlolo"
+                className="sc-htoDjs NwkFE sc-bwzfXH dRlolo"
                 data-light={false}
                 href="/about"
                 onClick={[Function]}
@@ -152,7 +152,7 @@ exports[`<Menu /> Snapshot tests should render correctly 1`] = `
                   />
                 </svg>
                 <span
-                  className="sc-dnqmqq cpJVKj"
+                  className="sc-iwsKbI gVMPMw"
                 >
                   About Gyararī
                 </span>
@@ -163,7 +163,7 @@ exports[`<Menu /> Snapshot tests should render correctly 1`] = `
             >
               <a
                 aria-current={null}
-                className="sc-htoDjs ydPJF sc-bwzfXH dRlolo"
+                className="sc-htoDjs NwkFE sc-bwzfXH dRlolo"
                 data-light={false}
                 href="/terms"
                 onClick={[Function]}
@@ -186,7 +186,7 @@ exports[`<Menu /> Snapshot tests should render correctly 1`] = `
                   />
                 </svg>
                 <span
-                  className="sc-dnqmqq cpJVKj"
+                  className="sc-iwsKbI gVMPMw"
                 >
                   Terms & Conditions
                 </span>
@@ -196,7 +196,7 @@ exports[`<Menu /> Snapshot tests should render correctly 1`] = `
               className="sc-gzVnrw kXANwb"
             >
               <a
-                className="sc-ifAKCX jSbHxJ"
+                className="sc-ifAKCX kBaSks"
                 href="https://gyararii.netlify.com"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -219,7 +219,7 @@ exports[`<Menu /> Snapshot tests should render correctly 1`] = `
                   />
                 </svg>
                 <span
-                  className="sc-dnqmqq cpJVKj"
+                  className="sc-iwsKbI gVMPMw"
                 >
                   Storybook
                 </span>
@@ -229,7 +229,7 @@ exports[`<Menu /> Snapshot tests should render correctly 1`] = `
               className="sc-gzVnrw kXANwb"
             >
               <a
-                className="sc-ifAKCX jSbHxJ"
+                className="sc-ifAKCX kBaSks"
                 href="https://github.com/rxseven/gyararii"
                 rel="noopener noreferrer"
                 target="_blank"
@@ -252,7 +252,7 @@ exports[`<Menu /> Snapshot tests should render correctly 1`] = `
                   />
                 </svg>
                 <span
-                  className="sc-dnqmqq cpJVKj"
+                  className="sc-iwsKbI gVMPMw"
                 >
                   View on GitHub
                 </span>
@@ -263,12 +263,12 @@ exports[`<Menu /> Snapshot tests should render correctly 1`] = `
             className="sc-EHOje kTJQym"
           >
             <a
-              className="sc-iwsKbI ktpWoE"
-              href="https://github.com/rxseven/gyararii/releases/tag/v0.4.0"
+              className="sc-gZMcBi cYeVZO"
+              href="https://github.com/rxseven/gyararii/releases/tag/v0.5.0"
               rel="noopener noreferrer"
               target="_blank"
             >
-              Version 0.4.0
+              Version 0.5.0
             </a>
           </div>
         </div>
