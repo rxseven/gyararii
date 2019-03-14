@@ -162,8 +162,8 @@ function Menu({ isOpen, location, onChange, onClose }) {
             </NavItem>
           </Navigation>
           <Meta>
-            <Version href="https://github.com/rxseven/gyararii/releases/tag/v0.5.0">
-              Version 0.5.0
+            <Version href="https://github.com/rxseven/gyararii/releases/tag/v0.5.1">
+              Version 0.5.1
             </Version>
           </Meta>
         </Frame>
