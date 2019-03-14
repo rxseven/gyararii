@@ -1,7 +1,7 @@
 {
   "name": "gyararii",
   "description": "A simple React app for collecting photos",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "license": "AGPL-3.0-or-later",
   "author": {
     "name": "Theerawat Pongsupawat",
