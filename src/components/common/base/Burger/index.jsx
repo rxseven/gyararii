@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 import Icon from 'components/common/base/Icon';
 
-const Bars = styled.span`
+const Frame = styled.span`
   align-items: center;
   cursor: pointer;
   border-radius: 50%;
@@ -35,9 +35,9 @@ const defaultProps = {
 
 function Burger({ className, onToggle }) {
   return (
-    <Bars className={className} onClick={onToggle}>
+    <Frame className={className} onClick={onToggle} title="Open menu">
       <Icon icon="bars" />
-    </Bars>
+    </Frame>
   );
 }
 
