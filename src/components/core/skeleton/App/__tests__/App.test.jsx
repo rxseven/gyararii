@@ -1,19 +1,17 @@
-import { shallow } from 'enzyme';
-import React from 'react';
-
+import { factory } from 'tests/utilities';
 import App from '../index';
 
+// Arrange
+const source = {};
+
+// Setup
+function setup(props) {
+  return factory(App, source, props);
+}
+
+// Test suites
 describe('<App />', () => {
-  // Arrange
-  const component = <App />;
-
-  describe('Unit tests', () => {
-    it('should render without crashing', () => {
-      // Act
-      const wrapper = shallow(component);
-
-      // Assert
-      expect(wrapper).toBeDefined();
-    });
+  it('should render without crashing', () => {
+    setup();
   });
 });
