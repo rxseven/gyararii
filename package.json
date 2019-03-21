@@ -37,7 +37,7 @@
     "storybook:static": "http-server ./storybook-static -p 8081 -o",
     "test": "node scripts/test.js --config jest.config.json",
     "test:coverage": "npm test -- --coverage --no-cache --silent",
-    "test:coverage:ci": "cat ./coverage/lcov.info | coveralls",
+    "test:coveralls": "cat ./coverage/lcov.info | coveralls",
     "test:debug": "react-scripts --inspect-brk test --runInBand",
     "test:silent": "npm test -- --silent",
     "test:staged": "cross-env CI=true npm test",
