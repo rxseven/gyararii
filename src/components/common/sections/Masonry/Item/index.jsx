@@ -169,12 +169,13 @@ function Item(props) {
 
   return (
     <Thumbnail data-visibility={visibility}>
-      <Frame onClick={handleOpenLightbox}>
+      <Frame data-testid="frame" onClick={handleOpenLightbox}>
         <Card.Image src={https} onLoad={handleLoaded} />
         <Shadow mobile={isMobile} />
         <Select
           data-checked={isSelected}
           data-mobile={isMobile}
+          data-testid="select"
           icon={toDelete ? 'trash-alt' : 'check-circle'}
           onClick={handleSelect}
         />
@@ -187,7 +188,7 @@ function Item(props) {
         >
           <Icon icon="external-link-alt" />
         </Link>
-        <Overlay isLoading={isLoading && isSelected}>
+        <Overlay data-testid="overlay" isLoading={isLoading && isSelected}>
           <Spinner color="#fff" />
         </Overlay>
       </Frame>
