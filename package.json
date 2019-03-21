@@ -136,7 +136,6 @@
     "identity-obj-proxy": "3.0.0",
     "jest": "23.6.0",
     "jest-dom": "3.1.2",
-    "jest-enzyme": "7.0.1",
     "jest-extended": "0.11.1",
     "jest-pnp-resolver": "1.0.2",
     "jest-resolve": "23.6.0",
