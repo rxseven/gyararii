@@ -1,30 +1,54 @@
-import { shallow } from 'enzyme';
-import React from 'react';
-import renderer from 'react-test-renderer';
+import { ThreeBounce } from 'better-react-spinkit';
 
+import { factory } from 'tests/utilities';
 import Spinner from '../index';
 
+// Mock
+jest.mock('better-react-spinkit');
+
+// Arrange
+const context = expect.any(Object);
+const options = { duration: '1.25s', gutter: 5 };
+const source = {};
+const input = { ...options, ...source };
+
+// Setup
+function setup(props) {
+  return factory(Spinner, source, props);
+}
+
+// Test suites
 describe('<Spinner />', () => {
-  // Arrange
-  const component = <Spinner />;
-
-  describe('Unit tests', () => {
-    it('should render without crashing', () => {
-      // Act
-      const wrapper = shallow(component);
-
-      // Assert
-      expect(wrapper).toBeDefined();
-    });
+  it('should render without crashing', () => {
+    setup();
   });
 
-  describe('Snapshot tests', () => {
-    it('should render correctly', () => {
-      // Act
-      const tree = renderer.create(component).toJSON();
+  it('should render with a default style', () => {
+    const expected = {
+      called: {
+        ...input,
+        color: '#999',
+        size: 7
+      }
+    };
+    setup();
 
-      // Assert
-      expect(tree).toMatchSnapshot();
-    });
+    expect(ThreeBounce).toHaveBeenCalledWith(expected.called, context);
+  });
+
+  it('should render with custom "color" and "size"', () => {
+    const props = {
+      color: '666',
+      size: 8
+    };
+    const expected = {
+      called: {
+        ...input,
+        ...props
+      }
+    };
+    setup(props);
+
+    expect(ThreeBounce).toHaveBeenCalledWith(expected.called, context);
   });
 });
