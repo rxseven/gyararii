@@ -17,15 +17,15 @@ const propTypes = {
   onClose: PropTypes.func.isRequired
 };
 
-function Modal({ children, onClose, ...props }) {
+const options = {
+  bodyOpenClassName: 'modal-open',
+  className: 'modal-dialog',
+  overlayClassName: 'modal'
+};
+
+function Modal({ children, ...props }) {
   return (
-    <ReactModal
-      {...props}
-      bodyOpenClassName="modal-open"
-      className="modal-dialog"
-      onRequestClose={onClose}
-      overlayClassName="modal"
-    >
+    <ReactModal {...options} {...props}>
       <div className="modal-content">{children}</div>
     </ReactModal>
   );
