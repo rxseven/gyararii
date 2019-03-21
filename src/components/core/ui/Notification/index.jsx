@@ -2,18 +2,7 @@ import React from 'react';
 import { ToastContainer } from 'react-toastify';
 
 import './Notification.styles.scss';
-
-function Close({ closeToast }) {
-  return (
-    <span
-      aria-hidden="true"
-      className="notification-close"
-      onClick={closeToast}
-    >
-      &times;
-    </span>
-  );
-}
+import Close from './Close';
 
 function Notification(props) {
   return (
