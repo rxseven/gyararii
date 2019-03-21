@@ -1,41 +1,69 @@
-import { shallow } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
-
-import Environment from 'tests/environment';
+import Button from 'components/common/base/Button';
+import Spinner from 'components/common/base/Spinner';
+import { factory } from 'tests/utilities';
 import Pagination from '../index';
 
+// Mock
+jest.mock('components/common/base/Button', () =>
+  jest.fn(({ children }) => <div>{children}</div>)
+);
+jest.mock('components/common/base/Spinner', () => jest.fn(() => <i />));
+
+// Arrange
+const seed = { content: 'content' };
+const source = {
+  children: seed.content,
+  isLoading: false,
+  isMore: false,
+  onLoad: jest.fn()
+};
+const input = { ...seed, ...source };
+
+// Setup
+function setup(props) {
+  return factory(Pagination, source, props);
+}
+
+// Cleanup
+afterEach(() => {
+  Button.mockClear();
+  Spinner.mockClear();
+});
+
+// Test suites
 describe('<Pagination />', () => {
-  // Arrange
-  const props = {
-    children: 'More images',
-    isLoading: false,
-    isMore: false,
-    onLoad: jest.fn()
-  };
-  const component = (
-    <Environment>
-      <Pagination {...props} />
-    </Environment>
-  );
-
-  describe('Unit tests', () => {
-    it('should render without crashing', () => {
-      // Act
-      const wrapper = shallow(component);
-
-      // Assert
-      expect(wrapper).toBeDefined();
-    });
+  it('should render without crashing', () => {
+    setup();
   });
 
-  describe('Snapshot tests', () => {
-    it('should render correctly', () => {
-      // Act
-      const tree = renderer.create(component).toJSON();
+  it('should render nothing by default', () => {
+    const { component } = setup();
 
-      // Assert
-      expect(tree).toMatchSnapshot();
-    });
+    expect(component).not.toBeVisible();
+  });
+
+  it('should render a spinner when loading data', () => {
+    const props = {
+      isLoading: true,
+      isMore: true
+    };
+    setup(props);
+
+    expect(Button).not.toHaveBeenCalled();
+    expect(Spinner).toHaveBeenCalled();
+  });
+
+  it('should render a button when more data is available', () => {
+    const props = {
+      isLoading: false,
+      isMore: true
+    };
+    const expected = { content: input.children };
+    const { component } = setup(props);
+
+    expect(component).toHaveTextContent(expected.content);
+    expect(Button).toHaveBeenCalled();
+    expect(Spinner).not.toHaveBeenCalled();
   });
 });
