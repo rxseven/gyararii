@@ -1,38 +1,56 @@
-import { shallow } from 'enzyme';
-import React from 'react';
-import renderer from 'react-test-renderer';
+import ReactImages from 'react-images';
 
+import { factory } from 'tests/utilities';
 import Lightbox from '../index';
 
+// Mock
+jest.mock('react-images');
+
+// Arrange
+const context = expect.any(Object);
+const source = {
+  currentImage: 1,
+  images: [{ src: 'image-001' }, { src: 'image-002' }, { src: 'image-003' }],
+  onClickNext: jest.fn(),
+  onClickPrev: jest.fn(),
+  onClose: jest.fn()
+};
+const input = { ...source };
+
+// Setup
+function setup(props) {
+  return factory(Lightbox, source, props);
+}
+
+// Test suites
 describe('<Lightbox />', () => {
-  // Arrange
-  const props = {
-    currentImage: 1,
-    images: [{ src: 'image-001' }, { src: 'image-002' }, { src: 'image-003' }],
-    isOpen: false,
-    onClickNext: jest.fn(),
-    onClickPrev: jest.fn(),
-    onClose: jest.fn()
-  };
-  const component = <Lightbox {...props} />;
-
-  describe('Unit tests', () => {
-    it('should render without crashing', () => {
-      // Act
-      const wrapper = shallow(component);
-
-      // Assert
-      expect(wrapper).toBeDefined();
-    });
+  it('should render without crashing', () => {
+    setup();
   });
 
-  describe('Snapshot tests', () => {
-    it('should render correctly', () => {
-      // Act
-      const tree = renderer.create(component).toJSON();
+  it('should hide a lightbox by default', () => {
+    const expected = {
+      called: {
+        ...input,
+        backdropClosesModal: true,
+        isOpen: false
+      }
+    };
+    setup();
 
-      // Assert
-      expect(tree).toMatchSnapshot();
-    });
+    expect(ReactImages).toHaveBeenCalledWith(expected.called, context);
+  });
+
+  it('should show a lightbox when "isOpen" prop is set to "true"', () => {
+    const props = { ...input, isOpen: true };
+    const expected = {
+      called: {
+        ...props,
+        backdropClosesModal: true
+      }
+    };
+    setup(props);
+
+    expect(ReactImages).toHaveBeenCalledWith(expected.called, context);
   });
 });
