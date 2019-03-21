@@ -1,35 +1,28 @@
-import { shallow } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
 
+import { factory, toMarkup } from 'tests/utilities';
 import Set from '../index';
 
+// Arrange
+const seed = { content: 'content' };
+const source = { children: <button type="button">{seed.content}</button> };
+const input = { ...seed, ...source };
+
+// Setup
+function setup(props) {
+  return factory(Set, source, props);
+}
+
+// Test suites
 describe('<Button.Set />', () => {
-  // Arrange
-  const component = (
-    <Set>
-      <button type="button">Button</button>
-      <button type="button">Button</button>
-    </Set>
-  );
-
-  describe('Unit tests', () => {
-    it('should render without crashing', () => {
-      // Act
-      const wrapper = shallow(component);
-
-      // Assert
-      expect(wrapper).toBeDefined();
-    });
+  it('should render without crashing', () => {
+    setup();
   });
 
-  describe('Snapshot tests', () => {
-    it('should render correctly', () => {
-      // Act
-      const tree = renderer.create(component).toJSON();
+  it('should render passed children correctly', () => {
+    const expected = { html: input.children };
+    const { component } = setup();
 
-      // Assert
-      expect(tree).toMatchSnapshot();
-    });
+    expect(component).toContainHTML(toMarkup(expected.html));
   });
 });
