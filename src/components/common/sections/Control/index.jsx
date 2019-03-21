@@ -38,7 +38,13 @@ const Meta = styled.div`
   margin-bottom: 0;
 `;
 
-const Status = styled.span`
+const Panel = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+`;
+
+const Summary = styled.span`
   font-size: 0.75rem;
   margin-right: 0.5rem;
 `;
@@ -80,18 +86,18 @@ function Control({
   const selectedLength = selected.length;
 
   return (
-    <Frame show={selectedLength}>
+    <Frame>
       <Choose>
         <When condition={selectedLength}>
-          <React.Fragment>
-            <Status>
+          <Panel>
+            <Summary>
               <If condition={isMobile}>
                 <Check icon={['far', 'check-circle']} />
               </If>
               <If condition={imageLength === selectedLength}>All </If>
               <Highlight>{selectedLength}</Highlight>
               <If condition={isBrowser}> selected</If>
-            </Status>
+            </Summary>
             <Button.Set>
               <Button isLoading={isLoading} onClick={onSelectAll}>
                 Select all
@@ -108,7 +114,7 @@ function Control({
                 Delete
               </Button>
             </Button.Set>
-          </React.Fragment>
+          </Panel>
         </When>
         <When condition={!!status}>
           <Meta>{status}</Meta>
