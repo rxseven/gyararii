@@ -1,5 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 import React from 'react';
+import ReactDOMServer from 'react-dom/server';
 import { render } from 'react-testing-library';
 import { isEmpty } from 'lodash';
 
@@ -29,4 +30,9 @@ function factory(Component, defaultProps, props = {}) {
   return { ...utilities, component };
 }
 
-export { customRender as render, factory };
+// Render to HTML markup
+function toMarkup(value) {
+  return ReactDOMServer.renderToStaticMarkup(value);
+}
+
+export { customRender as render, factory, toMarkup };
