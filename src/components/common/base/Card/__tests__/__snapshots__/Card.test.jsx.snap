@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`<Card /> Snapshot tests should render correctly 1`] = `
-<div
-  className="card text-text-left mb-3"
->
-  content
-</div>
-`;
