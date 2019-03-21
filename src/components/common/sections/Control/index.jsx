@@ -89,7 +89,7 @@ function Control({
     <Frame>
       <Choose>
         <When condition={selectedLength}>
-          <Panel>
+          <Panel data-testid="panel">
             <Summary>
               <If condition={isMobile}>
                 <Check icon={['far', 'check-circle']} />
@@ -117,10 +117,10 @@ function Control({
           </Panel>
         </When>
         <When condition={!!status}>
-          <Meta>{status}</Meta>
+          <Meta data-testid="status">{status}</Meta>
         </When>
         <When condition={!isEmpty && !status}>
-          <Meta>
+          <Meta data-testid="meta">
             Showing <Count>{imageLength}</Count> images
             {isError && (
               <span>
