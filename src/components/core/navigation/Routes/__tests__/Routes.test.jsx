@@ -1,19 +1,17 @@
-import { shallow } from 'enzyme';
-import React from 'react';
-
+import { factory } from 'tests/utilities';
 import Routes from '../index';
 
+// Arrange
+const source = {};
+
+// Setup
+function setup(props) {
+  return factory(Routes, source, props);
+}
+
+// Test suites
 describe('<Routes />', () => {
-  // Arrange
-  const component = <Routes />;
-
-  describe('Unit tests', () => {
-    it('should render without crashing', () => {
-      // Act
-      const wrapper = shallow(component);
-
-      // Assert
-      expect(wrapper).toBeDefined();
-    });
+  it('should render without crashing', () => {
+    setup();
   });
 });
