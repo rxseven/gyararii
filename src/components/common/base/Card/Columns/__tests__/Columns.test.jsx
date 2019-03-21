@@ -1,31 +1,32 @@
-import { shallow } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
 
+import { factory, toMarkup } from 'tests/utilities';
 import Column from '../index';
 
+// Arrange
+const seed = { content: 'content' };
+const source = { children: <span>{seed.content}</span> };
+const input = { ...seed, ...source };
+
+// Setup
+function setup(props) {
+  return factory(Column, source, props);
+}
+
+// Test suites
 describe('<Card.Column />', () => {
-  // Arrange
-  const props = { children: 'content' };
-  const component = <Column {...props} />;
-
-  describe('Unit tests', () => {
-    it('should render without crashing', () => {
-      // Act
-      const wrapper = shallow(component);
-
-      // Assert
-      expect(wrapper).toBeDefined();
-    });
+  it('should render without crashing', () => {
+    setup();
   });
 
-  describe('Snapshot tests', () => {
-    it('should render correctly', () => {
-      // Act
-      const tree = renderer.create(component).toJSON();
+  it('should render passed children correctly', () => {
+    const expected = {
+      content: input.content,
+      html: input.children
+    };
+    const { component } = setup();
 
-      // Assert
-      expect(tree).toMatchSnapshot();
-    });
+    expect(component).toHaveTextContent(expected.content);
+    expect(component).toContainHTML(toMarkup(expected.html));
   });
 });
