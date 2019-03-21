@@ -270,12 +270,12 @@ Gyararī was built with React and Node.js, one of the most popular stack of tech
 - JavaScript linting with ESLint
 - Stylesheet and Styled Components linting with Stylelint
 - Code formatting with Prettier
-- Automate testing with Jest, Enzyme, and React Testing Library
+- Automate testing with Jest and React Testing Library
 - Assets analyzing & debuging with Source Map Explorer & Webpack Bundle Analyzer
 - Type checking with PropTypes
 - Code debugging with Visual Studio Code and Chrome Debugger
 - Pre-commit hooking with Husky and Lint-staged
-- CI/CD with GitHub, Travis CI, Heroku, and Netlify
+- CI/CD with GitHub, Travis CI, Coveralls, Heroku, and Netlify
 - Developing UI components in isolation with Storybook
 
 > Note: the complete guidelines are available in [this project](https://github.com/rxseven/setup-react-app).
@@ -297,6 +297,7 @@ Gyararī was built with React and Node.js, one of the most popular stack of tech
 
 - [GitHub](https://github.com/) - web-based hosting service for version control using Git
 - [Travis CI](https://travis-ci.org/) - continuous integration
+- [Coveralls](https://coveralls.io/) - test coverage history and statistics
 
 [Back to top](#table-of-contents)
 
