@@ -1,30 +1,33 @@
-import { shallow } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { ToastContainer } from 'react-toastify';
 
+import { factory } from 'tests/utilities';
 import Notification from '../index';
 
+// Mock
+jest.mock('react-toastify', () => {
+  return {
+    ToastContainer: jest.fn(() => <i />)
+  };
+});
+
+// Arrange
+const source = {};
+
+// Setup
+function setup(props) {
+  return factory(Notification, source, props);
+}
+
+// Test suites
 describe('<Notification />', () => {
-  // Arrange
-  const component = <Notification />;
-
-  describe('Unit tests', () => {
-    it('should render without crashing', () => {
-      // Act
-      const wrapper = shallow(component);
-
-      // Assert
-      expect(wrapper).toBeDefined();
-    });
+  it('should render without crashing', () => {
+    setup();
   });
 
-  describe('Snapshot tests', () => {
-    it('should render correctly', () => {
-      // Act
-      const tree = renderer.create(component).toJSON();
+  it('should render a notification correctly', () => {
+    setup();
 
-      // Assert
-      expect(tree).toMatchSnapshot();
-    });
+    expect(ToastContainer).toHaveBeenCalled();
   });
 });
