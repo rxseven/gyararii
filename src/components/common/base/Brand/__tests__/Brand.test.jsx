@@ -1,36 +1,38 @@
-import { shallow } from 'enzyme';
-import React from 'react';
-import renderer from 'react-test-renderer';
-
-import Environment from 'tests/environment';
+import { factory } from 'tests/utilities';
 import Brand from '../index';
 
+// Arrange
+const source = {};
+
+// Setup
+function setup(props) {
+  return factory(Brand, source, props);
+}
+
+// Test suites
 describe('<Brand />', () => {
-  // Arrange
-  const props = { children: 'Link Text', href: '/' };
-  const component = (
-    <Environment>
-      <Brand {...props} />
-    </Environment>
-  );
-
-  describe('Unit tests', () => {
-    it('should render without crashing', () => {
-      // Act
-      const wrapper = shallow(component);
-
-      // Assert
-      expect(wrapper).toBeDefined();
-    });
+  it('should render without crashing', () => {
+    setup();
   });
 
-  describe('Snapshot tests', () => {
-    it('should render correctly', () => {
-      // Act
-      const tree = renderer.create(component).toJSON();
+  it('should render a logo containing the correct text', () => {
+    const expected = { content: 'ギャラリー' };
+    const { component } = setup();
 
-      // Assert
-      expect(tree).toMatchSnapshot();
-    });
+    expect(component).toHaveTextContent(expected.content);
+  });
+
+  it('should have "title" attribute with the correct text', () => {
+    const expected = { title: 'Gallery' };
+    const { component } = setup();
+
+    expect(component).toHaveAttribute('title', expected.title);
+  });
+
+  it('should link to root screen', () => {
+    const expected = { url: '/' };
+    const { component } = setup();
+
+    expect(component).toHaveAttribute('href', expected.url);
   });
 });

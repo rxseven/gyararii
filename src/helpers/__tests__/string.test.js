@@ -2,39 +2,33 @@ import { pluralWord } from '../string';
 
 describe('pluralWord helper', () => {
   it('should return singular word', () => {
-    // Arrange
     const count = 1;
     const singular = 'image';
+    const expected = singular;
 
-    // Act
     const result = pluralWord(count, singular);
 
-    // Assert
-    expect(result).toBe(singular);
+    expect(result).toBe(expected);
   });
 
   it('should return plural word by suffixing an "s"', () => {
-    // Arrange
     const count = 2;
     const singular = 'image';
+    const expected = `${singular}s`;
 
-    // Act
     const result = pluralWord(count, singular);
 
-    // Assert
-    expect(result).toBe(`${singular}s`);
+    expect(result).toBe(expected);
   });
 
   it('should return plural word by providing a particular word', () => {
-    // Arrange
     const count = 2;
     const singular = 'is';
     const plural = 'are';
+    const expected = plural;
 
-    // Act
     const result = pluralWord(count, singular, plural);
 
-    // Assert
-    expect(result).toBe(plural);
+    expect(result).toBe(expected);
   });
 });

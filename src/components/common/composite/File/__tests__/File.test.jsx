@@ -1,36 +1,63 @@
-import { shallow } from 'enzyme';
-import React from 'react';
-import renderer from 'react-test-renderer';
+import { fireEvent } from 'react-testing-library';
 
+import { factory } from 'tests/utilities';
 import File from '../index';
 
+// Arrange
+const seed = { content: 'content' };
+const source = {
+  children: seed.content,
+  id: 'file',
+  onUpload: jest.fn()
+};
+const input = { ...seed, ...source };
+
+// Setup
+function setup(props) {
+  return factory(File, source, props);
+}
+
+// Test suites
 describe('<File />', () => {
-  // Arrange
-  const props = {
-    children: 'Text',
-    id: 'file',
-    onChange: jest.fn(),
-    onUpload: jest.fn()
-  };
-  const component = <File {...props} />;
-
-  describe('Unit tests', () => {
-    it('should render without crashing', () => {
-      // Act
-      const wrapper = shallow(component);
-
-      // Assert
-      expect(wrapper).toBeDefined();
-    });
+  it('should render without crashing', () => {
+    setup();
   });
 
-  describe('Snapshot tests', () => {
-    it('should render correctly', () => {
-      // Act
-      const tree = renderer.create(component).toJSON();
+  it('should render passed children correctly', () => {
+    const expected = { content: input.children };
+    const { component } = setup();
 
-      // Assert
-      expect(tree).toMatchSnapshot();
-    });
+    expect(component).toHaveTextContent(expected.content);
+  });
+
+  it('should allow a single file to be uploaded by default', () => {
+    const expected = { attribute: 'multiple' };
+    const { getByLabelText } = setup();
+
+    expect(getByLabelText('upload')).not.toHaveAttribute(expected.attribute);
+  });
+
+  it('should accept multiple files to be uploaded', () => {
+    const props = { multiple: true };
+    const expected = { attribute: 'multiple' };
+    const { getByLabelText } = setup(props);
+
+    expect(getByLabelText('upload')).toHaveAttribute(expected.attribute);
+  });
+
+  it('should call onUpload() when input field has changed', () => {
+    const expected = { called: 1 };
+    const { getByLabelText } = setup();
+
+    fireEvent.change(getByLabelText('upload'));
+
+    expect(input.onUpload).toHaveBeenCalledTimes(expected.called);
+  });
+
+  it('should disabled input field when loading data', () => {
+    const props = { isLoading: true };
+    const { getByLabelText } = setup(props);
+
+    expect(getByLabelText('upload')).toBeDisabled();
   });
 });

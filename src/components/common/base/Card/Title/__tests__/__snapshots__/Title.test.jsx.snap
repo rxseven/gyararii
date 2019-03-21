@@ -1,9 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`<Card.Title /> Snapshot tests should render correctly 1`] = `
-<h5
-  className="card-title"
->
-  content
-</h5>
-`;

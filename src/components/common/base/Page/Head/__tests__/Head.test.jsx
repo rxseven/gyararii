@@ -1,31 +1,32 @@
-import { shallow } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { Helmet } from 'react-helmet';
 
+import { factory } from 'tests/utilities';
 import Head from '../index';
 
-describe('<Head />', () => {
-  // Arrange
-  const props = { children: 'content' };
-  const component = <Head {...props} />;
+// Mock
+jest.mock('react-helmet');
 
-  describe('Unit tests', () => {
-    it('should render without crashing', () => {
-      // Act
-      const wrapper = shallow(component);
+// Arrange
+const context = expect.any(Object);
+const source = { children: <title>Page title</title> };
+const input = { ...source };
 
-      // Assert
-      expect(wrapper).toBeDefined();
-    });
+// Setup
+function setup(props) {
+  return factory(Head, source, props);
+}
+
+// Test suites
+describe('<Page.Head />', () => {
+  it('should render without crashing', () => {
+    setup();
   });
 
-  describe('Snapshot tests', () => {
-    it('should render correctly', () => {
-      // Act
-      const tree = renderer.create(component).toJSON();
+  it('should render passed children correctly', () => {
+    const expected = { content: { children: input.children } };
+    setup();
 
-      // Assert
-      expect(tree).toMatchSnapshot();
-    });
+    expect(Helmet).toHaveBeenCalledWith(expected.content, context);
   });
 });

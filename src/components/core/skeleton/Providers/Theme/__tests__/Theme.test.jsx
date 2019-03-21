@@ -1,32 +1,51 @@
-import { shallow } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { ThemeProvider } from 'styled-components';
 
-import mock from 'tests/mock';
+import { factory, toMarkup } from 'tests/utilities';
 import Theme from '../index';
 
-describe('<Theme />', () => {
-  // Arrange
-  const props = { children: mock.elements.children };
-  const component = <Theme {...props} />;
+// Mock
+jest.mock('styled-components', () => {
+  return {
+    ThemeProvider: jest.fn(({ children }) => <div>{children}</div>)
+  };
+});
 
-  describe('Unit tests', () => {
-    it('should render without crashing', () => {
-      // Act
-      const wrapper = shallow(component);
+// Arrange
+const seed = { content: 'content' };
+const source = { children: <span>{seed.content}</span> };
+const input = { ...seed, ...source };
 
-      // Assert
-      expect(wrapper).toBeDefined();
-    });
+// Setup
+function setup(props) {
+  return factory(Theme, source, props);
+}
+
+// Cleanup
+afterEach(() => {
+  ThemeProvider.mockClear();
+});
+
+// Test suites
+describe('<Providers.Theme />', () => {
+  it('should render without crashing', () => {
+    setup();
   });
 
-  describe('Snapshot tests', () => {
-    it('should render correctly', () => {
-      // Act
-      const tree = renderer.create(component).toJSON();
+  it('should render passed children correctly', () => {
+    const expected = {
+      content: input.content,
+      html: input.children
+    };
+    const { component } = setup();
 
-      // Assert
-      expect(tree).toMatchSnapshot();
-    });
+    expect(component).toHaveTextContent(expected.content);
+    expect(component).toContainHTML(toMarkup(expected.html));
+  });
+
+  it('should render theme provider correctly', () => {
+    setup();
+
+    expect(ThemeProvider).toHaveBeenCalled();
   });
 });

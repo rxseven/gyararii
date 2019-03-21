@@ -1,35 +1,17 @@
-import { shallow } from 'enzyme';
-import React from 'react';
-import renderer from 'react-test-renderer';
-
-import Environment from 'tests/environment';
+import { factory } from 'tests/utilities';
 import Home from '../index';
 
+// Arrange
+const source = {};
+
+// Setup
+function setup(props) {
+  return factory(Home, source, props);
+}
+
+// Test suites
 describe('<Home />', () => {
-  // Arrange
-  const component = (
-    <Environment>
-      <Home />
-    </Environment>
-  );
-
-  describe('Unit tests', () => {
-    it('should render without crashing', () => {
-      // Act
-      const wrapper = shallow(component);
-
-      // Assert
-      expect(wrapper).toBeDefined();
-    });
-  });
-
-  describe('Snapshot tests', () => {
-    it('should render correctly', () => {
-      // Act
-      const tree = renderer.create(component).toJSON();
-
-      // Assert
-      expect(tree).toMatchSnapshot();
-    });
+  it('should render without crashing', () => {
+    setup();
   });
 });

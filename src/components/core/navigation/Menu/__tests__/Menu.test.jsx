@@ -1,35 +1,21 @@
-import { shallow } from 'enzyme';
-import React from 'react';
-import renderer from 'react-test-renderer';
-
-import Environment from 'tests/environment';
+import { factory } from 'tests/utilities';
 import Menu from '../index';
 
+// Arrange
+const source = {
+  isOpen: false,
+  onClose: jest.fn(),
+  onChange: jest.fn()
+};
+
+// Setup
+function setup(props) {
+  return factory(Menu, source, props);
+}
+
+// Test suites
 describe('<Menu />', () => {
-  // Arrange
-  const component = (
-    <Environment>
-      <Menu />
-    </Environment>
-  );
-
-  describe('Unit tests', () => {
-    it('should render without crashing', () => {
-      // Act
-      const wrapper = shallow(component);
-
-      // Assert
-      expect(wrapper).toBeDefined();
-    });
-  });
-
-  describe('Snapshot tests', () => {
-    it('should render correctly', () => {
-      // Act
-      const tree = renderer.create(component).toJSON();
-
-      // Assert
-      expect(tree).toMatchSnapshot();
-    });
+  it('should render without crashing', () => {
+    setup();
   });
 });

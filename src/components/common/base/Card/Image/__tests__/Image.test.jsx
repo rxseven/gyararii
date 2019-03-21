@@ -1,31 +1,57 @@
-import { shallow } from 'enzyme';
-import React from 'react';
-import renderer from 'react-test-renderer';
+import Img from 'react-image';
 
+import { factory } from 'tests/utilities';
 import Image from '../index';
 
+// Mock
+jest.mock('react-image');
+
+// Arrange
+const context = expect.any(Object);
+const seed = {
+  alt: '',
+  className: 'card-img',
+  src: '/gallery/image-001.png'
+};
+const source = { src: seed.src };
+const input = { ...seed, ...source };
+
+// Setup
+function setup(props) {
+  return factory(Image, source, props);
+}
+
+// Test suites
 describe('<Card.Image />', () => {
-  // Arrange
-  const props = { src: '/gallery/image-001.png' };
-  const component = <Image {...props} />;
-
-  describe('Unit tests', () => {
-    it('should render without crashing', () => {
-      // Act
-      const wrapper = shallow(component);
-
-      // Assert
-      expect(wrapper).toBeDefined();
-    });
+  it('should render without crashing', () => {
+    setup();
   });
 
-  describe('Snapshot tests', () => {
-    it('should render correctly', () => {
-      // Act
-      const tree = renderer.create(component).toJSON();
+  it('should render passed image', () => {
+    const expected = { called: { ...input } };
+    setup();
 
-      // Assert
-      expect(tree).toMatchSnapshot();
-    });
+    expect(Img).toHaveBeenCalledWith(expected.called, context);
+  });
+
+  it('should render with custom "alt" prop', () => {
+    const props = { alt: 'Gallery' };
+    const expected = { called: { ...input, ...props } };
+    setup(props);
+
+    expect(Img).toHaveBeenCalledWith(expected.called, context);
+  });
+
+  it('should render with custom class names', () => {
+    const props = { className: 'custom-class' };
+    const expected = {
+      called: {
+        ...input,
+        className: `card-img ${props.className}`
+      }
+    };
+    setup(props);
+
+    expect(Img).toHaveBeenCalledWith(expected.called, context);
   });
 });

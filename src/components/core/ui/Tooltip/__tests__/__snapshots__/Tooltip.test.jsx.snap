@@ -1,8 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`<Tooltip /> Snapshot tests should render correctly 1`] = `
-<div
-  className="__react_component_tooltip place-top type-dark "
-  data-id="tooltip"
-/>
-`;

@@ -1,36 +1,48 @@
-import { shallow } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
+import { fireEvent } from 'react-testing-library';
 
-import Environment from 'tests/environment';
+import Icon from 'components/common/base/Icon';
+import { factory } from 'tests/utilities';
 import Burger from '../index';
 
+// Mock
+jest.mock('components/common/base/Icon', () => jest.fn(() => <i />));
+
+// Arrange
+const context = expect.any(Object);
+const source = { onToggle: jest.fn() };
+
+// Setup
+function setup(props) {
+  return factory(Burger, source, props);
+}
+
+// Test suites
 describe('<Burger />', () => {
-  // Arrange
-  const props = { onToggle: jest.fn() };
-  const component = (
-    <Environment>
-      <Burger {...props} />
-    </Environment>
-  );
-
-  describe('Unit tests', () => {
-    it('should render without crashing', () => {
-      // Act
-      const wrapper = shallow(component);
-
-      // Assert
-      expect(wrapper).toBeDefined();
-    });
+  it('should render without crashing', () => {
+    setup();
   });
 
-  describe('Snapshot tests', () => {
-    it('should render correctly', () => {
-      // Act
-      const tree = renderer.create(component).toJSON();
+  it(`should contain the correct icon`, () => {
+    const expected = { icon: { icon: 'bars' } };
+    setup();
 
-      // Assert
-      expect(tree).toMatchSnapshot();
-    });
+    expect(Icon).toHaveBeenCalledWith(expected.icon, context);
+  });
+
+  it('should have "title" attribute with the correct text', () => {
+    const expected = { title: 'Open menu' };
+    const { component } = setup();
+
+    expect(component).toHaveAttribute('title', expected.title);
+  });
+
+  it('should call onToggle() when it is clicked', () => {
+    const expected = { called: 1 };
+    const { component } = setup();
+
+    fireEvent.click(component);
+
+    expect(source.onToggle).toHaveBeenCalledTimes(expected.called);
   });
 });

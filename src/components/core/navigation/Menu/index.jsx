@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import { slide as Offcanvas } from 'react-burger-menu';
 import { withRouter } from 'react-router-dom';
@@ -85,7 +86,13 @@ const Version = styled(Hyperlink)`
   font-size: 0.75rem;
 `;
 
-const menuStyles = {
+const propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired
+};
+
+const styles = {
   bmMenu: {
     background: '#fff'
   },
@@ -104,7 +111,7 @@ const menuStyles = {
   }
 };
 
-const menuOptions = {
+const options = {
   bodyClassName: 'menu-open',
   customBurgerIcon: false,
   customCrossIcon: false,
@@ -112,7 +119,7 @@ const menuOptions = {
   left: true,
   outerContainerId: HTML.wrapper,
   pageWrapId: HTML.body,
-  styles: menuStyles,
+  styles,
   width: '85%'
 };
 
@@ -124,7 +131,7 @@ function Menu({ isOpen, location, onChange, onClose }) {
 
   return (
     <React.Fragment>
-      <Offcanvas {...menuOptions} isOpen={isOpen} onStateChange={onChange}>
+      <Offcanvas {...options} isOpen={isOpen} onStateChange={onChange}>
         <Frame>
           <Header>
             <Logo />
@@ -172,5 +179,7 @@ function Menu({ isOpen, location, onChange, onClose }) {
     </React.Fragment>
   );
 }
+
+Menu.propTypes = propTypes;
 
 export default withRouter(Menu);

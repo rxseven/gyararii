@@ -20,7 +20,7 @@ const options = {
 };
 
 function Lightbox(props) {
-  return <ReactImages {...props} {...options} />;
+  return <ReactImages {...options} {...props} />;
 }
 
 Lightbox.propTypes = propTypes;
