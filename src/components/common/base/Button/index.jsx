@@ -111,7 +111,7 @@ function Button({
               {children}
             </Text>
           </If>
-          <Indicator isLoading={isLoading && spinner}>
+          <Indicator data-testid="spinner" isLoading={isLoading && spinner}>
             <Spinner color="#fff" />
           </Indicator>
         </React.Fragment>
