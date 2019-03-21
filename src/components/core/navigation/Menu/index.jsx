@@ -92,7 +92,7 @@ const propTypes = {
   onChange: PropTypes.func.isRequired
 };
 
-const menuStyles = {
+const styles = {
   bmMenu: {
     background: '#fff'
   },
@@ -111,7 +111,7 @@ const menuStyles = {
   }
 };
 
-const menuOptions = {
+const options = {
   bodyClassName: 'menu-open',
   customBurgerIcon: false,
   customCrossIcon: false,
@@ -119,7 +119,7 @@ const menuOptions = {
   left: true,
   outerContainerId: HTML.wrapper,
   pageWrapId: HTML.body,
-  styles: menuStyles,
+  styles,
   width: '85%'
 };
 
@@ -131,7 +131,7 @@ function Menu({ isOpen, location, onChange, onClose }) {
 
   return (
     <React.Fragment>
-      <Offcanvas {...menuOptions} isOpen={isOpen} onStateChange={onChange}>
+      <Offcanvas {...options} isOpen={isOpen} onStateChange={onChange}>
         <Frame>
           <Header>
             <Logo />
