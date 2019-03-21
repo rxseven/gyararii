@@ -1,36 +1,28 @@
-import { shallow } from 'enzyme';
-import React from 'react';
-import renderer from 'react-test-renderer';
-
-import Environment from 'tests/environment';
+import { factory } from 'tests/utilities';
 import Link from '../index';
 
+// Arrange
+const source = {
+  children: 'Link Text',
+  to: '/'
+};
+const input = { ...source };
+
+// Setup
+function setup(props) {
+  return factory(Link, source, props);
+}
+
+// Test suites
 describe('<Nav.Link />', () => {
-  // Arrange
-  const props = { children: 'Link Text', to: '/' };
-  const component = (
-    <Environment>
-      <Link {...props} />
-    </Environment>
-  );
-
-  describe('Unit tests', () => {
-    it('should render without crashing', () => {
-      // Act
-      const wrapper = shallow(component);
-
-      // Assert
-      expect(wrapper).toBeDefined();
-    });
+  it('should render without crashing', () => {
+    setup();
   });
 
-  describe('Snapshot tests', () => {
-    it('should render correctly', () => {
-      // Act
-      const tree = renderer.create(component).toJSON();
+  it('should render passed children correctly', () => {
+    const expected = { content: input.children };
+    const { component } = setup();
 
-      // Assert
-      expect(tree).toMatchSnapshot();
-    });
+    expect(component).toHaveTextContent(expected.content);
   });
 });
