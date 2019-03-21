@@ -20,9 +20,9 @@ const Logo = styled(Link)`
   }
 `;
 
-function Brand() {
+function Brand(props) {
   return (
-    <Logo title="Gallery" to="/">
+    <Logo {...props} title="Gallery" to="/">
       ギャラリー
     </Logo>
   );
