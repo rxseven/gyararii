@@ -1,5 +1,10 @@
 {
-  "collectCoverageFrom": ["src/**/*.{js,jsx,ts,tsx}", "!src/**/*.d.ts"],
+  "collectCoverageFrom": [
+    "src/**/*.{js,jsx,ts,tsx}",
+    "!src/**/*.d.ts",
+    "!src/**/*.stories.jsx",
+    "!src/index.jsx"
+  ],
   "coveragePathIgnorePatterns": [
     "<rootDir>/.storybook/",
     "<rootDir>/.vscode/",

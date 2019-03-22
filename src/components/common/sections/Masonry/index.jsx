@@ -80,7 +80,7 @@ function Masonry({
             })}
           </When>
           <Otherwise>
-            <div />
+            <div data-testid="empty" />
           </Otherwise>
         </Choose>
       </Card.Columns>

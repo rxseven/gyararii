@@ -1,35 +1,24 @@
-import { shallow } from 'enzyme';
-import React from 'react';
-import renderer from 'react-test-renderer';
-
-import Environment from 'tests/environment';
+import { factory } from 'tests/utilities';
 import NotFound from '../index';
 
+// Arrange
+const source = {};
+
+// Setup
+function setup(props) {
+  return factory(NotFound, source, props);
+}
+
+// Test suites
 describe('<NotFound />', () => {
-  // Arrange
-  const component = (
-    <Environment>
-      <NotFound />
-    </Environment>
-  );
-
-  describe('Unit tests', () => {
-    it('should render without crashing', () => {
-      // Act
-      const wrapper = shallow(component);
-
-      // Assert
-      expect(wrapper).toBeDefined();
-    });
+  it('should render without crashing', () => {
+    setup();
   });
 
-  describe('Snapshot tests', () => {
-    it('should render correctly', () => {
-      // Act
-      const tree = renderer.create(component).toJSON();
+  it('should render the correct content', () => {
+    const expected = { content: '404' };
+    const { component } = setup();
 
-      // Assert
-      expect(tree).toMatchSnapshot();
-    });
+    expect(component).toHaveTextContent(expected.content);
   });
 });

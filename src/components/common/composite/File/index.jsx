@@ -37,6 +37,7 @@ function File({ children, id, isLoading, multiple, onUpload, ...props }) {
         {children}
       </Button>
       <Input
+        aria-label="upload"
         disabled={isLoading}
         id={id}
         multiple={multiple}

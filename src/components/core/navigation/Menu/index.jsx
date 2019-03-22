@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import React, { useEffect } from 'react';
 import { slide as Offcanvas } from 'react-burger-menu';
 import { withRouter } from 'react-router-dom';
@@ -62,14 +63,6 @@ const NavLink = styled(Nav.Link)`
   ${linkStyles}
 `;
 
-const Logo = styled(Brand)`
-  color: #7952b3;
-
-  :hover {
-    color: ${({ theme }) => theme.color.secondary};
-  }
-`;
-
 const Overflow = createGlobalStyle`
   body.menu-open {
     overflow: hidden;
@@ -85,7 +78,13 @@ const Version = styled(Hyperlink)`
   font-size: 0.75rem;
 `;
 
-const menuStyles = {
+const propTypes = {
+  isOpen: PropTypes.bool.isRequired,
+  onClose: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired
+};
+
+const styles = {
   bmMenu: {
     background: '#fff'
   },
@@ -104,7 +103,7 @@ const menuStyles = {
   }
 };
 
-const menuOptions = {
+const options = {
   bodyClassName: 'menu-open',
   customBurgerIcon: false,
   customCrossIcon: false,
@@ -112,7 +111,7 @@ const menuOptions = {
   left: true,
   outerContainerId: HTML.wrapper,
   pageWrapId: HTML.body,
-  styles: menuStyles,
+  styles,
   width: '85%'
 };
 
@@ -124,10 +123,10 @@ function Menu({ isOpen, location, onChange, onClose }) {
 
   return (
     <React.Fragment>
-      <Offcanvas {...menuOptions} isOpen={isOpen} onStateChange={onChange}>
+      <Offcanvas {...options} isOpen={isOpen} onStateChange={onChange}>
         <Frame>
           <Header>
-            <Logo />
+            <Brand />
           </Header>
           <Navigation>
             <NavItem>
@@ -162,8 +161,8 @@ function Menu({ isOpen, location, onChange, onClose }) {
             </NavItem>
           </Navigation>
           <Meta>
-            <Version href="https://github.com/rxseven/gyararii/releases/tag/v0.5.1">
-              Version 0.5.1
+            <Version href="https://github.com/rxseven/gyararii/releases/tag/v0.6.0">
+              Version 0.6.0
             </Version>
           </Meta>
         </Frame>
@@ -172,5 +171,7 @@ function Menu({ isOpen, location, onChange, onClose }) {
     </React.Fragment>
   );
 }
+
+Menu.propTypes = propTypes;
 
 export default withRouter(Menu);

@@ -1,35 +1,44 @@
-import { shallow } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
-
-import Environment from 'tests/environment';
+import Icon from 'components/common/base/Icon';
+import { factory } from 'tests/utilities';
 import GitHub from '../index';
 
+// Mock
+jest.mock('components/common/base/Icon', () => jest.fn(() => <i />));
+
+// Arrange
+const context = expect.any(Object);
+const source = {};
+
+// Setup
+function setup(props) {
+  return factory(GitHub, source, props);
+}
+
+// Test suites
 describe('<GitHub />', () => {
-  // Arrange
-  const component = (
-    <Environment>
-      <GitHub />
-    </Environment>
-  );
-
-  describe('Unit tests', () => {
-    it('should render without crashing', () => {
-      // Act
-      const wrapper = shallow(component);
-
-      // Assert
-      expect(wrapper).toBeDefined();
-    });
+  it('should render without crashing', () => {
+    setup();
   });
 
-  describe('Snapshot tests', () => {
-    it('should render correctly', () => {
-      // Act
-      const tree = renderer.create(component).toJSON();
+  it('should have "title" attribute with the correct text', () => {
+    const expected = { title: 'GitHub repo' };
+    const { component } = setup();
 
-      // Assert
-      expect(tree).toMatchSnapshot();
-    });
+    expect(component).toHaveAttribute('title', expected.title);
+  });
+
+  it('should link to the correct URL', () => {
+    const expected = { link: 'https://github.com/rxseven/gyararii' };
+    const { component } = setup();
+
+    expect(component).toHaveAttribute('href', expected.link);
+  });
+
+  it(`should contain "GitHub" icon`, () => {
+    const expected = { icon: { icon: ['fab', 'github-alt'] } };
+    setup();
+
+    expect(Icon).toHaveBeenCalledWith(expected.icon, context);
   });
 });

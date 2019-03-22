@@ -1,20 +1,30 @@
-import { shallow } from 'enzyme';
 import React from 'react';
 
+import { factory } from 'tests/utilities';
 import Modal from '../index';
 
+// Arrange
+const seed = { content: 'content' };
+const source = {
+  children: <span>{seed.content}</span>,
+  isOpen: true,
+  onClose: jest.fn()
+};
+
+// Setup
+function setup(props) {
+  return factory(Modal, source, props);
+}
+
+// Test suites
 describe('<Modal />', () => {
-  // Arrange
-  const props = { children: 'content', isOpen: true, onClose: jest.fn() };
-  const component = <Modal {...props} />;
+  it('should render without crashing', () => {
+    setup();
+  });
 
-  describe('Unit tests', () => {
-    it('should render without crashing', () => {
-      // Act
-      const wrapper = shallow(component);
+  it('should render passed children correctly', () => {
+    const { queryByText } = setup();
 
-      // Assert
-      expect(wrapper).toBeDefined();
-    });
+    expect(queryByText(seed.content)).not.toBeNull();
   });
 });

@@ -13,7 +13,7 @@ import './Button.styles.scss';
 
 const propTypes = {
   block: PropTypes.bool,
-  children: PropTypes.string,
+  children: PropTypes.node,
   icon: PropTypes.oneOfType([
     PropTypes.string,
     PropTypes.arrayOf(PropTypes.string)
@@ -111,7 +111,7 @@ function Button({
               {children}
             </Text>
           </If>
-          <Indicator isLoading={isLoading && spinner}>
+          <Indicator data-testid="spinner" isLoading={isLoading && spinner}>
             <Spinner color="#fff" />
           </Indicator>
         </React.Fragment>

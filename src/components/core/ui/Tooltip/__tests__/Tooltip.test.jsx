@@ -1,30 +1,29 @@
-import { shallow } from 'enzyme';
-import React from 'react';
-import renderer from 'react-test-renderer';
-
+import ReactTooltip from 'react-tooltip';
+import { factory } from 'tests/utilities';
 import Tooltip from '../index';
 
+// Mock
+jest.mock('react-tooltip');
+
+// Arrange
+const context = expect.any(Object);
+const source = {};
+
+// Setup
+function setup(props) {
+  return factory(Tooltip, source, props);
+}
+
+// Test suites
 describe('<Tooltip />', () => {
-  // Arrange
-  const component = <Tooltip />;
-
-  describe('Unit tests', () => {
-    it('should render without crashing', () => {
-      // Act
-      const wrapper = shallow(component);
-
-      // Assert
-      expect(wrapper).toBeDefined();
-    });
+  it('should render without crashing', () => {
+    setup();
   });
 
-  describe('Snapshot tests', () => {
-    it('should render correctly', () => {
-      // Act
-      const tree = renderer.create(component).toJSON();
+  it('should render a tooltip correctly', () => {
+    const expected = { arguments: { effect: 'solid', place: 'top' } };
+    setup();
 
-      // Assert
-      expect(tree).toMatchSnapshot();
-    });
+    expect(ReactTooltip).toHaveBeenCalledWith(expected.arguments, context);
   });
 });

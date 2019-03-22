@@ -1,28 +1,28 @@
-import { shallow } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
 
+import { render } from 'tests/utilities';
 import withContext from '../index';
 
-describe('withContext HOC', () => {
-  // Arrange
-  const component = <withContext />;
+// Mock
+const Component = jest.fn(() => <i />);
 
+// Arrange
+const Enhanced = withContext(Component);
+
+// Setup
+function setup(props) {
+  return render(<Enhanced />);
+}
+
+// Test suites
+describe('<withContext HOC />', () => {
   it('should render without crashing', () => {
-    // Act
-    const wrapper = shallow(component);
-
-    // Assertions
-    expect(wrapper).toBeDefined();
+    setup();
   });
 
-  describe('Snapshot tests', () => {
-    it('should render correctly', () => {
-      // Act
-      const tree = renderer.create(component).toJSON();
+  it('should render wrapped component correctly', () => {
+    setup();
 
-      // Assert
-      expect(tree).toMatchSnapshot();
-    });
+    expect(Component).toHaveBeenCalled();
   });
 });

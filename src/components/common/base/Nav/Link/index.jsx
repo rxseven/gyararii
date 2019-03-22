@@ -27,7 +27,7 @@ const defaultProps = { light: false };
 
 function Link({ children, light, ...props }) {
   return (
-    <Frame {...props} data-light={light} activeClassName="active">
+    <Frame {...props} activeClassName="active" data-light={light}>
       {children}
     </Frame>
   );

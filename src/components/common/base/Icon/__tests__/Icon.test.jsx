@@ -1,36 +1,28 @@
-import { shallow } from 'enzyme';
-import React from 'react';
-import renderer from 'react-test-renderer';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import Environment from 'tests/environment';
+import { factory } from 'tests/utilities';
 import Icon from '../index';
 
+// Arrange
+const context = expect.any(Object);
+const source = { icon: 'home' };
+const input = { ...source };
+
+// Setup
+function setup(props) {
+  return factory(Icon, source, props);
+}
+
+// Test suites
 describe('<Icon />', () => {
-  // Arrange
-  const props = { icon: 'home' };
-  const component = (
-    <Environment>
-      <Icon {...props} />
-    </Environment>
-  );
-
-  describe('Unit tests', () => {
-    it('should render without crashing', () => {
-      // Act
-      const wrapper = shallow(component);
-
-      // Assert
-      expect(wrapper).toBeDefined();
-    });
+  it('should render without crashing', () => {
+    setup();
   });
 
-  describe('Snapshot tests', () => {
-    it('should render correctly', () => {
-      // Act
-      const tree = renderer.create(component).toJSON();
+  it('should render "Home" icon', () => {
+    const expected = { called: { icon: input.icon } };
+    setup();
 
-      // Assert
-      expect(tree).toMatchSnapshot();
-    });
+    expect(FontAwesomeIcon).toHaveBeenCalledWith(expected.called, context);
   });
 });

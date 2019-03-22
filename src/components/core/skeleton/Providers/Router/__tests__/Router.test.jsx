@@ -1,21 +1,32 @@
-import { shallow } from 'enzyme';
 import React from 'react';
 
-import mock from 'tests/mock';
+import { factory, toMarkup } from 'tests/utilities';
 import Router from '../index';
 
-describe('<Router />', () => {
-  // Arrange
-  const props = { children: mock.elements.children };
-  const component = <Router {...props} />;
+// Arrange
+const seed = { content: 'content' };
+const source = { children: <span>{seed.content}</span> };
+const input = { ...seed, ...source };
 
-  describe('Unit tests', () => {
-    it('should render without crashing', () => {
-      // Act
-      const wrapper = shallow(component);
+// Setup
+function setup(props) {
+  return factory(Router, source, props);
+}
 
-      // Assert
-      expect(wrapper).toBeDefined();
-    });
+// Test suites
+describe('<Providers.Router />', () => {
+  it('should render without crashing', () => {
+    setup();
+  });
+
+  it('should render passed children correctly', () => {
+    const expected = {
+      content: input.content,
+      html: input.children
+    };
+    const { component } = setup();
+
+    expect(component).toHaveTextContent(expected.content);
+    expect(component).toContainHTML(toMarkup(expected.html));
   });
 });

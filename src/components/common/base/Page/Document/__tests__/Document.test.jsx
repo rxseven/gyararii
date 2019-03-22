@@ -1,31 +1,32 @@
-import { shallow } from 'enzyme';
 import React from 'react';
-import renderer from 'react-test-renderer';
 
+import { factory, toMarkup } from 'tests/utilities';
 import Document from '../index';
 
-describe('<Document />', () => {
-  // Arrange
-  const props = { children: 'content' };
-  const component = <Document {...props} />;
+// Arrange
+const seed = { content: 'content' };
+const source = { children: <span>{seed.content}</span> };
+const input = { ...seed, ...source };
 
-  describe('Unit tests', () => {
-    it('should render without crashing', () => {
-      // Act
-      const wrapper = shallow(component);
+// Setup
+function setup(props) {
+  return factory(Document, source, props);
+}
 
-      // Assert
-      expect(wrapper).toBeDefined();
-    });
+// Test suites
+describe('<Page.Document />', () => {
+  it('should render without crashing', () => {
+    setup();
   });
 
-  describe('Snapshot tests', () => {
-    it('should render correctly', () => {
-      // Act
-      const tree = renderer.create(component).toJSON();
+  it('should render passed children correctly', () => {
+    const expected = {
+      content: input.content,
+      html: input.children
+    };
+    const { component } = setup();
 
-      // Assert
-      expect(tree).toMatchSnapshot();
-    });
+    expect(component).toHaveTextContent(expected.content);
+    expect(component).toContainHTML(toMarkup(expected.html));
   });
 });
