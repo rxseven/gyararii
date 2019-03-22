@@ -1,6 +1,6 @@
 # Gyararī
 
-[![Latest Release](https://img.shields.io/badge/latest-0.5.1-lightgrey.svg?style=flat 'Latest Release')](https://github.com/rxseven/gyararii/releases/tag/v0.5.1) [![Build Status](https://travis-ci.org/rxseven/gyararii.svg?branch=master 'Build Status')](https://travis-ci.org/rxseven/gyararii) [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/ 'CC BY-NC-ND 4.0') [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0 'AGPL v3')
+[![Latest Release](https://img.shields.io/badge/latest-0.6.0-lightgrey.svg?style=flat 'Latest Release')](https://github.com/rxseven/gyararii/releases/tag/v0.6.0) [![Build Status](https://travis-ci.org/rxseven/gyararii.svg?branch=master 'Build Status')](https://travis-ci.org/rxseven/gyararii) [![Code Coverage](https://coveralls.io/repos/github/rxseven/gyararii/badge.svg 'Code Coverage')](https://coveralls.io/github/rxseven/gyararii) [![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-nd/4.0/ 'CC BY-NC-ND 4.0') [![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0 'AGPL v3')
 
 **Gyararī is a simple React app for collecting photos.** It was built from scratch using only [React](https://reactjs.org) and [PropTypes](https://reactjs.org/docs/typechecking-with-proptypes.html). No complex state management, static type checking, and UI library needed!
 
@@ -270,12 +270,12 @@ Gyararī was built with React and Node.js, one of the most popular stack of tech
 - JavaScript linting with ESLint
 - Stylesheet and Styled Components linting with Stylelint
 - Code formatting with Prettier
-- Automate testing with Jest, Enzyme, and React Testing Library
+- Automate testing with Jest and React Testing Library
 - Assets analyzing & debuging with Source Map Explorer & Webpack Bundle Analyzer
 - Type checking with PropTypes
 - Code debugging with Visual Studio Code and Chrome Debugger
 - Pre-commit hooking with Husky and Lint-staged
-- CI/CD with GitHub, Travis CI, Heroku, and Netlify
+- CI/CD with GitHub, Travis CI, Coveralls, Heroku, and Netlify
 - Developing UI components in isolation with Storybook
 
 > Note: the complete guidelines are available in [this project](https://github.com/rxseven/setup-react-app).
@@ -297,6 +297,7 @@ Gyararī was built with React and Node.js, one of the most popular stack of tech
 
 - [GitHub](https://github.com/) - web-based hosting service for version control using Git
 - [Travis CI](https://travis-ci.org/) - continuous integration
+- [Coveralls](https://coveralls.io/) - test coverage history and statistics
 
 [Back to top](#table-of-contents)
 
