@@ -63,14 +63,6 @@ const NavLink = styled(Nav.Link)`
   ${linkStyles}
 `;
 
-const Logo = styled(Brand)`
-  color: #7952b3;
-
-  :hover {
-    color: ${({ theme }) => theme.color.secondary};
-  }
-`;
-
 const Overflow = createGlobalStyle`
   body.menu-open {
     overflow: hidden;
@@ -134,7 +126,7 @@ function Menu({ isOpen, location, onChange, onClose }) {
       <Offcanvas {...options} isOpen={isOpen} onStateChange={onChange}>
         <Frame>
           <Header>
-            <Logo />
+            <Brand />
           </Header>
           <Navigation>
             <NavItem>
