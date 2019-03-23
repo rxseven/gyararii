@@ -71,9 +71,9 @@ const Select = styled(Icon)`
     props['data-checked'] ? '#ff620c' : props['data-mobile'] ? '#666' : '#fff'};
   display: ${props =>
     props['data-checked'] || props['data-mobile'] ? 'block' : 'none'};
-  left: 7px;
+  left: ${props => (props['data-mobile'] ? '10px' : '7px')};
   opacity: ${props => (props['data-mobile'] ? 0.5 : 1)};
-  top: 7px;
+  top: ${props => (props['data-mobile'] ? '10px' : '7px')};
 
   /* stylelint-disable-next-line */
   ${Frame}:hover & {
