@@ -30,8 +30,8 @@ const STATE = {
   },
   gallery: {
     autoscroll: false,
-    next: 0,
     loaded: false,
+    next: 0,
     pagination: null,
     selected: []
   },
