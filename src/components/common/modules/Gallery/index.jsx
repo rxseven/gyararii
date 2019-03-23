@@ -121,7 +121,7 @@ class Gallery extends React.Component {
         },
         gallery: { images: remaining, cursor },
         state: { isRestoring },
-        status: `Deleted successfully`,
+        status: 'Deleted successfully',
         timeout: !isRefill
       });
     };
