@@ -35,14 +35,14 @@ const Frame = styled.div`
 const Link = styled.a`
   ${styles.icon}
   color: ${props => (props['data-mobile'] ? '#666' : '#fff')};
-  display: ${props => (props['data-mobile'] ? 'block' : 'none')};
+  display: none;
   left: ${props => (props['data-mobile'] ? '42px' : '32px')};
   opacity: ${props => (props['data-mobile'] ? 0.5 : 1)};
   top: 2px;
 
   /* stylelint-disable-next-line */
   ${Frame}:hover & {
-    display: block;
+    display: ${props => (props['data-mobile'] ? 'none' : 'block')};
     opacity: 0.5;
 
     :hover {
