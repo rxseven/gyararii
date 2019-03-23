@@ -30,8 +30,8 @@ const STATE = {
   },
   gallery: {
     autoscroll: false,
-    next: 0,
     loaded: false,
+    next: 0,
     pagination: null,
     selected: []
   },
@@ -121,10 +121,7 @@ class Gallery extends React.Component {
         },
         gallery: { images: remaining, cursor },
         state: { isRestoring },
-        status: `Deleted ${selected.length} ${pluralWord(
-          selected.length,
-          'image'
-        )} successfully`,
+        status: 'Deleted successfully',
         timeout: !isRefill
       });
     };
@@ -167,7 +164,7 @@ class Gallery extends React.Component {
     // Arrange status messages
     switch (true) {
       case isRefill:
-        status = 'Updating the gallery...';
+        status = 'Updating gallery...';
         break;
       case isMore:
         status = 'Loading images...';
@@ -235,10 +232,7 @@ class Gallery extends React.Component {
       // Update state and status message once the HTTP request finished
       this.handleAjaxSuccess({
         gallery: { cursor, images },
-        status: `Uploaded ${data.length} ${pluralWord(
-          data.length,
-          'image'
-        )} successfully`
+        status: 'Uploaded successfully'
       });
     };
 
