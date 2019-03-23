@@ -235,10 +235,7 @@ class Gallery extends React.Component {
       // Update state and status message once the HTTP request finished
       this.handleAjaxSuccess({
         gallery: { cursor, images },
-        status: `Uploaded ${data.length} ${pluralWord(
-          data.length,
-          'image'
-        )} successfully`
+        status: 'Uploaded successfully'
       });
     };
 
