@@ -105,7 +105,7 @@ function View(props) {
                   look={isSelecting ? 'primary' : 'secondary'}
                   onClick={handleSelecting}
                 >
-                  Select
+                  Tick
                 </Button>
               </If>
               <Autoscroll data-visibility={!isMobileOnly}>
