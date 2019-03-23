@@ -164,7 +164,7 @@ class Gallery extends React.Component {
     // Arrange status messages
     switch (true) {
       case isRefill:
-        status = 'Updating the gallery...';
+        status = 'Updating gallery...';
         break;
       case isMore:
         status = 'Loading images...';
