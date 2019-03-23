@@ -325,7 +325,7 @@ React & Redux starter kit with best practices bootstrapped with [Create React Ap
 
 - Implement animations
 - Optimize the app’s performance
-- Add more unit tests to cover the entire app
+- Add more unit, integration and E2E tests to cover the entire app
 - More...
 
 [Back to top](#table-of-contents)
