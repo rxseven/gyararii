@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { isMobile, isMobileOnly } from 'react-device-detect';
 import styled from 'styled-components';
 
@@ -34,6 +34,7 @@ const Frame = styled.div`
 `;
 
 function View(props) {
+  const [isSelecting, setSelecting] = useState(false);
   const {
     action,
     autoscroll,
@@ -75,6 +76,10 @@ function View(props) {
   const isPrefetching =
     (isFetching && isPreloading) || (isRestoring && !imageLength);
 
+  function handleSelecting() {
+    setSelecting(!isSelecting);
+  }
+
   return (
     <Frame isLoading={isPrefetching}>
       <Toolbar isLoading={isPrefetching}>
@@ -94,6 +99,15 @@ function View(props) {
               >
                 Upload
               </File>
+              <If condition={isMobile}>
+                <Button
+                  isLoading={isLoading}
+                  look={isSelecting ? 'primary' : 'secondary'}
+                  onClick={handleSelecting}
+                >
+                  Select
+                </Button>
+              </If>
               <Autoscroll data-visibility={!isMobileOnly}>
                 <Toggle
                   checked={autoscroll}
@@ -121,6 +135,7 @@ function View(props) {
       <Error error={error} onDismiss={onDismiss} />
       <Masonry
         isDeleting={isDeleting}
+        isSelecting={isSelecting}
         error={errorLength}
         isFetching={isFetching}
         isMore={isMore}

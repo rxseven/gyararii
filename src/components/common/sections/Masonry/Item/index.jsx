@@ -70,19 +70,28 @@ const Select = styled(Icon)`
   color: ${props =>
     props['data-checked'] ? '#ff620c' : props['data-mobile'] ? '#666' : '#fff'};
   display: ${props =>
-    props['data-checked'] || props['data-mobile'] ? 'block' : 'none'};
+    props['data-checked'] || props['data-selecting'] ? 'block' : 'none'};
   left: ${props => (props['data-mobile'] ? '10px' : '7px')};
-  opacity: ${props => (props['data-mobile'] ? 0.5 : 1)};
+  opacity: ${props => (props['data-checked'] ? '1' : '0.5')};
   top: ${props => (props['data-mobile'] ? '10px' : '7px')};
 
   /* stylelint-disable-next-line */
   ${Frame}:hover & {
-    display: block;
+    display: ${props =>
+      props['data-mobile'] && props['data-selecting']
+        ? 'block'
+        : !props['data-mobile'] && 'block'};
     opacity: ${props => (props['data-checked'] ? '1' : '0.5')};
 
     :hover {
-      color: ${props => (props['data-checked'] ? '#ff620c' : '#fff')};
-      opacity: 1;
+      color: ${props =>
+        props['data-checked']
+          ? '#ff620c'
+          : props['data-mobile']
+          ? '#666'
+          : '#fff'};
+      opacity: ${props =>
+        props['data-mobile'] && !props['data-checked'] ? '0.5' : 1};
     }
   }
 `;
@@ -123,6 +132,7 @@ const propTypes = exact({
   }).isRequired,
   index: PropTypes.number.isRequired,
   isLoading: PropTypes.bool,
+  isSelecting: PropTypes.bool,
   onLoaded: PropTypes.func.isRequired,
   onPreview: PropTypes.func.isRequired,
   isSelected: PropTypes.bool,
@@ -133,6 +143,7 @@ const propTypes = exact({
 const defaultProps = {
   isLoading: false,
   isSelected: false,
+  isSelecting: false,
   toDelete: false
 };
 
@@ -146,6 +157,7 @@ function Item(props) {
     onPreview,
     onSelect,
     isSelected,
+    isSelecting,
     toDelete
   } = props;
 
@@ -175,6 +187,7 @@ function Item(props) {
         <Select
           data-checked={isSelected}
           data-mobile={isMobile}
+          data-selecting={isSelecting}
           data-testid="select"
           icon={toDelete ? 'trash-alt' : 'check-circle'}
           onClick={handleSelect}
