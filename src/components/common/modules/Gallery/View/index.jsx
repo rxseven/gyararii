@@ -101,6 +101,7 @@ function View(props) {
               </File>
               <If condition={isMobile}>
                 <Button
+                  icon="check"
                   isLoading={isLoading}
                   look={isSelecting ? 'primary' : 'secondary'}
                   onClick={handleSelecting}
